@@ -1,0 +1,6 @@
+#!/bin/sh
+
+touch /hostlab/r1.testdone
+sleep 10
+halt
+

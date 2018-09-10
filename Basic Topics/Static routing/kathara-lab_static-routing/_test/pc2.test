@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Try pinging a nearby interface
+ping -c 3 -i 0.5 200.1.1.1 | head -n -3 | sed 's/time=.*//'
+
+# Try pinging a non-neighboring interface (this is expected to fail)
+ping -c 3 -i 0.5 100.0.0.10 2>&1
+
+# Try pinging a farther away interface (this too is expected to fail)
+ping -c 3 -i 0.5 100.0.0.9 2>&1
+
+touch /hostlab/pc2.testdone
+sleep 5
+halt
+
