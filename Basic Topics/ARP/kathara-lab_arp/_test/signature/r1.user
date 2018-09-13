@@ -1,0 +1,10 @@
+PING 195.11.14.5 (195.11.14.5) 56(84) bytes of data.
+64 bytes from 195.11.14.5: icmp_seq=1 ttl=64 
+64 bytes from 195.11.14.5: icmp_seq=2 ttl=64 
+64 bytes from 195.11.14.5: icmp_seq=3 ttl=64 
+
+PING 100.0.0.10 (100.0.0.10) 56(84) bytes of data.
+64 bytes from 100.0.0.10: icmp_seq=1 ttl=64 
+64 bytes from 100.0.0.10: icmp_seq=2 ttl=64 
+64 bytes from 100.0.0.10: icmp_seq=3 ttl=64 
+

@@ -1,0 +1,2 @@
+ifconfig eth0 200.1.1.7 hw ether FE:FD:C8:01:01:07 up
+route add default gw 200.1.1.1
