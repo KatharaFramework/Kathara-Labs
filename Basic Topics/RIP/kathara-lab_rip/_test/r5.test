@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Connectivity test
+ping -c 3 -i 0.5 100.2.0.1 | head -n -3 | sed 's/time=.*//'
+
+# This one should fail, because r5 has no default route set
+ping -c 3 -w 1 100.1.0.17 2>&1
+
+touch /hostlab/r5.testdone
+sleep 5
+halt

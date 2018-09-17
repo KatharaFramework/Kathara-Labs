@@ -1,0 +1,6 @@
+PING 100.2.0.1 (100.2.0.1) 56(84) bytes of data.
+64 bytes from 100.2.0.1: icmp_seq=1 ttl=64 
+64 bytes from 100.2.0.1: icmp_seq=2 ttl=64 
+64 bytes from 100.2.0.1: icmp_seq=3 ttl=64 
+
+connect: Network is unreachable

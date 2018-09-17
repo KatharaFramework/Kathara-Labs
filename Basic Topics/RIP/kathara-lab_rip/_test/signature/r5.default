@@ -1,0 +1,34 @@
+[NETWORK INTERFACES]
+
+[ROUTING TABLE]
+100.2.0.0       0.0.0.0         255.255.255.252 U     0      0        0 eth0
+
+[LISTENING PORTS]
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN     
+udp        0      0 0.0.0.0:111             0.0.0.0:*                          
+[PROCESSES]
+    0 /bin/bash /etc/init.d/netkit-test-phase
+    0 /bin/bash /etc/init.d/netkit-test-phase
+    0 /bin/bash /etc/rc2.d/S99netkit-phase2 start
+    0 /bin/ps -e -o uid,command
+    0 /bin/sh /etc/init.d/rc 2
+    0 /sbin/klogd -x
+    0 /sbin/syslogd
+    0 [aio/0]
+    0 [cifsdnotifyd]
+    0 [cifsoplockd]
+    0 [events/0]
+    0 [kblockd/0]
+    0 [khelper]
+    0 [ksoftirqd/0]
+    0 [kswapd0]
+    0 [kthreadd]
+    0 [nfsiod]
+    0 [pdflush]
+    0 [pdflush]
+    0 [rpciod/0]
+    0 init [2]       
+    0 sed -n 2,$p
+    0 sleep 1
+    1 /sbin/portmap
+
