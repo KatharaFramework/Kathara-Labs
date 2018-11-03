@@ -1,2 +1,2 @@
 # Kathara-Labs
-Repository for lab configurations tested on Kathará
+Repository for **Lab** configurations tested on [Kathará](https://github.com/KatharaFramework/Kathara).
