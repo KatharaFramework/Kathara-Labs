@@ -1,5 +1,0 @@
-#!/bin/sh
-
-touch /hostlab/r2.testdone
-sleep 10
-halt
