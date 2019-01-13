@@ -10,3 +10,4 @@ ip link set r3r2 multicast on
 ip addr add dev r3r2 13.0.0.10 peer 13.0.0.9
 ifconfig r3r2 up
 /etc/init.d/zebra start
+
