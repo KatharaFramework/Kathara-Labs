@@ -4,6 +4,6 @@ Repository for **Lab** configurations tested on [Kathará](https://github.com/Ka
 
 ## Netkit Labs
 
-If you need additional labs, you can visit the old [Netkit Lab Page](http://wiki.netkit.org/index.php/Labs_Exams). 
+If you need additional labs, you can visit the old [Netkit Lab Page](https://www.netkit.org/exams.html). 
 
 **Beware those labs are not tested on Kathará so they may not work properly!**
