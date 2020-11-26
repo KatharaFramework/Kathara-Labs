@@ -1,0 +1,2 @@
+ifconfig eth0 40.0.0.2/24 up
+route add default gw 40.0.0.1 dev eth0
