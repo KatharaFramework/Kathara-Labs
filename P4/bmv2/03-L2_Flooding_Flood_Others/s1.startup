@@ -1,0 +1,7 @@
+p4c l2_flooding_other_ports.p4
+simple_switch -i 1@eth0 -i 2@eth1 -i 3@eth2 -i 4@eth3 l2_flooding_other_ports.json &
+
+while [[ $(pgrep simple_switch) -eq 0 ]]; do sleep 1; done
+until simple_switch_CLI <<< "help"; do sleep 1; done
+
+simple_switch_CLI <<< $(cat commands.txt)

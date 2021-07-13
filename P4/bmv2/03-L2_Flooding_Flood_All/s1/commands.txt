@@ -1,0 +1,7 @@
+table_add dmac_forward forward_to_port 00:00:0a:00:00:01 => 1
+table_add dmac_forward forward_to_port 00:00:0a:00:00:02 => 2
+table_add dmac_forward forward_to_port 00:00:0a:00:00:03 => 3
+table_add dmac_forward forward_to_port 00:00:0a:00:00:04 => 4
+mc_mgrp_create 1
+mc_node_create 0 1 2 3 4
+mc_node_associate 1 0

@@ -1,0 +1,12 @@
+ip link set eth1 address 00:00:00:01:02:00
+ip link set eth2 address 00:00:00:01:03:00
+ip link set eth3 address 00:00:00:01:04:00
+ip link set eth4 address 00:00:00:01:05:00
+
+p4c /shared/flowlet_switching.p4 -o /
+simple_switch -i 1@eth0 -i 2@eth1 -i 3@eth2 -i 4@eth3 -i 5@eth4 flowlet_switching.json &
+
+while [[ $(pgrep simple_switch) -eq 0 ]]; do sleep 1; done
+until simple_switch_CLI <<< "help"; do sleep 1; done
+
+simple_switch_CLI <<< $(cat commands.txt)
