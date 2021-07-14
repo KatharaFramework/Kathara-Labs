@@ -48,7 +48,7 @@ root@h2:/# ping 10.0.0.1
 4. Verify that the switch table was populated: 
 
 ```bash
-simple_switch_CLI --thrift-port 9090
+simple_switch_CLI
 Obtaining JSON from switch...
 Done
 Control utility for runtime P4 table manipulation

@@ -6,6 +6,7 @@ There, you can find a detailed explanation about the scenario, and the exercise 
 This is the network scenario topology: 
 
 ![topology](images/topology.png)
+
 It is composed by three devices: two host `h1` and `h2`, and one switch `s1`. 
 This is a very simple example in which `s1` act as a repeater. 
 In other words, when a packet enters `port 1` it has to be leave from `port 2` and vice versa.

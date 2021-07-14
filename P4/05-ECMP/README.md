@@ -36,9 +36,9 @@ root@h1:/# ping 10.0.6.2
 
 6. Get a terminal in `h1`. Use the `send.py` script.
 
-   ```bash
-   python3 send.py 10.0.6.2 1000
-   ```
+```bash
+python3 send.py 10.0.6.2 1000
+```
 
 This will send `tcp syn` packets with random ports. Now you should see packets going to all the interfaces, 
 since each packet will have a different hash.

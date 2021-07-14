@@ -1,5 +1,5 @@
 # Flowlet-Switching
-This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/05-ECMP).
+This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/05-Flowlet_Switching).
 There, you can find a detailed explanation about the scenario, and the exercise (here only the solutions are provided).
 
 ## Network Scenario
@@ -35,9 +35,9 @@ root@h1:/# ping 10.0.6.2
 
 6. Get a terminal in `h1`. Use the `send.py` script.
 
-   ```bash
-   python3 send.py 10.0.6.2 1000 <sleep_time_between_packets>
-   ```
+```bash
+python3 send.py 10.0.6.2 1000 <sleep_time_between_packets>
+```
 
 This will send `tcp syn` packets with the same 5-tuple. You can play with the sleep time (third parameter). 
 If you set it bigger than your gap, packets should change paths, if you set it smaller (set it quite smaller 
