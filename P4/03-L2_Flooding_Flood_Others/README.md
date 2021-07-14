@@ -1,4 +1,4 @@
-# 02-L2-Basic-Forwarding
+# 02-L2-Flood-Other-Ports
 This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/03-L2_Flooding).
 There, you can find a detailed explanation about the scenario, and the exercise (here only the solutions are provided).
 

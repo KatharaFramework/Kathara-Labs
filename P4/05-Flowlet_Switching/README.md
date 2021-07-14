@@ -1,4 +1,4 @@
-# ECMP
+# Flowlet-Switching
 This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/05-ECMP).
 There, you can find a detailed explanation about the scenario, and the exercise (here only the solutions are provided).
 
@@ -8,7 +8,12 @@ This is the network scenario topology:
 
 ![topology](images/multi_hop_topo.png)
 
-The `s1` and `s6` switches implements an ECMP policy, sending traffic to all the nexthops for a destination.  
+The `s1` and `s6` switches implements a flowlet switching policy, sending traffic to all the nexthops for a destination,
+leveraging the burstiness of TCP flows to achieve a better load balancing then ECMP. TCP flows tend to come in bursts 
+(for instance because a flow needs to wait to get window space). 
+Every time there is gap which is big enough (i.e., 50ms) between packets from the same flow, 
+flowlet switching will rehash the flow to another path (by hashing an ID value together with the 5-tuple).
+
 ## Testing the scenario
 1. To run the network scenario, open a terminal in the scenario directory and type: 
 ```bash
@@ -31,10 +36,10 @@ root@h1:/# ping 10.0.6.2
 6. Get a terminal in `h1`. Use the `send.py` script.
 
    ```bash
-   python3 send.py 10.0.6.2 1000
+   python3 send.py 10.0.6.2 1000 <sleep_time_between_packets>
    ```
 
-This will send `tcp syn` packets with random ports. Now you should see packets going to all the interfaces, 
-since each packet will have a different hash.
-
+This will send `tcp syn` packets with the same 5-tuple. You can play with the sleep time (third parameter). 
+If you set it bigger than your gap, packets should change paths, if you set it smaller (set it quite smaller 
+since the software model is not very precise) you will see all the packets cross the same interfaces.
 

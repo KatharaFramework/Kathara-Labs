@@ -1,11 +1,16 @@
-# 02-Repeater
-This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/02-Repeater).
+# 02-L2-Basic-Forwarding
+This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/03-L2_Basic_forwarding).
 There, you can find a detailed explanation about the scenario, and the exercise (here only the solutions are provided).
 
 ## Network Scenario
-It is composed by three devices: two host `h1` and `h2`, and one switch `s1`. 
-This is a very simple example in which `s1` act as a repeater. 
-In other words, when a packet enters `port 1` it has to be leave from `port 2` and vice versa.
+
+This is the network scenario topology: 
+
+![topology](images/l2_topology.png)
+
+It is composed by four hosts `hx` and one switch `s1`. 
+In order to familiarize with tables and how to map ethernet addresses to a given host (port), 
+the switch implement a very basic l2 forwarding that statically maps mac addresses to ports.
 
 ## Testing the scenario
 1. To run the network scenario, open a terminal in the scenario directory and type: 
@@ -13,38 +18,9 @@ In other words, when a packet enters `port 1` it has to be leave from `port 2` a
 kathara lstart 
 ```
 
-2. For testing the P4 program, open a terminal on `h2` and run receive.py: 
+2. For testing the P4 program, open a terminal on one host and ping the others: 
 ```bash
-python3 receive.py
+root@h2:/# ping 10.0.0.1 
 ```
 
-3. Then, open a terminal on `h1` and run receive.py: 
-```bash
-python send.py 10.0.0.2 "Hello H2"
-```
-
-You will see an output like this on `h2`: 
-
-```bash 
-Packet Received:
-###[ Ethernet ]### 
-  dst       = 06:07:08:09:0a:0b
-  src       = 00:01:02:03:04:05
-  type      = IPv4
-###[ IP ]### 
-     version   = 4
-     ihl       = 5
-     tos       = 0x0
-     len       = 28
-     id        = 1
-     flags     = 
-     frag      = 0
-     ttl       = 64
-     proto     = hopopt
-     chksum    = 0x66df
-     src       = 10.0.0.1
-     dst       = 10.0.0.2
-     \options   \
-###[ Raw ]### 
-        load      = 'Hello H2'
-```
+3. If all the hosts can reach the others, the switch is working. 

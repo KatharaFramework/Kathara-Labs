@@ -1,19 +1,32 @@
-# P4 BMv2 Examples
+# 01-Reflector
+This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/01-Reflector).
+There, you can find a detailed explanation about the scenario, and the exercise (here only the solution are provided).
 
-Kathar&aacute; examples of P4 labs, taken from [nsg-ethz/p4-learning](https://github.com/nsg-ethz/p4-learning).
+## Network Scenario
+It is composed by two devices: one host `h1` and one switch `s1`. 
+This is a very simple example in which `s1` bounces back packets received on an interface. 
 
-Network scenario descriptions can be found [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises).
-
-## Prerequisites
-
-Some of the labs use Scapy to craft arbitrary packets. Hence, you need to build the `kathara/scapy` image.
-
-From this folder, open a terminal and type:
+## Testing the scenario
+To run the network scenario, open a terminal in the scenario directory and type: 
+```bash
+kathara lstart 
 ```
-docker build -t kathara/scapy .
+
+For testing the P4 program, open a terminal on `h1` and type: 
+```bash
+python3 send_receive.py 
 ```
 
-## Notes
+You will see an output like this: 
 
-Some implementation details, like MAC address assignment and IP assignment, could differ from the original solutions.
-As an example, the MAC address `ff:ff:ff:ff:ff:ff` cannot be used in Kathar&aacute;.
+```bash
+root@h1:/# python3 send_receive.py 
+Press the return key to send a packet:
+Sending on interface eth0 to 10.0.0.2
+
+[!] A packet was reflected from the switch: 
+[!] Info: 00:01:02:03:04:05 -> 4a:ca:38:cf:c4:32
+
+[!] A packet was reflected from the switch: 
+[!] Info: 00:01:02:03:04:05 -> 4a:ca:38:cf:c4:32
+```

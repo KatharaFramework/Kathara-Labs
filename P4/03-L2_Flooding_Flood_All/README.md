@@ -1,5 +1,5 @@
-# 02-L2-Basic-Forwarding
-This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/03-L2_Basic_forwarding).
+# 02-L2-Flood-All-Ports
+This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/03-L2_Flooding).
 There, you can find a detailed explanation about the scenario, and the exercise (here only the solutions are provided).
 
 ## Network Scenario
@@ -9,8 +9,7 @@ This is the network scenario topology:
 ![topology](images/l2_topology.png)
 
 It is composed by four hosts `hx` and one switch `s1`. 
-In order to familiarize with tables and how to map ethernet addresses to a given host (port), 
-the switch implement a very basic l2 forwarding that statically maps mac addresses to ports.
+The switch forwards received packets to all the ports. 
 
 ## Testing the scenario
 1. To run the network scenario, open a terminal in the scenario directory and type: 

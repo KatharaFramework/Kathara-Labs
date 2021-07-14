@@ -1,4 +1,4 @@
-# 02-L2-CPU-Copy
+# 02-L2-Learning-Digest
 This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/03-L2_Flooding).
 There, you can find a detailed explanation about the scenario, and the exercise (here only the solutions are provided).
 
@@ -25,7 +25,7 @@ exercise.
 
 For that we need a controller code, and instruct the switch to send the (mac, port) tuple to the controller.
 
-In this exercise packets are sent to the controller after cloning them. 
+In this exercise packets are sent to the controller using digests. 
 
 ## Testing the scenario
 1. To run the network scenario, open a terminal in the scenario directory and type: 
@@ -35,7 +35,7 @@ kathara lstart
 
 2. For testing the P4 program, open a terminal on the switch and type:
 ```bash
-python3 l2_learning_controller.py s1 cpu
+python3 l2_learning_controller.py s1 digest
 ```
 
 3. Open a terminal on one host and ping the others
