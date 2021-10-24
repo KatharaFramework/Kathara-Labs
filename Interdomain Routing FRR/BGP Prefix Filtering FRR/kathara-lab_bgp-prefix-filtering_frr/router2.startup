@@ -1,0 +1,4 @@
+/sbin/ifconfig eth0 193.10.11.2 up
+/sbin/ifconfig eth1 200.1.1.1 up
+/sbin/ifconfig eth2 200.1.2.1 up
+/etc/init.d/frr start
