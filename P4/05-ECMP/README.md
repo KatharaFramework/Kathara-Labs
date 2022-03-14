@@ -1,6 +1,6 @@
-# ECMP
-This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/05-ECMP).
-There, you can find a detailed explanation about the scenario, and the exercise (here only the solutions are provided).
+# 05-ECMP
+Original network scenario can be found [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/05-ECMP).
+There, you can find a detailed explanation about the scenario, and the exercise (here only the solution is provided).
 
 ## Network Scenario
 

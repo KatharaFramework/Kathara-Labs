@@ -1,3 +1,5 @@
+echo '127.0.0.1 localhost' > /etc/hosts
+
 p4c repeater.p4
 simple_switch -i 1@eth0 -i 2@eth1 repeater.json &
 

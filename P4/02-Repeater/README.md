@@ -1,6 +1,6 @@
 # 02-Repeater
-This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/02-Repeater).
-There, you can find a detailed explanation about the scenario, and the exercise (here only the solutions are provided).
+Original network scenario can be found [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/02-Repeater).
+There, you can find a detailed explanation about the scenario, and the exercise (here only the solution is provided).
 
 ## Network Scenario
 This is the network scenario topology: 
@@ -24,7 +24,7 @@ python3 receive.py
 
 3. Then, open a terminal on `h1` and run receive.py: 
 ```bash
-python send.py 10.0.0.2 "Hello H2"
+python3 send.py 10.0.0.2 "Hello H2"
 ```
 
 You will see an output like this on `h2`: 

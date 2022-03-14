@@ -1,6 +1,6 @@
-# 02-L2-Flood-Other-Ports
-This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/03-L2_Flooding).
-There, you can find a detailed explanation about the scenario, and the exercise (here only the solutions are provided).
+# 03-L2_Flooding_Flood_Others
+Original network scenario can be found [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/03-L2_Flooding).
+There, you can find a detailed explanation about the scenario, and the exercise (here only the solution is provided).
 
 ## Network Scenario
 

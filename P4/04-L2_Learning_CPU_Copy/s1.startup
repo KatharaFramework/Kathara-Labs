@@ -1,6 +1,3 @@
-# Install scapy
-python3 -m pip install scapy
-
 # Add CPU Port
 ip link add cpu type dummy
 ip link set cpu up

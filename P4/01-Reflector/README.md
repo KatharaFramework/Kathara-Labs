@@ -1,6 +1,6 @@
 # 01-Reflector
-This network scenario is taken from [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/01-Reflector).
-There, you can find a detailed explanation about the scenario, and the exercise (here only the solution are provided).
+Original network scenario can be found [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/01-Reflector).
+In that page, you can find a detailed explanation about the scenario, and the exercise (here only the solution is provided).
 
 ## Network Scenario
 It is composed by two devices: one host `h1` and one switch `s1`. 
