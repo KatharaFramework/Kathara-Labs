@@ -13,6 +13,11 @@ typedef bit<9>  egressSpec_t;
 typedef bit<48> macAddr_t;
 typedef bit<32> ip4Addr_t;
 
+enum bit<8> FieldLists {
+    none = 0,
+    redirect_FL = 1
+}
+
 header ethernet_t {
     macAddr_t dstAddr;
     macAddr_t srcAddr;
@@ -25,6 +30,7 @@ header cpu_t {
 }
 
 struct metadata {
+    @field_list(FieldLists.redirect_FL) 
     bit<9> ingressPort;
 }
 
@@ -105,7 +111,7 @@ control MyIngress(inout headers hdr,
 
     action mac_learn() {
         meta.ingressPort = standard_metadata.ingress_port;
-        clone3(CloneType.I2E, 100, meta);
+        clone_preserving_field_list(CloneType.I2E, 100, FieldLists.redirect_FL);
     }
 
     table smac {

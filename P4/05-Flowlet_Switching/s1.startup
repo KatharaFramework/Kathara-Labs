@@ -1,3 +1,4 @@
+ip link set eth0 address 00:00:00:00:01:01
 ip link set eth1 address 00:00:00:01:02:00
 ip link set eth2 address 00:00:00:01:03:00
 ip link set eth3 address 00:00:00:01:04:00

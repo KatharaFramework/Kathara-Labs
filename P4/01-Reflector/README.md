@@ -27,6 +27,4 @@ Sending on interface eth0 to 10.0.0.2
 [!] A packet was reflected from the switch: 
 [!] Info: 00:01:02:03:04:05 -> 4a:ca:38:cf:c4:32
 
-[!] A packet was reflected from the switch: 
-[!] Info: 00:01:02:03:04:05 -> 4a:ca:38:cf:c4:32
 ```

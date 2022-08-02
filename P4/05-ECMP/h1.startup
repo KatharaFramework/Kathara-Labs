@@ -1,3 +1,5 @@
 ip link set eth0 address 00:00:0a:00:01:01
 ip addr add 10.0.1.1/24 dev eth0
 ip r add 10.0.6.0/24 dev eth0
+
+arp -s 10.0.6.2 00:00:00:00:01:01
