@@ -1,5 +1,3 @@
-echo '127.0.0.1 localhost' > /etc/hosts
-
 p4c l2_basic_forwarding.p4
 simple_switch -i 1@eth0 -i 2@eth1 -i 3@eth2 -i 4@eth3 l2_basic_forwarding.json &
 

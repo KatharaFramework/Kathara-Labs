@@ -1,5 +1,3 @@
-echo '127.0.0.1 localhost' > /etc/hosts
-
 ip link set eth0 address 00:00:00:04:01:00
 ip link set eth1 address 00:00:00:04:06:00
 
