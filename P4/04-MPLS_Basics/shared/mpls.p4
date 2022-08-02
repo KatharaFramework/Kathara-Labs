@@ -63,7 +63,6 @@ parser MyParser(packet_in packet,
                 out headers hdr,
                 inout metadata meta,
                 inout standard_metadata_t standard_metadata) {
-
     state start {
         transition parse_ethernet;
     }
@@ -104,13 +103,12 @@ control MyVerifyChecksum(inout headers hdr, inout metadata meta) {
 control MyIngress(inout headers hdr,
                   inout metadata meta,
                   inout standard_metadata_t standard_metadata) {
-        
     action drop() {
         mark_to_drop(standard_metadata);
     }
 
-    action set_is_ingress_border(){
-        meta.is_ingress_border = (bit<1>)1;
+    action set_is_ingress_border() {
+        meta.is_ingress_border = (bit<1>) 1;
     }
 
     table check_is_ingress_border {
@@ -186,31 +184,24 @@ control MyIngress(inout headers hdr,
     }
 
     apply {
+        // We check if it is an ingress border port
+        check_is_ingress_border.apply();
 
-            // We check if it is an ingress border port
-            check_is_ingress_border.apply();
-
-            if(meta.is_ingress_border == 1){
-
-                // We need to check if the header is valid since mpls label is based on dst ip
-                if(hdr.ipv4.isValid()){
-                    
-                    // We add the label based on the destination
-                    fec_to_label.apply();
-                }
+        if(meta.is_ingress_border == 1) {
+            // We need to check if the header is valid since mpls label is based on dst ip
+            if(hdr.ipv4.isValid()) {
+                // We add the label based on the destination
+                fec_to_label.apply();
             }
-            
-            // We select the egress port based on the mpls label
-            if(hdr.mpls.isValid()){
-                mpls_tbl.apply();
-            }
-
+        }
+        
+        // We select the egress port based on the mpls label
+        if(hdr.mpls.isValid()) {
+            mpls_tbl.apply();
+        } else if(hdr.ipv4.isValid()) {
             // We implement normal forwarding
-            else if (hdr.ipv4.isValid())
-            {
-                ipv4_lpm.apply();
-            }
-
+            ipv4_lpm.apply();
+        }
     }
 }
 
@@ -221,9 +212,7 @@ control MyIngress(inout headers hdr,
 control MyEgress(inout headers hdr,
                  inout metadata meta,
                  inout standard_metadata_t standard_metadata) {
-
-    action is_egress_border(){
-        
+    action is_egress_border() {
         // We remove the mpls header
         hdr.mpls.setInvalid();
         hdr.ethernet.etherType = TYPE_IPV4;
@@ -244,9 +233,9 @@ control MyEgress(inout headers hdr,
 
     apply { 
         // We check if it is an egress border port
-        if (hdr.mpls.isValid()){
+        if(hdr.mpls.isValid()) {
             check_is_egress_border.apply();
-        }     
+        }
     }
 }
 

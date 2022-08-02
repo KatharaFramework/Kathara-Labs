@@ -1,7 +1,5 @@
-echo '127.0.0.1 localhost' > /etc/hosts
-
-ip link set eth0 address 00:00:00:03:01:00
-ip link set eth1 address 00:00:00:03:04:00
+ip link set eth0 address 00:00:00:05:04:00
+ip link set eth1 address 00:00:00:05:07:00
 
 p4c /shared/mpls.p4 -o /
 simple_switch -i 1@eth0 -i 2@eth1 mpls.json &
