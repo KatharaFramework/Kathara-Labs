@@ -2,6 +2,8 @@
 Original network scenario can be found [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/04-MPLS).
 There, you can find a detailed explanation about the scenario, and the exercise (here only the solution is provided).
 
+This network scenario has been adapted by Marco Vignaga (University of Padua).
+
 ## Network Scenario
 
 This is the network scenario topology: 
