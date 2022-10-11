@@ -1,0 +1,11 @@
+ip addr add 193.201.0.254/16 dev eth0
+
+ip route add default via 193.201.0.1
+
+update-ca-certificates --fresh
+
+mkdir -p /root/.rpki-cache/tals/
+mkdir -p /root/.rpki-cache/repository
+
+# wget --no-check-certificate https://193.0.0.1:3000/ta/ta.tal -P /root/.rpki-cache/tals/ 
+# routinator --rrdp-root-cert=/usr/local/share/ca-certificates/root.crt -c root/.routinator.conf -v server

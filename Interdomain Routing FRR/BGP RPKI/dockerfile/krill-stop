@@ -1,0 +1,5 @@
+#!/bin/bash
+DATA_DIR="/etc/krill"
+KRILL_PID="$DATA_DIR/krill.pid"
+
+kill `cat $KRILL_PID`

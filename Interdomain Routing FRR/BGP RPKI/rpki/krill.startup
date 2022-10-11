@@ -1,0 +1,23 @@
+ip addr add 193.0.0.1/24 dev eth0
+ip route add default via 193.0.0.2
+
+
+update-ca-certificates --fresh
+
+service haproxy start
+
+/etc/init.d/krill-start
+
+krillc health > /dev/null 2>&1
+while [ $? -ne 0 ]
+do
+    sleep 1
+    krillc health > /dev/null 2>&1
+done
+
+chmod +x /setup_ca.sh
+chmod +x /add_roas.sh
+
+/bin/bash /setup_ca.sh Kathara-CA
+sleep 3
+/bin/bash /add_roas.sh Kathara-CA
