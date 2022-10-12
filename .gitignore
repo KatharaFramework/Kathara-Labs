@@ -2,3 +2,5 @@
 
 # PowerPoint temporary
 ~$*.ppt*
+*.pem
+*.crt
