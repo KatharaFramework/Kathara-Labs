@@ -4,3 +4,19 @@ ip addr add 193.203.0.1/16 dev eth2
 ip addr add 10.3.33.2/30 dev eth3
 
 /etc/init.d/frr start
+
+curl 193.203.0.254:9556/api/v1/status > /dev/null 2>&1
+while [ $? -ne 0 ]
+do
+    sleep 2
+    curl 193.203.0.254:9556/api/v1/status > /dev/null 2>&1
+done
+
+curl 193.203.0.254:9556/api/v1/status | grep '"validROAs": 0' > /dev/null 2>&1
+while [ $? -eq 0 ]
+do
+    sleep 2
+    curl 193.203.0.254:9556/api/v1/status | grep '"validROAs": 0' > /dev/null 2>&1
+done
+
+/etc/init.d/frr restart

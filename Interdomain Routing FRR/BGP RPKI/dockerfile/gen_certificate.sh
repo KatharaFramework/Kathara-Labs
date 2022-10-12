@@ -14,7 +14,7 @@ openssl req -new \
 # Prepare x509 Certificate extensions
 {
             echo "[krill]"
-            echo "subjectAltName=DNS:localhost, IP:127.0.0.1, IP:193.0.0.1"
+            echo "subjectAltName=DNS:rpki-server.org, DNS:rpki-server.org:3000, DNS:rpki-server.org:80, IP:193.0.0.1"
             echo "basicConstraints=CA:FALSE"
 } >> krill.ext
 openssl req -new \
@@ -60,3 +60,6 @@ cp root.crt "../rpki/krill/usr/local/share/ca-certificates/root.crt"
 cp krill.includesprivatekey.pem "../rpki/krill/etc/ssl/certs/cert.includesprivatekey.pem"
 cp krill.crt "../rpki/krill/var/krill/data/ssl/cert.pem"
 cp krill.key "../rpki/krill/var/krill/data/ssl/key.pem"
+rm root.crt
+rm krill.includesprivatekey.pem krill.crt krill.key krill.csr krill.ext root.key
+

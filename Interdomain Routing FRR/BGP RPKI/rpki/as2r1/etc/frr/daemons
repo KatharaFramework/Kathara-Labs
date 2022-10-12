@@ -1,2 +1,3 @@
 zebra=yes
 bgpd=yes
+bgpd_options="   --daemon -A 127.0.0.1 -M rpki"

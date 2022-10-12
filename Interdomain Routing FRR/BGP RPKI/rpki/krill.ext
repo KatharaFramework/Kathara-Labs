@@ -1,3 +1,0 @@
-[krill]
-subjectAltName=DNS:localhost, IP:127.0.0.1, IP:193.0.0.1
-basicConstraints=CA:FALSE

@@ -2,10 +2,18 @@ ip addr add 193.204.0.254/16 dev eth0
 
 ip route add default via 193.204.0.1
 
-echo "42.42.42.42  rpki-server.org" >> /etc/hosts
+echo "193.0.0.1  rpki-server.org" >> /etc/hosts
+
+update-ca-certificates --fresh
+
 mkdir -p /root/.rpki-cache/tals/
 mkdir -p /root/.rpki-cache/repository
 
-(sleep 60; wget https://rpki-server.org:3000/ta/ta.tal -P /root/.rpki-cache/tals/) &
-(sleep 65; routinator --rrdp-root-cert=/usr/local/share/ca-certificates/root.crt -c root/.routinator.conf -v server) &
-(sleep 70; vtysh -c "rpki start")
+wget https://rpki-server.org:3000/ta/ta.tal -P /root/.rpki-cache/tals/ > /dev/null 2>&1
+while [ $? -ne 0 ]
+do
+    sleep 1
+    wget https://rpki-server.org:3000/ta/ta.tal -P /root/.rpki-cache/tals/ > /dev/null 2>&1
+done
+
+routinator --rrdp-root-cert=/usr/local/share/ca-certificates/root.crt -c root/.routinator.conf -v server &
