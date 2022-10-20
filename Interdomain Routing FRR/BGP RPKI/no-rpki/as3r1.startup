@@ -1,4 +1,5 @@
 ip addr add 10.2.3.2/30 dev eth0
 ip addr add 10.3.4.1/30 dev eth1
+ip addr add 10.3.33.2/30 dev eth2
 
 /etc/init.d/frr start
