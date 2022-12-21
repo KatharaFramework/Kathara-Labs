@@ -1,0 +1,24 @@
+ip link add bond1 type bond miimon 100 mode 802.3ad xmit_hash_policy layer3+4 all_slaves_active 1
+ip link set dev eth0 down
+ip link set dev eth1 down
+ip link set dev bond1 down
+ip link set eth0 master bond1
+ip link set eth1 master bond1
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip link set dev bond1 up
+
+
+# Creating the bridge
+ip link add br100 type bridge
+# Attach interfaces to the bridge
+ip link set dev bond1 master br100
+ip link set dev eth2 master br100
+ip link set dev eth3 master br100
+# Enable bridge vlans
+ip link set dev br100 type bridge vlan_filtering 1
+bridge vlan add vid 10 dev bond1
+bridge vlan add vid 20 dev bond1
+bridge vlan add vid 10 dev eth2 pvid untagged
+bridge vlan add vid 20 dev eth3 pvid untagged
+ip link set up dev br100
