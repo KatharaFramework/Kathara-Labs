@@ -1,0 +1,19 @@
+ifconfig eth1 193.204.0.1/30 up
+
+# Setting up VXLAN interfaces
+ip link add vtep100 type vxlan id 100 dev eth1 dstport 4789 local 193.204.0.1 nolearning
+ip link set up dev vtep100
+
+# Creating the companion bridge
+ip link add br100 type bridge
+# Attach interfaces to the bridge
+ip link set dev vtep100 master br100
+ip link set dev eth0 master br100
+# Enable bridge vlans
+ip link set dev br100 type bridge vlan_filtering 1
+bridge vlan add vid 100 dev vtep100 pvid untagged
+bridge vlan add vid 100 dev eth0 pvid untagged
+ip link set up dev br100
+
+# Enabling FRR
+/etc/init.d/frr start
