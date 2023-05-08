@@ -1,1 +1,1 @@
-chown quagga:quaggavtysh /etc/quagga
+chown quagga:quaggavty /etc/quagga
