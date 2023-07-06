@@ -1,5 +1,5 @@
-ifconfig eth0 10.0.0.1/30 up
-ifconfig eth1 10.0.0.5/30 up
+ifconfig eth0 10.0.0.9/30 up
+ifconfig eth1 10.0.0.13/30 up
 
 # Create loopback
 ip addr add 192.168.0.1/32 dev lo
@@ -15,13 +15,13 @@ ip link set up dev vtep5020
 ip link add vtep5030 type vxlan id 5030 dev lo dstport 4789 local 192.168.0.1 nolearning
 ip link set up dev vtep5030
 
-ip link add bond2 type bond miimon 100 mode 802.3ad
+ip link add bond2 type bond miimon 100 mode 802.3ad xmit_hash_policy layer3+4 lacp_rate 1
 ip link set down dev eth2
 ip link set dev eth2 master bond2
 ip link set up dev eth2
 ip link set up dev bond2
 
-ip link add bond3 type bond miimon 100 mode 802.3ad
+ip link add bond3 type bond miimon 100 mode 802.3ad xmit_hash_policy layer3+4 lacp_rate 1
 ip link set down dev eth3
 ip link set dev eth3 master bond3
 ip link set up dev eth3

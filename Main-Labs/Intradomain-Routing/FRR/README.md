@@ -1,0 +1,8 @@
+# Quagga Intradomain Routing
+This section includes laboratories about intradomain routing using [FRRouting](https://frrouting.org/)).
+
+| Name | Description | Slides | Lab |
+| --- | --- | --- | --- |
+| **RIP** | Experiences with the RIPv2 distance vector routing protocol | [ppt](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/RIP/007-kathara-lab_rip.ppt), [pdf](https://github.com/KatharaFramework/Kathara-Labs/blob/master/Intradomain%20Routing/RIP/007-kathara-lab_rip.pdf) | [zip](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/RIP/kathara-lab_rip.zip) |
+| **Quagga Introduction** | Introduction to Quagga (and to a Cisco-like router configuration) | [ppt](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/Quagga%20Introduction/002-kathara-lab_quagga.ppt), [pdf](https://github.com/KatharaFramework/Kathara-Labs/blob/master/Intradomain%20Routing/Quagga%20Introduction/002-kathara-lab_quagga.pdf) | [zip](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/Quagga%20Introduction/kathara-lab_quagga.zip) |
+| **OSPF** | A network showing the operation of the OSPF routing protocol. | [ppt](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/OSPF/019-kathara-labs_ospf.ppt), [pdf](https://github.com/KatharaFramework/Kathara-Labs/blob/master/Intradomain%20Routing/OSPF/019-kathara-labs_ospf.pdf) | [zip](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/OSPF/kathara-labs_ospf.zip) |
