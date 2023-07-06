@@ -2,12 +2,13 @@
 This page contains network scenarios created by the Kathará community. 
 The aim is to share ideas and use cases among Kathará users. 
 
-If you want to be added to this list, please contact us at [contact@kathara.org](mailto:contact@kathara.org), 
-open an issue or directly create a PR.
+If you have something interesting to share, please let us know!
 
-The Kathará Team is not responsible for maintaining the content of the external repositories below.
+You can email contact@kathara.org, open an issue in this repository or directly make a Pull Request.
 
-Beware: the following network scenarios are not tested by the Kathará Team. For any problem, refer to the authors. 
+Contributions are always welcome!
+
+**Beware**: The Kathará Team is not responsible for maintaining the content of the external repositories below. For any problem, refer directly to the authors. 
 
 
 | Author | Name | Description | Link |
