@@ -1,8 +1,8 @@
-# Quagga Intradomain Routing
-This section includes laboratories about intradomain routing using [FRRouting](https://frrouting.org/)).
+# FRRouting Intradomain Routing
+This section includes laboratories about intradomain routing using [FRRouting](https://frrouting.org/).
 
-| Name | Description | Slides | Lab |
-| --- | --- | --- | --- |
-| **RIP** | Experiences with the RIPv2 distance vector routing protocol | [ppt](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/RIP/007-kathara-lab_rip.ppt), [pdf](https://github.com/KatharaFramework/Kathara-Labs/blob/master/Intradomain%20Routing/RIP/007-kathara-lab_rip.pdf) | [zip](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/RIP/kathara-lab_rip.zip) |
-| **Quagga Introduction** | Introduction to Quagga (and to a Cisco-like router configuration) | [ppt](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/Quagga%20Introduction/002-kathara-lab_quagga.ppt), [pdf](https://github.com/KatharaFramework/Kathara-Labs/blob/master/Intradomain%20Routing/Quagga%20Introduction/002-kathara-lab_quagga.pdf) | [zip](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/Quagga%20Introduction/kathara-lab_quagga.zip) |
-| **OSPF** | A network showing the operation of the OSPF routing protocol. | [ppt](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/OSPF/019-kathara-labs_ospf.ppt), [pdf](https://github.com/KatharaFramework/Kathara-Labs/blob/master/Intradomain%20Routing/OSPF/019-kathara-labs_ospf.pdf) | [zip](https://github.com/KatharaFramework/Kathara-Labs/raw/master/Intradomain%20Routing/OSPF/kathara-labs_ospf.zip) |
+| Name                 | Description                                                   | Slides                                                                                                       | Lab                                               |
+|----------------------|---------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
+| **FRR Introduction** | Introduction to FRR                                           | [ppt](FRRouting-Introduction/006-kathara-lab_frr.ppt), [pdf](FRRouting-Introduction/006-kathara-lab_frr.pdf) | [zip](FRRouting-Introduction/kathara-lab_frr.zip) |
+| **RIP**              | Experiences with the RIPv2 distance vector routing protocol   | [ppt](RIP/009-kathara-lab_rip_frr.ppt), [pdf](RIP/009-kathara-lab_rip_frr.pdf)                               | [zip](RIP/kathara-lab_rip_frr.zip)                |
+| **OSPF**             | A network showing the operation of the OSPF routing protocol. | [ppt](OSPF/020-kathara-labs_ospf_frr.ppt), [pdf](OSPF/020-kathara-labs_ospf_frr.pdf)                         | [zip](OSPF/kathara-labs_ospf_frr.zip)             |
