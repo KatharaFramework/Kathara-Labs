@@ -1,4 +1,4 @@
-# Main-Labs
+# Main Labs
 This section contains the laboratories used in the course of "Internet and Data Centers" at
 Roma Tre university. 
 

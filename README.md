@@ -4,7 +4,7 @@ This repository contains the official network scenarios of [Kathará](https://gi
 ## Tutorials
 The [Tutorials](tutorials) directory contains several tutorials about basic and advanced usage of Kathará.
 
-## Main-Labs
+## Main Labs
 The [Main-Labs](main-labs) directory contains the laboratories used in the course of "Internet and Data Centers" at
 Roma Tre university. 
 
@@ -18,7 +18,7 @@ the related explanation slides.
 * [Labs Integrating Several Technologies](main-labs/labs-integrating-several-technologies)
 * [P4](main-labs/p4) (Thanks to ETH Zurich :smile:)
 
-## Community-Labs
+## Community Labs
 The [Community-Labs](community-labs) directory contains a collection of network scenarios from the Kathará community.
 
 If you have something interesting to share, please let us know! 
@@ -29,7 +29,7 @@ Pull Request.
 Contributions are always welcome! 
 
 
-## Exam-Labs
+## Exam Labs
 The [Exam-Labs](exam-labs) directory contains the network scenarios used for the practical exams of the course 
 "Internet and Data Centers" at  Roma Tre University.
 
