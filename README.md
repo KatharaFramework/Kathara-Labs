@@ -19,7 +19,7 @@ the related explanation slides.
 * [P4](Main-Labs/P4) (Thanks to ETH Zurich :smile:)
 
 ## Community-Labs
-The [Community-Labs](Community-Labs) directory contains a collection of network scenarios from the Kathará community.
+The [Community-Labs](community-labs) directory contains a collection of network scenarios from the Kathará community.
 
 If you have something interesting to share, please let us know! 
 
@@ -30,7 +30,7 @@ Contributions are always welcome!
 
 
 ## Exam-Labs
-The [Exam-Labs](Exam-Labs) directory contains the network scenarios used for the practical exams of the course 
+The [Exam-Labs](exam-labs) directory contains the network scenarios used for the practical exams of the course 
 "Internet and Data Centers" at  Roma Tre University.
 
 For each scenario you can find a `.pdf` file containing the exam's text and the relative solution. 
