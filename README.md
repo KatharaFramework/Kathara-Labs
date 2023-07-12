@@ -2,7 +2,7 @@
 This repository contains the official network scenarios of [Kathará](https://github.com/KatharaFramework/Kathara).
 
 ## Tutorials
-The [Tutorials](Tutorials) directory contains several tutorials about basic and advanced usage of Kathará.
+The [Tutorials](tutorials) directory contains several tutorials about basic and advanced usage of Kathará.
 
 ## Main-Labs
 The [Main-Labs](Main-Labs) directory contains the laboratories used in the course of "Internet and Data Centers" at
