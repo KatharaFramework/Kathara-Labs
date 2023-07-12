@@ -1,2 +1,0 @@
-ifconfig eth0 5.5.2.2/24 up
-route add default gw 5.5.2.1 dev eth0

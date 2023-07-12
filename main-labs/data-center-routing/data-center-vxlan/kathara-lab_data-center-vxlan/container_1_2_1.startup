@@ -1,0 +1,4 @@
+ifconfig eth0 200.30.0.1/16 up
+ip link set dev eth0 mtu 1450
+
+/etc/init.d/apache2 start

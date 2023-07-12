@@ -1,0 +1,11 @@
+$TTL    60000
+@               IN      SOA     dnsr3.uniroma3.it.    root.dnsr3.uniroma3.it. (
+                        2006031201 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@               IN      NS      dnsr3.uniroma3.it.
+dnsr3           IN      A       100.1.3.2
+www		        IN	    A	    100.1.2.2

@@ -1,3 +1,0 @@
-a. Router-id is 100.20.2.21 (the highest IP Address of its interfaces)
-b. The one with the highest router ID: 100.20.2.21 [b02] > 100.20.1.20 [b012], so it's b02
-c. r12, r11, r21, r31 (the ones not assigned to the backbone area)

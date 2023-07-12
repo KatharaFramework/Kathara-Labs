@@ -1,0 +1,46 @@
+# 05-ECMP
+Original network scenario can be found [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises/05-ECMP).
+There, you can find a detailed explanation about the scenario, and the exercise (here only the solution is provided).
+
+## Network Scenario
+
+This is the network scenario topology: 
+
+![topology](images/multi_hop_topo.png)
+
+The `s1` and `s6` switches implements an ECMP policy, sending traffic on all the links for a destination. 
+For example in the topology below, when `s1` has to send
+a packet to `h2`, the switch should determine the output port by computing: `hash(some-header-fields) mod 4`. 
+To prevent out of order packets, ECMP hashing is done on a per-flow basis,
+which means that all packets with the same source and destination IP addresses and the same source and destination
+ports always hash to the same next hop.
+
+## Testing the scenario
+1. To run the network scenario, open a terminal in the scenario directory and type: 
+```bash
+kathara lstart 
+```
+
+2. Open a terminal on one hosts and ping the others to verify reachability:
+```bash
+root@h1:/# ping 10.0.6.2 
+```
+
+3. If all the hosts can reach the others, open a tcpdump on the links towards `s1` and the other switches.
+
+4. Ping between two hosts: you should see traffic in only 1 or 2 interfaces (due to the return path).
+   Since all the ping packets have the same 5-tuple.
+
+5. Do iperf between two hosts: you should also see traffic in 1 or 2 interfaces (due to the return path).
+   Since all the packets belonging to the same flow have the same 5-tuple, and thus the hash always returns the same index.
+
+6. Get a terminal in `h1`. Use the `send.py` script.
+
+```bash
+python3 send.py 10.0.6.2 1000
+```
+
+This will send `tcp syn` packets with random ports. Now you should see packets going to all the interfaces, 
+since each packet will have a different hash.
+
+

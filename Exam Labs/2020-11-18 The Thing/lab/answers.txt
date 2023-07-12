@@ -1,9 +1,0 @@
-a. The router-id of b012 is 100.20.1.20 (the one corresponding to the highest ip address)
-
-b. The designeted router for LAN G is b03 (the one  with the highest router-id: 100.30.1.30 > 10.20.1.20)
-
-c. Two 0/0 can be found in r21, one coming from b012 and one from b02. The possible choises can be found in the following: 
-   =================================================================
-    O> 0.0.0.0/0 [110/11] via 100.20.1.20, eth0, 00:18:37
-                      	  via 100.20.2.20, eth1, 00:18:37
-   =================================================================

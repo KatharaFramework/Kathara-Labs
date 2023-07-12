@@ -1,0 +1,12 @@
+ip link set eth0 address 00:00:00:04:02:00
+ip link set eth1 address 00:00:00:04:03:00
+ip link set eth2 address 00:00:00:04:05:00
+ip link set eth3 address 00:00:00:04:06:00
+
+p4c /shared/mpls.p4 -o /
+simple_switch -i 1@eth0 -i 2@eth1 -i 3@eth2 -i 4@eth3 mpls.json &
+
+while [[ $(pgrep simple_switch) -eq 0 ]]; do sleep 1; done
+until simple_switch_CLI <<< "help"; do sleep 1; done
+
+simple_switch_CLI <<< $(cat commands.txt)

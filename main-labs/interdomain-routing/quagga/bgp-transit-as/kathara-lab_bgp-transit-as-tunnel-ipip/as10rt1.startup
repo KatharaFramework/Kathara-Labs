@@ -1,0 +1,12 @@
+ifconfig eth0 11.0.0.2 netmask 255.255.255.252 up
+ifconfig lo:1 1.1.1.1 netmask 255.255.255.255 up
+ip tunnel add r1r3 mode ipip remote 3.3.3.3 local 1.1.1.1 ttl 10
+ip link set r1r3 multicast on
+ip addr add dev r1r3 13.0.0.2 peer 13.0.0.1
+ifconfig r1r3 up
+ip tunnel add r1r2 mode ipip remote 2.2.2.2 local 1.1.1.1 ttl 10
+ip link set r1r2 multicast on
+ip addr add dev r1r2 13.0.0.5 peer 13.0.0.6
+ifconfig r1r2 up
+/etc/init.d/zebra start
+
