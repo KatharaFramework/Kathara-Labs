@@ -7,7 +7,7 @@ This tutorial shows how to manage the lab filesystem from the Python APIs.
 In the following we will provide a complete explanation of the script. 
 
 ## Lab Configuration
-We will recreate the official lab [BGP Announcement FRR](../../../Main-Labs/Interdomain-Routing/FRR/BGP-Announcement) 
+We will recreate the official lab [BGP Announcement FRR](../../../main-labs/interdomain-routing/frr/bgp-announcement) 
 using the APIs. 
 
 ![img.png](topology.png)

@@ -5,18 +5,18 @@ This repository contains the official network scenarios of [Kathará](https://gi
 The [Tutorials](tutorials) directory contains several tutorials about basic and advanced usage of Kathará.
 
 ## Main-Labs
-The [Main-Labs](Main-Labs) directory contains the laboratories used in the course of "Internet and Data Centers" at
+The [Main-Labs](main-labs) directory contains the laboratories used in the course of "Internet and Data Centers" at
 Roma Tre university. 
 
 The laboratories cover several topics. For each topic there are different scenarios and for each of them you can find 
 the related explanation slides.
-* [Basic Topics](Main-Labs/Basic-Topics)
-* [Application Level](Main-Labs/Application-Level)
-* [Intradomain Routing](Main-Labs/Intradomain-Routing)
-* [Interdomain Routing](Main-Labs/Interdomain-Routing)
-* [Data Center Routing](Main-Labs/Data-Center-Routing)
-* [Labs Integrating Several Technologies](Main-Labs/Labs-Integrating-Several-Technologies)
-* [P4](Main-Labs/P4) (Thanks to ETH Zurich :smile:)
+* [Basic Topics](main-labs/basic-topics)
+* [Application Level](main-labs/application-level)
+* [Intradomain Routing](main-labs/intradomain-routing)
+* [Interdomain Routing](main-labs/interdomain-routing)
+* [Data Center Routing](main-labs/data-center-routing)
+* [Labs Integrating Several Technologies](main-labs/labs-integrating-several-technologies)
+* [P4](main-labs/p4) (Thanks to ETH Zurich :smile:)
 
 ## Community-Labs
 The [Community-Labs](community-labs) directory contains a collection of network scenarios from the Kathará community.
