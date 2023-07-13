@@ -5,11 +5,11 @@ This repository contains the official network scenarios of [Kathará](https://gi
 The [tutorials](tutorials) directory contains several tutorials about basic and advanced usage of Kathará.
 
 ## Main Labs
-The [main-labs](main-labs) directory contains the laboratories used in the course of "Internet and Data Centers" at
+The [main-labs](main-labs) directory contains the network scenarios used in the course of "Internet and Data Centers" at
 Roma Tre university. 
 
-The laboratories cover several topics. For each topic there are different scenarios and for each of them you can find 
-the related explanation slides.
+The network scenarios cover several topics. For each topic there are different scenarios and for each of them you can find 
+the related explanatory slides.
 * [Basic Topics](main-labs/basic-topics)
 * [Application Level](main-labs/application-level)
 * [Intradomain Routing](main-labs/intradomain-routing)
@@ -31,7 +31,7 @@ Contributions are always welcome!
 
 ## Exam Labs
 The [exam-labs](exam-labs) directory contains the network scenarios used for the practical exams of the course 
-"Internet and Data Centers" at  Roma Tre University.
+"Internet and Data Centers" at Roma Tre University.
 
 For each scenario you can find a `.pdf` file containing the exam's text and the relative solution. 
 
