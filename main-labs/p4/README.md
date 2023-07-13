@@ -1,6 +1,6 @@
 # P4 BMv2 Examples
 
-Kathar&aacute; examples of P4 labs, taken from [nsg-ethz/p4-learning](https://github.com/nsg-ethz/p4-learning).
+Kathar&aacute; examples of P4 network scenarios, taken from [nsg-ethz/p4-learning](https://github.com/nsg-ethz/p4-learning).
 
 Network scenario descriptions can be found [here](https://github.com/nsg-ethz/p4-learning/tree/master/exercises).
 

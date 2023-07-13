@@ -1,11 +1,12 @@
-# Python API - Tutorials
+# Python APIs - Tutorials
 
-Kathará provides also Python API that allow you to interact with it within Python apps.
+Kathará also provides Python APIs that allow to interact with the tool within Python apps.
 
-Here you can find some tutorials explaining how to use the Python API. 
+Here you can find some tutorials explaining how to use Python APIs. 
 
-* [Getting-Started](getting-started)
-* [Managing-Filesystem](managing-filesystem)
+* [Getting Started](getting-started)
+* [Managing Filesystem](managing-filesystem)
 
-## Documentation 
+## Documentation
+
 You can find a complete overview of the Kathará API at [docs](https://github.com/KatharaFramework/Kathara/wiki/Kathara-API-Docs). 

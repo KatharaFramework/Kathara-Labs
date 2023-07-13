@@ -1,5 +1,5 @@
 # Basic Topics
-This section includes basic laboratories to get confident with networking and Kathará.
+This section includes basic network scenarios to get confident with networking and Kathará.
 
 | Name               | Description                                                             | Slides                                                                                                              | Lab                                                  |
 |--------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
