@@ -1,0 +1,2 @@
+/sbin/ifconfig eth0 192.168.0.11 up
+/etc/init.d/bind start

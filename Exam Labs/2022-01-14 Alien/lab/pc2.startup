@@ -1,2 +1,0 @@
-ifconfig eth0 4.4.2.2/24 up
-route add default gw 4.4.2.1 dev eth0

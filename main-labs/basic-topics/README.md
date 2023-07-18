@@ -1,0 +1,8 @@
+# Basic Topics
+This section includes basic laboratories to get confident with networking and Kathará.
+
+| Name               | Description                                                             | Slides                                                                                                              | Lab                                                  |
+|--------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| **Two hosts**      | A simple network with two hosts connected to the same collision domain. | [ppt](two-hosts/003-kathara-lab_two-hosts.pptx), [pdf](two-hosts/003-kathara-lab_two-hosts.pdf)                     | -                                                    |
+| **Static routing** | Configuration of static routes in a simple network with two routers.    | [ppt](static-routing/004-kathara-lab_static-routing.pptx), [pdf](static-routing/004-kathara-lab_static-routing.pdf) | [zip](static-routing/kathara-lab_static-routing.zip) |
+| **ARP**            | Understanding ARP when routers are involved.                            | [ppt](arp/005-kathara-lab_arp.ppt), [pdf](arp/005-kathara-lab_arp.pdf)                                              | [zip](arp/kathara-lab_arp.zip)                       |

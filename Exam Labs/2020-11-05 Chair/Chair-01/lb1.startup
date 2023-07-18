@@ -1,6 +1,0 @@
-ifconfig eth0 50.50.50.11/24 up
-ifconfig eth1 10.0.0.11/24 up
-route add default gw 50.50.50.22 dev eth0
-
-iptables --table nat --append PREROUTING --destination 50.50.50.11 -p tcp --dport 80 --match statistic --mode random --probability 0.5 --jump DNAT --to-destination 10.0.0.1:80
-iptables --table nat --append PREROUTING --destination 50.50.50.11 -p tcp --dport 80 --jump DNAT --to-destination 10.0.0.2:80

@@ -1,26 +1,44 @@
 # Kathara Labs
+This repository contains the official network scenarios of [Kathará](https://github.com/KatharaFramework/Kathara).
 
-Repository containing all the official network scenarios of [Kathará](https://github.com/KatharaFramework/Kathara).
+## Tutorials
+The [tutorials](tutorials) directory contains several tutorials about basic and advanced usage of Kathará.
 
-## Official Labs
-* [Introduction](https://github.com/KatharaFramework/Kathara-Labs/blob/master/001-kathara-introduction.pdf)
-* [Basic Topics](https://github.com/KatharaFramework/Kathara-Labs/tree/master/Basic%20Topics)
-* [Application Level](https://github.com/KatharaFramework/Kathara-Labs/tree/master/Application%20Level)
-* [Intradomain Routing](https://github.com/KatharaFramework/Kathara-Labs/tree/master/Intradomain%20Routing)
-* [Interdomain Routing Quagga](https://github.com/KatharaFramework/Kathara-Labs/tree/master/Interdomain%20Routing)
-* [Interdomain Routing FRR](https://github.com/KatharaFramework/Kathara-Labs/tree/master/Interdomain%20Routing%20FRR)
-* [Data Center Routing](https://github.com/KatharaFramework/Kathara-Labs/tree/master/Data%20Center%20Routing)
-* [Labs Integrating Several Technologies](https://github.com/KatharaFramework/Kathara-Labs/tree/master/Labs%20Integrating%20Several%20Technologies)
-* [Exam Labs](https://github.com/KatharaFramework/Kathara-Labs/tree/master/Exam%20Labs)
+## Main Labs
+The [main-labs](main-labs) directory contains the laboratories used in the course of "Internet and Data Centers" at
+Roma Tre university. 
 
-## Advanced Labs
-* [P4](https://github.com/KatharaFramework/Kathara-Labs/tree/master/P4)
+The laboratories cover several topics. For each topic there are different scenarios and for each of them you can find 
+the related explanation slides.
+* [Basic Topics](main-labs/basic-topics)
+* [Application Level](main-labs/application-level)
+* [Intradomain Routing](main-labs/intradomain-routing)
+* [Interdomain Routing](main-labs/interdomain-routing)
+* [Data Center Routing](main-labs/data-center-routing)
+* [Labs Integrating Several Technologies](main-labs/labs-integrating-several-technologies)
+* [P4](main-labs/p4) (Thanks to ETH Zurich :smile:)
 
 ## Community Labs
-* [List of the community Labs](https://github.com/KatharaFramework/Kathara-Labs/wiki/Community-Labs)
+The [community-labs](community-labs) directory contains a collection of network scenarios from the Kathará community.
+
+If you have something interesting to share, please let us know! 
+
+You can email [contact@kathara.org](mailto:contact@kathara.org), open an issue in this repository or directly make a 
+Pull Request. 
+
+Contributions are always welcome! 
+
+
+## Exam Labs
+The [exam-labs](exam-labs) directory contains the network scenarios used for the practical exams of the course 
+"Internet and Data Centers" at  Roma Tre University.
+
+For each scenario you can find a `.pdf` file containing the exam's text and the relative solution. 
+
+You can use it for training and practice!
 
 ## Netkit Labs
 
 If you need additional network scenarios, you can visit the old [Netkit Lab Page](https://www.netkit.org/exams.html). 
 
-**Beware those network scenarios are not tested on Kathará so they may not work properly!**
+**Beware those network scenarios are not tested on Kathará, so they may not work properly!**

@@ -1,3 +1,0 @@
-ifconfig eth0 50.50.50.22/24 up
-ifconfig eth1 100.100.100.22/24 up
-route add -net 150.150.150.0/24 gw 100.100.100.33 dev eth1

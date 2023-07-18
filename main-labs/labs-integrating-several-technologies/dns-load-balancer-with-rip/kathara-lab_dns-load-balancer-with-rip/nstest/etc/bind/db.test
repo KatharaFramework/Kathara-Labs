@@ -1,0 +1,7 @@
+$TTL   60000
+@    IN SOA ns.test. root.ns.test. 2006031201 28800 14400 3600000 0
+
+server.test.    IN A 30.0.0.3
+server.test.    IN A 30.0.0.2
+test.    IN NS ns.test.
+ns.test.     IN A 20.0.0.3
