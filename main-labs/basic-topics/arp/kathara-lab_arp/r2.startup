@@ -1,3 +1,4 @@
-ifconfig eth0 200.1.1.1 hw ether FE:FD:C8:01:01:01 up
-ifconfig eth1 100.0.0.10 netmask 255.255.255.252 broadcast 100.0.0.11 up
-route add -net 195.11.14.0 netmask 255.255.255.0 gw 100.0.0.9 dev eth1
+ip link set dev eth0 address FE:FD:C8:01:01:01
+ip address add 200.1.1.1/24 dev eth0
+ip address add 100.0.0.10/30 dev eth1
+ip route add 195.11.14.0/24 via 100.0.0.9 dev eth1
