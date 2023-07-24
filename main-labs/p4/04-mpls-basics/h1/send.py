@@ -19,7 +19,7 @@ def main():
 
     pkt = Ether(src=get_if_hwaddr(iface), dst='00:00:00:01:01:00')
     pkt = pkt /IP(dst=addr) / TCP(dport=random.randint(5000,60000), sport=random.randint(49152,65535))
-    sendp(pkt, iface=iface, verbose=True, loop=int(sys.argv[2]), inter=0.5)
+    sendp(pkt, iface=iface, verbose=True, count=int(sys.argv[2]), inter=0.5)
 
 if __name__ == '__main__':
     main()
