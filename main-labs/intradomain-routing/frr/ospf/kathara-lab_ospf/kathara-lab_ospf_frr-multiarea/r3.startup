@@ -1,5 +1,4 @@
-ifconfig eth0 120.0.0.2 netmask 255.255.255.252 up
-ifconfig eth1 110.0.0.2 netmask 255.255.255.252 up
-ifconfig eth2 210.0.0.1 netmask 255.255.255.0 up
-/etc/init.d/frr start
-
+ip address add 120.0.0.2/30 dev eth0
+ip address add 110.0.0.2/30 dev eth1
+ip address add 210.0.0.1/24 dev eth2
+systemctl start frr
