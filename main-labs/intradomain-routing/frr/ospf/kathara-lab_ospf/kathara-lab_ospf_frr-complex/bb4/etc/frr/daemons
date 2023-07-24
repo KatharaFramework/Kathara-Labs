@@ -50,4 +50,3 @@ fabricd_options="  --daemon -A 127.0.0.1"
 # or you can use "all_wrap" for all daemons, e.g. to use perf record:
 #   all_wrap="/usr/bin/perf record --call-graph -"
 # the normal daemon command is added to this at the end.
-
