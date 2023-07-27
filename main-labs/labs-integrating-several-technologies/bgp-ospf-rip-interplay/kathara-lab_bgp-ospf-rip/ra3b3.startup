@@ -1,5 +1,4 @@
-ifconfig eth0 3.1.0.1/16 up
-ifconfig eth1 3.2.0.2/16 up
-ifconfig eth2 23.0.0.2/8 up
-
-/etc/init.d/zebra start
+ip address add 3.1.0.1/16 dev eth0
+ip address add 3.2.0.2/16 dev eth1
+ip address add 23.0.0.2/8 dev eth2
+systemctl start quagga
