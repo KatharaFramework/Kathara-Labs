@@ -1,5 +1,5 @@
-ifconfig eth0 100.0.0.2 netmask 255.255.255.0 up
-ifconfig eth1 10.0.0.5 netmask 255.255.255.0 up
+ip address add 100.0.0.2/24 dev eth0
+ip address add 10.0.0.5/24 dev eth1
 
 iptables-legacy --table nat --append PREROUTING --destination 100.0.0.2 -p tcp --dport 80 --match statistic --mode random --probability 0.33 --jump DNAT --to-destination 10.0.0.1:80
 iptables-legacy --table nat --append PREROUTING --destination 100.0.0.2 -p tcp --dport 80 --match statistic --mode random --probability 0.5 --jump DNAT --to-destination 10.0.0.2:80
