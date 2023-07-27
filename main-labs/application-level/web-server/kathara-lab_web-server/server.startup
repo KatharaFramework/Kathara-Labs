@@ -1,3 +1,2 @@
-ifconfig eth0 10.0.0.1 netmask 255.255.255.0 up
-/etc/init.d/apache2 start
-
+ip address add 10.0.0.1/24 dev eth0
+systemctl start apache2
