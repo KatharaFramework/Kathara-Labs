@@ -1,5 +1,5 @@
-ifconfig eth0 10.0.0.9/30 up
-ifconfig eth1 10.0.0.13/30 up
+ip address add 10.0.0.9/30 dev eth0
+ip address add 10.0.0.13/30 dev eth1
 
 # Create loopback
 ip addr add 192.168.0.1/32 dev lo
@@ -48,4 +48,4 @@ bridge vlan add vid 20 dev bond3
 bridge vlan add vid 30 dev bond3
 ip link set up dev br100
 
-/etc/init.d/frr start
+systemctl start frr

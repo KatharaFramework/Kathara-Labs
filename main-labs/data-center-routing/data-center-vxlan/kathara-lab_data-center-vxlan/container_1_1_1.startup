@@ -1,4 +1,4 @@
-ifconfig eth0 200.10.0.1/16 up
+ip address add 200.10.0.1/16 dev eth0
 ip link set dev eth0 mtu 1450
 
-/etc/init.d/apache2 start
+systemctl start apache2
