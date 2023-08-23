@@ -1,4 +1,4 @@
-# Community-Labs
+z# Community-Labs
 This page contains network scenarios created by the Kathará community. 
 The aim is to share ideas and use cases among Kathará users. 
 
@@ -26,3 +26,4 @@ Contributions are always welcome!
 | Lorenzo Valeriani, Daniele Ferrarelli, Marco Ferri | KatharaRPKI | This project is structured in two parts. In the first part, a BGP Hijacking attack is implemented. In the second part, it is shown how a Resource Public Key Infrastructure (RPKI) makes it possible to prevent this type of threat. | [Link](https://github.com/ThetaRangers/KatharaRPKI) |
 | Tommaso Caiazzi | Kathara-TRex | A collection of Kathará network scenarios for testing the [TRex](https://trex-tgn.cisco.com/) traffic generator. | [Link](https://github.com/tcaiazzi/kathara-trex-labs) |
 | Federico Cignoli | KathaCigno | A lab explaining how to configure a firewall using iptables | [Link](https://github.com/Fede-droid/KathaCigno) | 
+| Leonardo Linguaglossa | Kathara-BGP | Practical lab on the configuration of BGP using Kathará | [Link](https://gitlab.telecom-paris.fr/linguaglossa/gin201-bgp-lab) |
