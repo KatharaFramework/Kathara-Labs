@@ -3,7 +3,7 @@ ip address add 10.0.0.5/30 dev eth1
 
 # Create loopback
 ip addr add 192.168.0.1/32 dev lo
-route add 192.168.0.1/32 dev lo
+ip route add 192.168.0.1/32 dev lo
 
 # Setting up VXLAN interfaces
 ip link add vtep5010 type vxlan id 5010 dev lo dstport 4789 local 192.168.0.1 nolearning
