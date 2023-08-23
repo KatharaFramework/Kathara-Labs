@@ -1,6 +1,5 @@
-ifconfig eth0 11.0.0.10/30 up
-ifconfig eth1 30.3.3.1/24 up
-ifconfig eth2 11.0.0.25/30 up
-ifconfig eth3 11.0.0.18/30 up
-/etc/init.d/quagga start
-
+ip address add 11.0.0.10/30 dev eth0
+ip address add 30.3.3.1/24 dev eth1
+ip address add 11.0.0.25/30 dev eth2
+ip address add 11.0.0.18/30 dev eth3
+systemctl start quagga
