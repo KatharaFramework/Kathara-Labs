@@ -1,8 +1,8 @@
 # Main Labs
-This section contains the laboratories used in the course of "Internet and Data Centers" at
+This section contains the network scenarios used in the course of "Internet and Data Centers" at
 Roma Tre university. 
 
-The laboratories cover several topics. For each topic there are different scenarios and for each of them you can find 
+The network scenarios cover several topics. For each topic there are different scenarios and for each of them you can find 
 the related explanation slides.
 
 * [Basic Topics](basic-topics): A set of network scenarios on basic networking topics.

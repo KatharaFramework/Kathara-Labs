@@ -1,5 +1,5 @@
 # Application Level
-This section includes laboratories about the application level.
+This section includes network scenarios about the application level.
 
 | Name                     | Description                                 | Slides                                                                                                                                      | Lab                                                              |
 |--------------------------|---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|

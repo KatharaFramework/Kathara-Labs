@@ -72,8 +72,8 @@ This is an example of output.
 This is just an example of what you can do with Kathará Python API.
 
 ## What's next?
-The API also allows you to manage the labs and devices filesystem to create more complex scenarios. 
-If you are interested follow the [Managing-Filesystem](../managing-filesystem) tutorial. 
+The API also allows you to manage network scenarios and devices filesystem to create more complex scenarios. 
+If you are interested follow the [Managing Filesystem](../managing-filesystem) tutorial. 
 
 ## Documentation 
 You can find a complete overview of the Kathará API at [docs](https://github.com/KatharaFramework/Kathara/wiki/Kathara-API-Docs).  
