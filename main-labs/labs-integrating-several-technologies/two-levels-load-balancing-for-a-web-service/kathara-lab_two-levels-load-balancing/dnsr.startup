@@ -1,4 +1,4 @@
-ifconfig eth0 45.67.0.14/24 up
-route add default gw 45.67.0.17 dev eth0
+ip address add 45.67.0.14/24 dev eth0
+ip route add default via 45.67.0.17 dev eth0
 
-/etc/init.d/bind start
+systemctl start named

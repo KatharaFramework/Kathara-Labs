@@ -1,6 +1,6 @@
-ifconfig eth0 123.0.0.11/24 up
-ifconfig eth1 45.67.0.17/24 up
-ifconfig eth2 109.0.0.10/24 up
+ip address add 123.0.0.11/24 dev eth0
+ip address add 45.67.0.17/24 dev eth1
+ip address add 109.0.0.10/24 dev eth2
 
-route add -net 11.1.1.0/24 gw 109.0.0.9 dev eth2
-route add -net 22.2.2.0/24 gw 109.0.0.9 dev eth2
+ip route add 11.1.1.0/24 via 109.0.0.9 dev eth2
+ip route add 22.2.2.0/24 via 109.0.0.9 dev eth2
