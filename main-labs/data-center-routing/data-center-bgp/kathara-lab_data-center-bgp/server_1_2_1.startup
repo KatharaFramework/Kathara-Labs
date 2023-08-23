@@ -1,2 +1,2 @@
 ip address add 201.2.1.2/24 dev eth0
-route add default gw 201.2.1.1 eth0
+ip route add default via 201.2.1.1 dev eth0
