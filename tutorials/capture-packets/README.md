@@ -4,6 +4,12 @@ This tutorial explain how to capture packets of a collision domain using Wiresha
 
 Thanks to [nopid](https://github.com/nopid) and [whatever4711](https://github.com/whatever4711) for suggesting this brilliant solution! :rocket:
 
+## Docker Desktop Compatibility
+Due to a Docker Desktop issue currently the port forwarding smoothly works only on linux (KatharaFramework/Kathara#230). 
+However, if you are using **Docker Desktop** it is possible to circumvent the problem using the `lconfig command`,
+as described by the issue KatharaFramework/Kathara#230.
+
+
 ## Let's start!
 Let's consider the simple network scenario in the [lab](lab) directory, that is composed by two devices, namely 
 `pc1` and `pc2`
@@ -27,33 +33,44 @@ pc2[0]=A
 
 wireshark[0]=A
 wireshark[bridged]=true
+wireshark[port]="3000:3000/tcp"
 wireshark[image]="lscr.io/linuxserver/wireshark"
 ```
 
 Note that to capture packets on more than one collision domain, you only need to connect the `wireshark` device on desired collision domains. 
 
 The `wireshark` device uses the `lscr.io/linuxserver/wireshark` image, which exposes a Wireshark GUI accessible using 
-a web browser. To access the GUI you need to connect on the bridged interface of the device on port 3000.
+a web browser.
+The `wireshark[port]="3000:3000/tcp` entry exposes port `3000` of the container to port `3000` on the host. 
+In this way you can connect to the wireshark container GUI with your browser on 'localhost:3000'.
 
+
+### Docker Desktop 
+If you are using Docker Desktop on MacOS or Windows, you need to use the following `lab.conf` file:
+```txt
+pc1[0]=A
+pc2[0]=A
+
+wireshark[bridged]=true
+wireshark[port]="3000:3000/tcp"
+wireshark[image]="lscr.io/linuxserver/wireshark"
+```
+And then manually connect the `wireshark` device to collision domain `A` using the following command: 
+```shell
+kathara lconfig -n wireshark --add A
+```
+
+### The Wireshark GUI
 You can connect to the GUI following these steps:
 
-1. Go into the `wireshark` device and find the bridged interface IP address:
-    ```bash
-    root@wireshark:/# ip address
-    ...
-    37: eth1@if38: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue state UP 
-        link/ether 02:42:ac:11:00:02 brd ff:ff:ff:ff:ff:ff
-        inet 172.17.0.2/16 brd 172.17.255.255 scope global eth1
-       valid_lft forever preferred_lft forever
-    ```
-2. Access the GUI through a web browser using the following URL (`http://<ip_bridged>:3000`):
-   - `http://172.17.0.2:3000/`
-   By default, the user/pass is abc/abc. If you change your password or want to login manually to the GUI session for 
-   any reason use the following link: `http://172.17.0.2:3000/?login=true`
+1. Access the GUI through a web browser using the following URL:
+   - [http://localhost:3000/](http://localhost:3000/)
+   By default, the user/pass is abc/abc. If you change your password or want to log in manually to the GUI session for 
+   any reason use the following link: [http://localhost:3000/?login=true](http://localhost:3000/?login=true)`
 
-3. You can select the interface connected to the collision domain to sniff (e.g., `eth0`).
+2. You can select the interface connected to the collision domain to sniff (e.g., `eth0`).
    ![Wireshark Interfaces](images/wireshark-tutorial-1.png)
 
-4. Now, you can see packets exchanged on that collision domain between the devices.
+3. Now, you can see packets exchanged on that collision domain between the devices.
    ![Wireshark Packets](images/wireshark-tutorial-2.png)
 
