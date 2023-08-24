@@ -42,7 +42,7 @@ Note that to capture packets on more than one collision domain, you only need to
 The `wireshark` device uses the `lscr.io/linuxserver/wireshark` image, which exposes a Wireshark GUI accessible using 
 a web browser.
 The `wireshark[port]="3000:3000/tcp` entry exposes port `3000` of the container to port `3000` on the host. 
-In this way you can connect to the wireshark container GUI with your browser on 'localhost:3000'.
+In this way you can connect to the wireshark container GUI with your browser on `localhost:3000`.
 
 
 ### Docker Desktop 
