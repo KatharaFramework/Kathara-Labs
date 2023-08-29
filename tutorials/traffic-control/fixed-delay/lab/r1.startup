@@ -1,0 +1,4 @@
+ip address add 100.0.0.1/24 dev eth0
+ip address add 200.0.0.1/24 dev eth1
+
+tc qdisc add dev eth0 root netem delay 10ms
