@@ -1,5 +1,5 @@
-name: Bug
-description: File a bug report
+name: Network Scenario Bug
+description: A network scenario bug report
 body:
   - type: markdown
     attributes:
