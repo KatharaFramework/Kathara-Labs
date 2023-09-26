@@ -1,2 +1,2 @@
-ifconfig eth0 192.168.0.5 up
-/etc/init.d/bind start
+ip address add 192.168.0.5/24 dev eth0
+systemctl start named

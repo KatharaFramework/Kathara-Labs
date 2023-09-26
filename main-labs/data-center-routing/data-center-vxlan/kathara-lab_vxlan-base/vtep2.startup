@@ -1,4 +1,4 @@
-ifconfig eth1 193.204.0.2/30 up
+ip address add 193.204.0.2/30 dev eth1
 
 # Setting up VXLAN interfaces
 ip link add vtep100 type vxlan id 100 dev eth1 dstport 4789 local 193.204.0.2 nolearning
@@ -16,4 +16,4 @@ bridge vlan add vid 100 dev eth0 pvid untagged
 ip link set up dev br100
 
 # Enabling FRR
-/etc/init.d/frr start
+systemctl start frr

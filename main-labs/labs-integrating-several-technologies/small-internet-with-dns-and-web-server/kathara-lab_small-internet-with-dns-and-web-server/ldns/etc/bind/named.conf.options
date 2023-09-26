@@ -1,0 +1,5 @@
+options {
+    directory "/var/cache/bind";
+    allow-recursion { 200.2/16; };
+    dnssec-validation no;
+};

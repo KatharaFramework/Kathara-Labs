@@ -1,2 +1,1 @@
-ifconfig eth0 100.0.0.11 netmask 255.255.255.0 up
-
+ip address add 100.0.0.11/24 dev eth0

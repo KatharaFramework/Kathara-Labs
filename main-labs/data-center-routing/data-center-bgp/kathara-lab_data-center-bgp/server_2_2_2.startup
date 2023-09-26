@@ -1,2 +1,2 @@
-ifconfig eth0 202.2.2.2/24 up
-route add default gw 202.2.2.1 eth0
+ip address add 202.2.2.2/24 dev eth0
+ip route add default via 202.2.2.1 dev eth0

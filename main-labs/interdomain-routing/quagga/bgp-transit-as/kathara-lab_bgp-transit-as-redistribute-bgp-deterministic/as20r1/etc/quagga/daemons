@@ -1,9 +1,8 @@
-# This file tells the zebra package
+# This file tells the quagga package
 # which daemons to start.
 # Entries are in the format: <daemon>=(yes|no|priority)
 # where 'yes' is equivalent to infinitely low priority, and
-# lower numbers mean higher priority. Read
-# /usr/doc/zebra/README.Debian for details.
+# lower numbers mean higher priority.
 # Daemons are: bgpd zebra ospfd ospf6d ripd ripngd
 zebra=yes
 bgpd=yes
@@ -11,4 +10,3 @@ ospfd=no
 ospf6d=no
 ripd=no
 ripngd=no
-

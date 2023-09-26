@@ -1,4 +1,4 @@
-ifconfig eth0 11.0.0.10 netmask 255.255.255.252 broadcast 11.0.0.11 up
-ifconfig eth1 30.3.3.1 netmask 255.255.255.0 broadcast 30.3.3.255 up
-ifconfig eth2 11.0.0.25 netmask 255.255.255.252 broadcast 11.0.0.27 up
-/etc/init.d/frr start
+ip address add 11.0.0.10/30 dev eth0
+ip address add 30.3.3.1/24 dev eth1
+ip address add 11.0.0.25/30 dev eth2
+systemctl start frr

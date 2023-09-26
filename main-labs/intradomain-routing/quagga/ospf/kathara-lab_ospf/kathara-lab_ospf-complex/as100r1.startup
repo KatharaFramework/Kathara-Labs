@@ -1,3 +1,2 @@
-ifconfig eth0 140.0.0.2 netmask 255.255.255.252 up
-/etc/init.d/zebra start
-
+ip address add 140.0.0.2/30 dev eth0
+systemctl start quagga

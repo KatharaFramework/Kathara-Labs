@@ -1,9 +1,9 @@
-ifconfig eth0 10.0.0.1/30 up
-ifconfig eth1 10.0.0.5/30 up
+ip address add 10.0.0.1/30 dev eth0
+ip address add 10.0.0.5/30 dev eth1
 
 # Create loopback
 ip addr add 192.168.0.1/32 dev lo
-route add 192.168.0.1/32 dev lo
+ip route add 192.168.0.1/32 dev lo
 
 # Setting up VXLAN interfaces
 ip link add vtep5010 type vxlan id 5010 dev lo dstport 4789 local 192.168.0.1 nolearning
@@ -48,4 +48,4 @@ bridge vlan add vid 20 dev bond3
 bridge vlan add vid 30 dev bond3
 ip link set up dev br100
 
-/etc/init.d/frr start
+systemctl start frr

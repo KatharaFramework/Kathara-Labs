@@ -1,2 +1,3 @@
-ifconfig eth0 200.1.1.3 hw ether FE:FD:C8:01:01:03 up
-route add default gw 200.1.1.1
+ip link set dev eth0 address FE:FD:C8:01:01:03
+ip address add 200.1.1.3/24 dev eth0
+ip route add default via 200.1.1.1 dev eth0
