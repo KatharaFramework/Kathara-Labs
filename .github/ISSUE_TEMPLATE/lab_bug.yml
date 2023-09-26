@@ -20,7 +20,7 @@ body:
   - type: input
     id: kathara
     attributes:
-      label: kathara Version
+      label: Kathará Version
       description: "Please provide the Kathará version you are using."
       placeholder: "3.6.3"
     validations:
