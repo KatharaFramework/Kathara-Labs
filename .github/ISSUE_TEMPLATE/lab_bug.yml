@@ -1,0 +1,47 @@
+name: Bug
+description: File a bug report
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a bug report, please search for the behaviour in the existing issues. 
+        
+        ---
+        
+        Thank you for taking the time to file a bug report. To address this bug as fast as possible, we need some information.
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: "Which operating system do you use? Please provide the version as well."
+      placeholder: "Ubuntu 23.04"
+    validations:
+      required: true
+  - type: input
+    id: kathara
+    attributes:
+      label: kathara Version
+      description: "Please provide the Kathará version you are using."
+      placeholder: "3.6.3"
+    validations:
+      required: true
+  - type: input
+    id: lab
+    attributes:
+      label: Lab Name
+      description: "Please provide the name of the network scenario with the bug."
+      placeholder: "main-labs/application-level/load-balancer-random"
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug description
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which steps do we need to take to reproduce this error?
