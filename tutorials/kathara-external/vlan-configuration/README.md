@@ -75,4 +75,4 @@ listening on enp0s31f6, link-type EN10MB (Ethernet), snapshot length 262144 byte
 
 ## Resources
 You can find a ready-to-run example in the [lab](lab) directory. You only need to replace `<physical_interface>` with 
-the name of one of your host interfaces. 
+the name of one of your host interfaces in the `lab.ext` file. 

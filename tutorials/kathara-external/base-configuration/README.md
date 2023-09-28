@@ -73,4 +73,4 @@ be:05:0e:3e:49:1b > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 60: Reques
 
 ## Resources
 You can find a ready-to-run example in the [lab](lab) directory. You only need to replace `<physical_interface>` with 
-the name of one of your host interfaces. 
+the name of one of your host interfaces in the `lab.ext` file.
