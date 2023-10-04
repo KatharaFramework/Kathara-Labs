@@ -1,2 +1,3 @@
 table_add repeater forward_to_port 1 => 2
 table_add repeater forward_to_port 2 => 1
+EOF

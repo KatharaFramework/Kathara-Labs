@@ -15,3 +15,4 @@ table_add igress_match multicast_group 1 => 1
 table_add igress_match multicast_group 2 => 2
 table_add igress_match multicast_group 3 => 3
 table_add igress_match multicast_group 3 => 4
+EOF
