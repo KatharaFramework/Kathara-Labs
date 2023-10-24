@@ -1,0 +1,13 @@
+$TTL   60000
+@               IN      SOA     dnsit.it.    root.dnsit.it. (
+                        2006031201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@                       IN      NS      dnsit.it.
+dnsit.it.               IN      A       192.168.0.1
+
+uniroma3.it.            IN      NS      dnsuni.uniroma3.it.
+dnsuni.uniroma3.it.     IN      A       192.168.0.11

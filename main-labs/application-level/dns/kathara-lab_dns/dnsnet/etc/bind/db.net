@@ -6,8 +6,8 @@ $TTL    60000
                         3600000 ; expire
                         0 ; negative cache ttl
                         )
-@               IN      NS      dnsnet.net.
-dnsnet          IN      A       192.168.0.2
+@                    IN      NS      dnsnet.net.
+dnsnet.net.          IN      A       192.168.0.2
 
-nanoinside      IN      NS      dnsnano.nanoinside.net.
-dnsnano.nanoinside IN   A       192.168.0.22
+startup.net.          IN     NS      dnsstart.startup.net.
+dnsstart.startup.net. IN     A       192.168.0.22
