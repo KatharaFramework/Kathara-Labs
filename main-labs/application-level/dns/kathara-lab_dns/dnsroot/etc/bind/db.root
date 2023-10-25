@@ -10,8 +10,8 @@ $TTL   60000
 @               IN      NS      ROOT-SERVER.
 ROOT-SERVER.	IN	A	192.168.0.5
 
-org.		IN 	NS	dnsorg.org.
-dnsorg.org.	IN 	A	192.168.0.1
+it.		    IN 	NS	dnsit.it.
+dnsit.it.	    IN 	A	192.168.0.1
 
-net.		IN	NS	dnsnet.net.
-dnsnet.net.	IN	A	192.168.0.2
+net.		    IN	NS	dnsnet.net.
+dnsnet.net.	    IN	A	192.168.0.2

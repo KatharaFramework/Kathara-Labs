@@ -1,2 +1,0 @@
-ip address add 192.168.0.11/24 dev eth0
-systemctl start named
