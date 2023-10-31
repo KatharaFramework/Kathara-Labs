@@ -1,0 +1,4 @@
+/etc/init.d/networking stop
+/etc/init.d/networking start
+/etc/init.d/isc-dhcp-server restart
+
