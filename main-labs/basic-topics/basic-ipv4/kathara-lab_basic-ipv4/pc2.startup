@@ -1,0 +1,9 @@
+# to eth0 a MAC address is assigned
+# different from the default one
+ip link set dev eth0 address 00:00:00:00:00:02
+
+# to eth0 an IPv4 address is assigned
+ip address add 200.1.1.7/24 dev eth0
+
+# a default router is selected
+ip route add default via 200.1.1.1 dev eth0
