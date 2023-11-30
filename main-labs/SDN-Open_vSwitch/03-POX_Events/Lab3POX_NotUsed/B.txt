@@ -1,0 +1,13 @@
+from pox.core import core
+from pox.lib.revent.revent import Event
+
+class B ():
+
+	def __init__ (self, A):
+		A.addListeners(self)
+      		
+      	def _handle_pktInSeen (self, event):
+      		print("A has seen an OFP packetIn")
+      		
+def launch ( ):
+	core.registerNew(B)

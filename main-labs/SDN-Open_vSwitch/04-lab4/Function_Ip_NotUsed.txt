@@ -1,0 +1,21 @@
+from pox.core import core
+from pox.lib.revent.revent import Event
+from pox.lib.packet import ethernet as pkt
+
+class Ip ():
+
+	def __init__ (self):
+		core.openflow.addListeners(self)
+		
+	def _handle_packetIn (self, event):
+		packet = event.parsed
+		
+		if packet.type == pkt.IP_TYPE:
+			print("Its an Ip packet")
+		else:
+			print("Its not an Ip packet")
+
+def launch ( ):
+	comp = Ip()
+	core.register("Ip", comp)
+			

@@ -1,0 +1,41 @@
+# 02-POX_Core_Object
+
+You can put your Python code wherever you like, as long as POX can find it.
+
+One of the top-level directories in POX is called "ext". Indeed, POX automatically adds “ext” folder to the Python search path.
+
+Each component must define a launch function:
+* it is a function that POX calls to tell the component to initialize itself
+* it specifies how command line arguments are passed to the component
+
+The POX core object is a rendezvous between components:
+* no need of import statements
+* components register themselves on the core object
+* other components will query the core object
+
+The following command is used to import the core object:
+```from pox.core import core```
+
+It can be convenient for a component to "register" an API-providing object on the core object. There are two ways to register a component: 
+* core.register( )
+* core.registerNew( )
+
+Now, we see what the lab does:
+* we have created two POX components
+* the component A implements: a string attribute named "hello_message", a method to print the "hello_message" attribute on
+screen, and register itself in the POX Core.
+* the component B implements a method that calls the “print” method of component A at startup.
+
+Now, run the components A and B to test the implementation:
+* launch 'kathara connect controller' in the main terminal 
+* launch '/home/pox/pox.py A B' inside root@controller
+* you will obtain: 
+```# general informations
+POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al. 
+# Result of component B
+Testo prova
+# normal warning, not be worry
+WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
+WARNING:version:You're running Python 3.11.
+WARNING:version:If you run into problems, try using a supported version.
+INFO:core:POX 0.7.0 (gar) is up.```

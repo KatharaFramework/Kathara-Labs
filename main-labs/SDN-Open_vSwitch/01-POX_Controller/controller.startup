@@ -1,0 +1,3 @@
+ip addr add 20.0.1.4/24 dev eth0
+
+chmod +x /home/pox/pox.py
