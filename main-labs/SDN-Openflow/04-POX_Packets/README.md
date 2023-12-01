@@ -1,14 +1,14 @@
 # 04-POX_work_with_packets
 
-POX has a library for parsing and constructing packets.
+## Introduction
+POX has a library for parsing and constructing packets. 
 Most packets have some sort of a header and some sort of a payload.
-
 Some of the packet types supported by POX are: ethernet, ARP, IPv4, ICMP, TCP, UDP, DHCP, DNS, LLDP, VLAN.
 
-One can import the POX packet library with the command:
+You can import the POX packet library with the command:
 ```import pox.lib.packet as pkt```
 
-One can navigate the encapsulated packets in two ways:
+You can navigate the encapsulated packets in two ways:
 * by using the payload attribute of the packet object
 ```
 def parse_icmp (eth_packet):
@@ -27,15 +27,23 @@ def handle_IP_packet (packet):
     print "Source IP:", ip.srcip
 ```
 
-Now, we go to the hands on moment:
-* we have created a POX component that listen to packetIn events and determine if they contain an IP packet
+## Lab
 
-Test the implementation:
-Now, run the components A_listener and B_listener to test the implementation:
-* launch 'kathara connect controller' in the main terminal 
-* launch './home/pox/pox.py Packet_check openflow.of_01 -port=6653'
-* you will obtain: 
-```# general informations
+Now, we go to the hands on moment. We have created a POX component that listen to packetIn events and determine if they contain an IP packet.
+
+### Test the implementation
+
+Run the components A_listener and B_listener to test the implementation:
+
+Launch ```kathara lstart``` in the main terminal, wait until the lab is created
+
+Launch ```kathara connect controller``` in the main terminal
+
+Launch ```./home/pox/pox.py Packet_check openflow.of_01 -port=6653``` in the root@controller
+
+You will obtain: 
+```
+# general informations
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
 
 # normal Warning
@@ -47,7 +55,8 @@ INFO:core:POX 0.7.0 (gar) is up.
 # connection of the switch
 INFO:openflow.of_01:[e6-b1-b4-df-ec-42 1] connected
 ```
-* in h1 xterm:
+
+In h1 xterm:
 ```
 cd home
 
@@ -55,19 +64,18 @@ python3 sendARP.py
 #or
 python3 sendIP.py 
 ```
-* in the root@controller terminal you will see:
+
+In the root@controller terminal you will see:
 ```
-# python3 sendARP.py 
+# if you do python3 sendARP.py 
 *** From Component: packet detected NOT IP!
 
-# python3 sendIP.py 
+# if you do python3 sendIP.py 
 *** From Component: IP packet detected!
 ```
 
-* close the root@controller
-```exit```
+close the root@controller with ```exit```
 
-* close the lab
-```kathara lclean```
+close the lab with ```kathara lclean```
 
-Inside the controller, there is another python3 script that does the same thing, try it with the proper changes.
+Inside the controller, there is another python3 script that does the same thing. Try it with the proper changes.
