@@ -1,4 +1,4 @@
-# 04-POX_work_with_packets
+# 04-POX_Work_with_Packets
 
 ## Introduction
 POX has a library for parsing and constructing packets. 
@@ -29,7 +29,7 @@ def handle_IP_packet (packet):
 
 ## Lab
 
-Now, we go to the hands on moment. We have created a POX component that listen to packetIn events and determine if they contain an IP packet.
+We have created a POX component that listen to packetIn events and determine if they contain an IP packet.
 
 ### Test the implementation
 
@@ -46,7 +46,7 @@ You will obtain:
 # general informations
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
 
-# normal Warning
+# normal Warning, don't worry
 WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
 WARNING:version:You're running Python 3.11.
 WARNING:version:If you run into problems, try using a supported version.

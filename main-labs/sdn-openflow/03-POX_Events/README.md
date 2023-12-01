@@ -23,7 +23,7 @@ terminated.
 
 ## Lab
 
-Now, we go to the hands on moment. We have created two POX components:
+We have created two POX components:
 * the component A_listener is a listener of packetIn events: whenever a packetIn event occurs, the component A prints a message on the display publishes an event named pktInSeen
 * the component B_listener is a listener of pktInSeen events: whenever a pktInSeen event occurs, the component B prints the message “A has seen an OFP packetIn” on the screen.
 
@@ -44,7 +44,7 @@ POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
 *** From Component_A: packetIn captured!
 *** From Component_B: A has seen an OFP packetIn!
 
-# normal warning, not be worry
+# normal warning, don't worry
 WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
 WARNING:version:You're running Python 3.11.
 WARNING:version:If you run into problems, try using a supported version.
