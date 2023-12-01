@@ -12,4 +12,4 @@ the related explanation slides.
 * [Data Center Routing](data-center-routing): A set of network scenarios on data center routing.
 * [Labs Integrating Several Technologies](labs-integrating-several-technologies): A set of network scenarios integrating several technologies.
 * [P4](p4) (Thanks to ETH Zurich :smile:): A set of network scenarios on programmable switches using P4. 
-* [sdn](sdn-openflow): A set of network scenarios on SDN and Openflow.
+* [SDN-Openflow](sdn-openflow): A set of network scenarios on SDN and Openflow.
