@@ -14,6 +14,8 @@ An example of a POX component is forwarding.l2_learning: this component makes Op
 
 We have created a POX component that listen to packetIn events and determine if they contain an IP packet.
 
+![Network Scenario](/home/ricgobs/Desktop/Kathara-Labs/main-labs/sdn-openflow/network_images/network_image1.png)
+
 ### Test the implementation
 
 Run the components A_listener and B_listener to test the implementation:
