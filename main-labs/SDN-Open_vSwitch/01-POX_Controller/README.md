@@ -12,3 +12,5 @@ To see the what this component does:
 * Run the Kathara lab provided: 'kathara lstart'
 * the command l2_learning is already installed in the controller.startup
 * you are able to execute a ping between the two hosts
+* do ```exit``` to go out the root@controller
+* do ```kathara lclean``` to close the lab

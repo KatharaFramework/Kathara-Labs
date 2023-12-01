@@ -28,14 +28,25 @@ screen, and register itself in the POX Core.
 
 Now, run the components A and B to test the implementation:
 * launch 'kathara connect controller' in the main terminal 
-* launch '/home/pox/pox.py A B' inside root@controller
+* launch './home/pox/pox.py A B openflow.of_01 -port=6653' inside root@controller
 * you will obtain: 
 ```# general informations
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al. 
+
 # Result of component B
 Testo prova
+
 # normal warning, not be worry
 WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
 WARNING:version:You're running Python 3.11.
 WARNING:version:If you run into problems, try using a supported version.
-INFO:core:POX 0.7.0 (gar) is up.```
+INFO:core:POX 0.7.0 (gar) is up.
+
+# connection of the switch
+INFO:openflow.of_01:[e6-b1-b4-df-ec-42 1] connected
+
+# close the root@controller
+exit
+
+# close the lab
+kathara lclean```
