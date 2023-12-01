@@ -14,7 +14,7 @@ An example of a POX component is forwarding.l2_learning: this component makes Op
 
 We have created a POX component that listen to packetIn events and determine if they contain an IP packet.
 
-![Network Scenario](/home/ricgobs/Desktop/Kathara-Labs/main-labs/sdn-openflow/network_images/network_image1.png)
+![Network Scenario](https://github.com/RicGobs/Kathara-Labs/blob/main/main-labs/sdn-openflow/network_images/network_image1.png)
 
 ### Test the implementation
 
@@ -67,7 +67,10 @@ ovs-ofctl dump-flows s1
 
 You will obtain in s1 something like that:
 ```
-cookie=0x0, duration=13.687s, table=0, n_packets=2, n_bytes=196, idle_timeout=10, hard_timeout=30, priority=65535,icmp,in_port=eth1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:01,nw_src=10.0.2.2,nw_dst=10.0.1.1,nw_tos=0,icmp_type=0,icmp_code=0 actions=output:eth0
+cookie=0x0, duration=13.687s, table=0, n_packets=2, n_bytes=196, 
+idle_timeout=10, hard_timeout=30, priority=65535,icmp,in_port=eth1,
+vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:01,
+nw_src=10.0.2.2,nw_dst=10.0.1.1,nw_tos=0,icmp_type=0,icmp_code=0 actions=output:eth0
 ```
 
 Close the root@controller with ```exit```

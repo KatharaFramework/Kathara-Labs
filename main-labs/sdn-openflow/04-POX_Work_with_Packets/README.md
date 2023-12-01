@@ -31,6 +31,9 @@ def handle_IP_packet (packet):
 
 We have created a POX component that listen to packetIn events and determine if they contain an IP packet.
 
+![Network Scenario](https://github.com/RicGobs/Kathara-Labs/blob/main/main-labs/sdn-openflow/network_images/network_image1.png)
+
+
 ### Test the implementation
 
 Run the components A_listener and B_listener to test the implementation:

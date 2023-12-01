@@ -15,6 +15,8 @@ We have created a POX discovery application that:
 * Switches are discovered by handling connection up events
 * Links are discovered by exploiting the mechanism show in the figure
 
+![Network Scenario](https://github.com/RicGobs/Kathara-Labs/blob/main/main-labs/sdn-openflow/network_images/network_image2.png)
+
 ### Test the implementation
 
 Launch ```kathara lstart``` in the main terminal, wait until the lab is created

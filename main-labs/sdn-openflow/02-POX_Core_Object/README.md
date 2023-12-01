@@ -24,6 +24,8 @@ We have created two POX components:
 * the component A implements: a string attribute named "hello_message", a method to print the "hello_message" attribute on screen, and register itself in the POX Core.
 * the component B implements a method that calls the “print” method of component A at startup.
 
+![Network Scenario](https://github.com/RicGobs/Kathara-Labs/blob/main/main-labs/sdn-openflow/network_images/network_image1.png)
+
 So, now we are using custom components and not a default one.
 
 ### Test the implementation
