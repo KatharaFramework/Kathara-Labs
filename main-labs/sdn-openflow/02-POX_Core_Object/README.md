@@ -4,19 +4,14 @@
 
 You can put your Python code wherever you like, as long as POX can find it. One of the top-level directories in POX is called "ext". Indeed, POX automatically adds “ext” folder to the Python search path.
 
-Each component must define a launch function: it is a function that POX calls to tell the component to initialize itself and it specifies how command line arguments are passed to the component.
-
 The POX core object is a rendezvous between components:
 * no need of import statements
 * components register themselves on the core object
 * other components will query the core object
 
+It can be convenient for a component to "register" an API-providing object on the core object. You can use core.register( ) or core.registerNew( ).
+
 The following command is used to import the core object: ```from pox.core import core```.
-
-It can be convenient for a component to "register" an API-providing object on the core object. There are two ways to register a component: 
-* core.register( )
-* core.registerNew( )
-
 
 ## Lab
 
@@ -42,7 +37,7 @@ You will obtain:
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al. 
 
 # Result of component B
-Testo prova
+hello_message
 
 # normal warning, don't worry
 WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9

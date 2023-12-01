@@ -1,16 +1,14 @@
 # 03-POX_Events
 
 ## Introduction
-Event handling in POX fits into the publish/subscribe paradigm.
-Events in POX are all instances of subclasses of revent.Event.
+Event handling in POX fits into the publish/subscribe paradigm. 
 
 OpenFlow related events have the following three attributes:
 * **connection**: Connection to the relevant switch (e.g., which sent the message this event corresponds to)
-* **dpid**: Datapath ID of relevant switch (use dpid_to_str( )
-to format it for display)
+* **dpid**: Datapath ID of relevant switch (use dpid_to_str( ) to format it for display)
 * **ofp**: OpenFlow message object that caused this event
 
-Now, we see the OpenFlow Events:
+The possible OpenFlow Events are:
 * **ConnectionUp event** is fired in response to the establishment of a new control channel with a switch.
 * **ConnectionDown event** is fired when a connection to a switch has been
 terminated.

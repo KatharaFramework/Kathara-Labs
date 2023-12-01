@@ -81,4 +81,4 @@ close the root@controller with ```exit```
 
 close the lab with ```kathara lclean```
 
-Inside the controller, there is another python3 script that does the same thing. Try it with the proper changes.
+Inside the controller, there is the script IPL.py that implements the same application. Try it with the proper changes.
