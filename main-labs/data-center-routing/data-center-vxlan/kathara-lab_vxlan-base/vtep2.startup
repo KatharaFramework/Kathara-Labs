@@ -7,7 +7,8 @@ ip link set up dev vtep100
 # Creating the companion bridge
 ip link add br100 type bridge
 # Attach interfaces to the bridge
-ip link set dev vtep100 master br100
+ip link set dev vtep100 master br100 addrgenmode none
+ip link set vtep100 type bridge_slave neigh_suppress on learning off
 ip link set dev eth0 master br100
 # Enable bridge vlans
 ip link set dev br100 type bridge vlan_filtering 1
