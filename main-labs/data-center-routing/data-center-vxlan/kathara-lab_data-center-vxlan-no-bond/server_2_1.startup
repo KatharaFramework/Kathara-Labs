@@ -1,0 +1,11 @@
+
+# Creating the bridge
+ip link add br100 type bridge
+# Attach interfaces to the bridge
+ip link set dev eth0 master br100
+ip link set dev eth2 master br100
+# Enable bridge vlans
+ip link set dev br100 type bridge vlan_filtering 1
+bridge vlan add vid 30 dev eth0
+bridge vlan add vid 30 dev eth2 pvid untagged
+ip link set up dev br100
