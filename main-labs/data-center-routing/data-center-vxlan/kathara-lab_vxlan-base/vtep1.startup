@@ -2,19 +2,18 @@ ip address add 193.204.0.1/30 dev eth1
 
 # Setting up VXLAN interfaces
 ip link add vtep100 type vxlan id 100 dev eth1 dstport 4789 local 193.204.0.1 nolearning
-ip link set up dev vtep100
 
 # Creating the companion bridge
 ip link add br100 type bridge
+ip link set br100 addrgenmode none
 
 # Attach interfaces to the bridge
 ip link set dev vtep100 master br100 addrgenmode none
 ip link set vtep100 type bridge_slave neigh_suppress on learning off
 ip link set dev eth0 master br100
-# Enable bridge vlans
-ip link set dev br100 type bridge vlan_filtering 1
-bridge vlan add vid 100 dev vtep100 pvid untagged
-bridge vlan add vid 100 dev eth0 pvid untagged
+
+# Enable interfaces
+ip link set up dev vtep100
 ip link set up dev br100
 
 # Enabling FRR
