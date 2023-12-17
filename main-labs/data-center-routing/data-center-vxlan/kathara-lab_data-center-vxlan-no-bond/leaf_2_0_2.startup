@@ -3,9 +3,9 @@ ip address add 192.168.0.4/32 dev lo
 ip route add 192.168.0.4/32 dev lo
 
 # Setting up VXLAN interfaces
-ip link add vtep5010 type vxlan id 5010 dev lo dstport 4789 local 192.168.0.2 nolearning
-ip link add vtep5020 type vxlan id 5020 dev lo dstport 4789 local 192.168.0.2 nolearning
-ip link add vtep5030 type vxlan id 5030 dev lo dstport 4789 local 192.168.0.2 nolearning
+ip link add vtep5010 type vxlan id 5010 dev lo dstport 4789 local 192.168.0.4 nolearning
+ip link add vtep5020 type vxlan id 5020 dev lo dstport 4789 local 192.168.0.4 nolearning
+ip link add vtep5030 type vxlan id 5030 dev lo dstport 4789 local 192.168.0.4 nolearning
 
 # Creating the companion bridge
 ip link add br100 type bridge
