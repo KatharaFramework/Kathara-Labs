@@ -1,43 +1,39 @@
-ip address add 10.0.0.1/30 dev eth0
-ip address add 10.0.0.5/30 dev eth1
-
 # Create loopback
 ip addr add 192.168.0.1/32 dev lo
 ip route add 192.168.0.1/32 dev lo
 
-# Setting up VXLAN interfaces
-ip link add vtep5010 type vxlan id 5010 dev lo dstport 4789 local 192.168.0.1 nolearning
-ip link set up dev vtep5010
-
-ip link add vtep5020 type vxlan id 5020 dev lo dstport 4789 local 192.168.0.1 nolearning
-ip link set up dev vtep5020
-
-ip link add vtep5030 type vxlan id 5030 dev lo dstport 4789 local 192.168.0.1 nolearning
-ip link set up dev vtep5030
-
-ip link add bond2 type bond miimon 100 mode 802.3ad xmit_hash_policy layer3+4 lacp_rate 1
+ip link add bond2 type bond miimon 100 mode active-backup
 ip link set down dev eth2
 ip link set dev eth2 master bond2
 ip link set up dev eth2
 ip link set up dev bond2
 
-ip link add bond3 type bond miimon 100 mode 802.3ad xmit_hash_policy layer3+4 lacp_rate 1
+ip link add bond3 type bond miimon 100 mode active-backup
 ip link set down dev eth3
 ip link set dev eth3 master bond3
 ip link set up dev eth3
 ip link set up dev bond3
 
+# Setting up VXLAN interfaces
+ip link add vtep5010 type vxlan id 5010 dev lo dstport 4789 local 192.168.0.1 nolearning
+ip link add vtep5020 type vxlan id 5020 dev lo dstport 4789 local 192.168.0.1 nolearning
+ip link add vtep5030 type vxlan id 5030 dev lo dstport 4789 local 192.168.0.1 nolearning
+
 # Creating the companion bridge
 ip link add br100 type bridge
+ip link set br100 addrgenmode none
 
 # Attach interfaces to the bridge
-ip link set dev vtep5010 master br100
-ip link set dev vtep5020 master br100
-ip link set dev vtep5030 master br100
+ip link set dev vtep5010 master br100 addrgenmode none
+ip link set vtep5010 type bridge_slave neigh_suppress on learning off
+ip link set dev vtep5020 master br100 addrgenmode none
+ip link set vtep5020 type bridge_slave neigh_suppress on learning off
+ip link set dev vtep5030 master br100 addrgenmode none
+ip link set vtep5030 type bridge_slave neigh_suppress on learning off
 ip link set dev bond2 master br100
 ip link set dev bond3 master br100
 
-# Enable bridge vlans
+# Enable bridge VLANs
 ip link set dev br100 type bridge vlan_filtering 1
 bridge vlan add vid 10 dev vtep5010 pvid untagged
 bridge vlan add vid 20 dev vtep5020 pvid untagged
@@ -46,6 +42,11 @@ bridge vlan add vid 10 dev bond2
 bridge vlan add vid 20 dev bond2
 bridge vlan add vid 20 dev bond3
 bridge vlan add vid 30 dev bond3
+
+# Enable interfaces
+ip link set up dev vtep5010
+ip link set up dev vtep5020
+ip link set up dev vtep5030
 ip link set up dev br100
 
 systemctl start frr
