@@ -25,6 +25,7 @@ ip link set dev br100 type bridge vlan_filtering 1
 bridge vlan add vid 10 dev vtep5010 pvid untagged
 bridge vlan add vid 20 dev vtep5020 pvid untagged
 bridge vlan add vid 30 dev vtep5030 pvid untagged
+bridge vlan add vid 10 dev eth2
 bridge vlan add vid 20 dev eth2
 bridge vlan add vid 30 dev eth2
 
