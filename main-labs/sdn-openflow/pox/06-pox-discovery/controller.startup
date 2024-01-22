@@ -1,0 +1,1 @@
+ip addr add 20.0.1.100/24 dev eth0

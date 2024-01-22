@@ -1,0 +1,1 @@
+ip addr add 10.0.1.1/16 dev eth0

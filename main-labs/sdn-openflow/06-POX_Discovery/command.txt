@@ -1,6 +1,0 @@
-./home/pox/pox.py link_discovery_solution1 openflow.of_01 -port=6653
-
-./home/pox/pox.py link_discovery_solution2 openflow.of_01 -port=6653
-
-# There are link_discovery_solution1 and link_discovery_solution2
-# They both work
