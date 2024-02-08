@@ -24,7 +24,7 @@ Launch ```kathara lstart``` in the main terminal, wait until the lab is created
 
 Launch ```kathara connect controller``` in the main terminal
 
-Launch ```/pox/pox.py reflector openflow.of_01 -port=6653``` in the root@controller
+Launch ```python3 /pox/pox.py reflector openflow.of_01 -port=6653``` in the root@controller
 
 You will obtain: 
 ```

@@ -1,1 +1,1 @@
-/pox/pox.py Packet_check openflow.of_01 -port=6653
+python3 /pox/pox.py Packet_check openflow.of_01 -port=6653

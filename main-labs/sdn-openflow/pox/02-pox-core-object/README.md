@@ -25,7 +25,7 @@ We have created two POX components:
   on screen, and register itself in the POX Core.
 * the component B implements a method that calls the “print” method of component A at startup.
 
-![Network Scenario](https://github.com/RicGobs/Kathara-Labs/blob/main/main-labs/sdn-openflow/network_images/network_image1.png)
+![Network Scenario](../images/image1.png)
 
 So, now we are using custom components and not a default one.
 
@@ -35,7 +35,7 @@ Launch ```kathara lstart``` in the main terminal, wait until the lab is created
 
 Launch ```kathara connect controller``` in the main terminal
 
-Launch ```/pox/pox.py A B openflow.of_01 -port=6653``` in the root@controller
+Launch ```python3 /pox/pox.py A B openflow.of_01 -port=6653``` in the root@controller
 
 You will obtain:
 

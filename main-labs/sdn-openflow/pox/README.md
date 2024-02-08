@@ -18,10 +18,11 @@ found [here](https://noxrepo.github.io/pox-doc/html/#components-in-pox).
 | Name                           | Description                                                                        |
 |--------------------------------|------------------------------------------------------------------------------------|
 | **POX Controller**             | Simple example about the `forwarding.l2_learning` component.                       |
-| **BGP Announcement**           | A network example showing how to make basic BGP announcements between two routers. |
-| **BGP Prefix Filtering**       | A network introducing to the use of prefix-lists, route-maps, and access-lists.    |
-| **BGP Stub AS**                | Architecture of a stub network.                                                    |
-| **BGP Stub AS Static**         | Configuration of a Stub AS with static routes.                                     |
-| **BGP Multi-homed Stub**       | Configuration of a Multi-homed stub network with backup.                           |
-| **BGP Multi-homed Stub Large** | A Multi-homed stub network running RIP.                                            |
-| **BGP Multi-homed**            | Configuration of a Multi-homed network with backup and load sharing.               |
+| **POX Core Object**           | A network example showing how to make basic BGP announcements between two routers. |
+| **POX Events**       | A network introducing to the use of prefix-lists, route-maps, and access-lists.    |
+| **POX Work with Packets**                | Architecture of a stub network.                                                    |
+| **POX Datapaths**         | Configuration of a Stub AS with static routes.                                     |
+| **POX Link Discovery**       | Configuration of a Multi-homed stub network with backup.                           |
+| **POX Host Discovery** | A Multi-homed stub network running RIP.                                            |
+| **POX ARP Handler**            | Configuration of a Multi-homed network with backup and load sharing.               |
+| **POX Routing**            | Configuration of a Multi-homed network with backup and load sharing.               |

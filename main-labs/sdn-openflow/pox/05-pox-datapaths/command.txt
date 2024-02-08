@@ -1,1 +1,1 @@
-/pox/pox.py reflector openflow.of_01 -port=6653
+python3 /pox/pox.py reflector openflow.of_01 -port=6653

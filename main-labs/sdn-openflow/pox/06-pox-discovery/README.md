@@ -24,7 +24,7 @@ Launch ```kathara lstart``` in the main terminal, wait until the lab is created
 
 Launch ```kathara connect controller``` in the main terminal
 
-Launch ```/pox/pox.py link_discovery_solution1 openflow.of_01 -port=6653``` in the root@controller
+Launch ```python3 /pox/pox.py link_discovery_solution1 openflow.of_01 -port=6653``` in the root@controller
 
 You will obtain:
 
@@ -86,5 +86,5 @@ Close the lab with ```kathara lclean```
 
 In the controller there is another possible solution, if you want to try it, repeat the tutorial with: 
 ```
-/pox/pox.py link_discovery_solution2 openflow.of_01 -port=6653
+python3 /pox/pox.py link_discovery_solution2 openflow.of_01 -port=6653
 ```

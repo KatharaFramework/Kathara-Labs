@@ -8,7 +8,7 @@ In particular, the scenario shows how to enable the `forwarding.l2_learning` com
 
 ## Network Topology
 
-![Network Scenario](../network_images/simple_network.png)
+![Network Scenario](../images/image1.png)
 
 ## Run the Network Scenario
 
@@ -32,11 +32,13 @@ ovs-ofctl dump-flows s1
 
 This happens since the switch acts as a L2 learning switch by the default, but does not fill the table.
 
-To enable the `forwarding.l2_learning` POX component and see the flow rules in the switch, go into the `controller`
-terminal and type:
+To enable the `forwarding.l2_learning` POX component and see the flow rules in the switch, launching ```kathara connect controller```.
+
+Launch in the root@controller:
 ```
-python3.9 /pox/pox.py forwarding.l2_learning openflow.of_01 -port=6653
+python3 /pox/pox.py forwarding.l2_learning openflow.of_01 -port=6653
 ``` 
+
 **Note:** We installed `python3.9` on the `kathara/pox` image to improve compatibility with POX.
 
 You will obtain something like:

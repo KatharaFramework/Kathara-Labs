@@ -1,0 +1,1 @@
+python3 /pox/pox.py openflow.of_01 -port=6653 host_discovery link_discovery
