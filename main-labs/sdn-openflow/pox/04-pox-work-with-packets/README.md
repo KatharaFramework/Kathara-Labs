@@ -1,4 +1,4 @@
-# 04-POX_Work_with_Packets
+# 04-POX Work with Packets
 
 ## Introduction
 POX has a library for parsing and constructing packets. 
@@ -31,7 +31,7 @@ def handle_IP_packet (packet):
 
 We have created a POX component that listen to packetIn events and determine if they contain an IP packet.
 
-![Network Scenario](https://github.com/RicGobs/Kathara-Labs/blob/main/main-labs/sdn-openflow/network_images/network_image1.png)
+![Network Scenario](../images/image1.png)
 
 
 ### Test the implementation
@@ -42,7 +42,7 @@ Launch ```kathara lstart``` in the main terminal, wait until the lab is created
 
 Launch ```kathara connect controller``` in the main terminal
 
-Launch ```python3 /pox/pox.py Packet_check openflow.of_01 -port=6653``` in the root@controller
+Launch ```python3.9 /pox/pox.py Packet_check openflow.of_01 -port=6653``` in the root@controller
 
 You will obtain: 
 ```

@@ -1,4 +1,4 @@
-# 06-POX_Discovery
+# 06-POX Discovery
 
 ## Introduction
 
@@ -16,7 +16,7 @@ We have created a POX discovery application that:
 * Switches are discovered by handling connection up events
 * Links are discovered by exploiting the mechanism show in the figure
 
-![Network Scenario](https://github.com/RicGobs/Kathara-Labs/blob/main/main-labs/sdn-openflow/network_images/network_image2.png)
+![Network Scenario](../images/image2.png)
 
 ### Test the implementation
 
@@ -24,7 +24,7 @@ Launch ```kathara lstart``` in the main terminal, wait until the lab is created
 
 Launch ```kathara connect controller``` in the main terminal
 
-Launch ```python3 /pox/pox.py link_discovery_solution1 openflow.of_01 -port=6653``` in the root@controller
+Launch ```python3.9 /pox/pox.py link_discovery_solution1 openflow.of_01 -port=6653``` in the root@controller
 
 You will obtain:
 

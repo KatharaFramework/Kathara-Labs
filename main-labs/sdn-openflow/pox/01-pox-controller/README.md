@@ -1,4 +1,4 @@
-# 01-POX_Controller
+# 01-POX Controller
 
 ## Introduction
 
@@ -6,11 +6,11 @@ This scenario contains an example of usage of a built-in POX component.
 
 In particular, the scenario shows how to enable the `forwarding.l2_learning` component.
 
-## Network Topology
+## Lab
 
 ![Network Scenario](../images/image1.png)
 
-## Run the Network Scenario
+### Test the implementation
 
 To run the network scenario, open a terminal in the scenario directory and type:
 
@@ -36,7 +36,7 @@ To enable the `forwarding.l2_learning` POX component and see the flow rules in t
 
 Launch in the root@controller:
 ```
-python3 /pox/pox.py forwarding.l2_learning openflow.of_01 -port=6653
+python3.9 /pox/pox.py forwarding.l2_learning openflow.of_01 -port=6653
 ``` 
 
 **Note:** We installed `python3.9` on the `kathara/pox` image to improve compatibility with POX.

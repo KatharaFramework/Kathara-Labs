@@ -1,4 +1,4 @@
-# 09-POX_Routing
+# 09-POX Routing
 
 ## Introduction
 
@@ -11,7 +11,7 @@ In the controller, there are the following functionalities:
 - a component that track the current occupation (in terms of number of flows) of each link
 - a component that compute and install the “max throughput” path. The used algorithm is the Dijkstra's Algorithm: a shortest path search algorithm in a weighted graph, assigning a weight to each edge and finding the shortest path between a starting node and all other nodes.
 
-![Network Scenario](/pox/images/network-image3.png)
+![Network Scenario](../images/image3.png)
 
 ### Test the implementation
 
@@ -21,7 +21,7 @@ Look at the controller xterm and **wait** until thw nx library is installed (abo
 
 Launch ```kathara connect controller``` in the main terminal
 
-Launch ```python3 /pox/pox.py openflow.of_01 -port=6653 component_ARP network_occupation host_discovery link_discovery max_throughput_routing``` in the root@controller
+Launch ```python3.9 /pox/pox.py openflow.of_01 -port=6653 component_ARP network_occupation host_discovery link_discovery max_throughput_routing``` in the root@controller
 
 You will obtain: 
 ```

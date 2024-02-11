@@ -1,4 +1,4 @@
-# 07-POX_Host_Discovery
+# 07-POX Host Discovery
 
 ## Introduction
 
@@ -24,7 +24,7 @@ We have created a POX Host Discovery application that:
 * uses the POX_Link_Discovery component (with some changes) allowing the controller to know the network topology (switches and link between them)
 * after the connection up events, all the hosts are discovered (their links with the switches)
 
-![Network Scenario](/pox/images/network-image3.png)
+![Network Scenario](../images/image3.png)
 
 ### Test the implementation
 
@@ -32,7 +32,7 @@ Launch ```kathara lstart``` in the main terminal, wait until the lab is created
 
 Launch ```kathara connect controller``` in the main terminal
 
-Launch ```python3 /pox/pox.py openflow.of_01 -port=6653 host_discovery``` in the root@controller
+Launch ```python3.9 /pox/pox.py openflow.of_01 -port=6653 host_discovery``` in the root@controller
 
 You will obtain: 
 ```

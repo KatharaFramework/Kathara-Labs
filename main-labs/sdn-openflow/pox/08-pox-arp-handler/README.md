@@ -1,4 +1,4 @@
-# 08-POX_ARP_Handler
+# 08-POX ARP Handler
 
 ## Introduction
 
@@ -19,7 +19,7 @@ We have created a POX ARP Handler application that:
 - the host discovery component of the previous lab (with some small changes), to know the hosts of the network
 - a component that answers to ARP requests of the hosts (assume that the gateway is at 10.0.0.1): if the destination IP is a host, it answers with the correct MAC; if the destination IP is the gateway or external, it answers with a fake MAC
 
-![Network Scenario](/pox/images/network-image4.png)
+![Network Scenario](../images/image4.png)
 
 ### Test the implementation
 
@@ -27,7 +27,7 @@ Launch ```kathara lstart``` in the main terminal, wait until the lab is created
 
 Launch ```kathara connect controller``` in the main terminal
 
-Launch ```python3 /pox/pox.py openflow.of_01 -port=6653 component_ARP host_discovery``` in the root@controller
+Launch ```python3.9 /pox/pox.py openflow.of_01 -port=6653 component_ARP host_discovery``` in the root@controller
 
 You will obtain: 
 ```

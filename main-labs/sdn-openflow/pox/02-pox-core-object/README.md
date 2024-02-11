@@ -1,4 +1,4 @@
-# 02-POX_Core_Object
+# 02-POX Core Object
 
 ## Introduction
 
@@ -35,7 +35,7 @@ Launch ```kathara lstart``` in the main terminal, wait until the lab is created
 
 Launch ```kathara connect controller``` in the main terminal
 
-Launch ```python3 /pox/pox.py A B openflow.of_01 -port=6653``` in the root@controller
+Launch ```python3.9 /pox/pox.py A B openflow.of_01 -port=6653``` in the root@controller
 
 You will obtain:
 

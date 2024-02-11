@@ -1,4 +1,4 @@
-# 03-POX_Events
+# 03 - POX Events
 
 ## Introduction
 Event handling in POX fits into the publish/subscribe paradigm. 
@@ -25,7 +25,7 @@ We have created two POX components:
 * the component A_listener is a listener of packetIn events: whenever a packetIn event occurs, the component A prints a message on the display publishes an event named pktInSeen
 * the component B_listener is a listener of pktInSeen events: whenever a pktInSeen event occurs, the component B prints the message “A has seen an OFP packetIn” on the screen.
 
-![Network Scenario](https://github.com/RicGobs/Kathara-Labs/blob/main/main-labs/sdn-openflow/network_images/network_image1.png)
+![Network Scenario](../images/image1.png)
 
 ### Test the implementation
 
@@ -33,7 +33,7 @@ Launch ```kathara lstart``` in the main terminal, wait until the lab is created
 
 Launch ```kathara connect controller``` in the main terminal
 
-Launch ```python3 /pox/pox.py A_listener B_listener openflow.of_01 -port=6653``` in the root@controller
+Launch ```python3.9 /pox/pox.py A_listener B_listener openflow.of_01 -port=6653``` in the root@controller
 
 You will obtain: 
 ```
