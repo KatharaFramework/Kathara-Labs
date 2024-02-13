@@ -28,18 +28,20 @@ We have created a POX Host Discovery application that:
 
 ### Test the implementation
 
-Launch ```kathara lstart``` in the main terminal, wait until the lab is created
+To run the network scenario, open a terminal in the scenario directory and type:
+```
+kathara lstart 
+```
 
-Launch ```kathara connect controller``` in the main terminal
-
-Launch ```python3.9 /pox/pox.py openflow.of_01 -port=6653 host_discovery``` in the root@controller
+Launch in the root@controller:
+```
+python3.9 /pox/pox.py openflow.of_01 -port=6653 host_discovery
+```
 
 You will obtain: 
 ```
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
-WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
-WARNING:version:You're running Python 3.11.
-WARNING:version:If you run into problems, try using a supported version.
+WARNING:version:Support for Python 3 is experimental.
 INFO:core:POX 0.7.0 (gar) is up.
 INFO:openflow.of_01:[96-42-18-c8-bb-4c 1] connected
 INFO:openflow.of_01:[f2-7d-06-c5-98-49 2] connected
@@ -66,6 +68,7 @@ INFO:openflow.of_01:[b6-50-bc-90-a9-4d 4] disconnected
 INFO:core:Down.
 ```
 
-Close the root@controller with ```exit```
-
-Close the lab with ```kathara lclean```
+To undeploy the network scenario, open a terminal in the network scenario directory and type:
+```bash
+kathara lclean
+```

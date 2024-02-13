@@ -1,4 +1,4 @@
-# 06-POX Discovery
+# 06-POX Link Discovery
 
 ## Introduction
 
@@ -20,11 +20,15 @@ We have created a POX discovery application that:
 
 ### Test the implementation
 
-Launch ```kathara lstart``` in the main terminal, wait until the lab is created
+To run the network scenario, open a terminal in the scenario directory and type:
+```bash
+kathara lstart 
+```
 
-Launch ```kathara connect controller``` in the main terminal
-
-Launch ```python3.9 /pox/pox.py link_discovery_solution1 openflow.of_01 -port=6653``` in the root@controller
+Launch  in the root@controller:
+```
+python3.9 /pox/pox.py link_discovery_solution1 openflow.of_01 -port=6653
+```
 
 You will obtain:
 
@@ -33,9 +37,7 @@ You will obtain:
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
 
 # normal Warning, don't worry
-WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
-WARNING:version:You're running Python 3.11.
-WARNING:version:If you run into problems, try using a supported version.
+WARNING:version:Support for Python 3 is experimental.
 INFO:core:POX 0.7.0 (gar) is up.
 
 # connection of the switches
@@ -82,9 +84,12 @@ INFO:openflow.of_01:[b6-50-bc-90-a9-4d 4] disconnected
 INFO:core:Down.
 ```
 
-Close the lab with ```kathara lclean```
+To undeploy the network scenario, open a terminal in the network scenario directory and type:
+```bash
+kathara lclean
+```
 
 In the controller there is another possible solution, if you want to try it, repeat the tutorial with: 
 ```
-python3 /pox/pox.py link_discovery_solution2 openflow.of_01 -port=6653
+python3.9 /pox/pox.py link_discovery_solution2 openflow.of_01 -port=6653
 ```

@@ -15,20 +15,20 @@ In the controller, there are the following functionalities:
 
 ### Test the implementation
 
-Launch ```kathara lstart``` in the main terminal, wait until the lab is created
+To run the network scenario, open a terminal in the scenario directory and type:
+```bash
+kathara lstart 
+```
 
-Look at the controller xterm and **wait** until thw nx library is installed (about 3/4 minutes).
-
-Launch ```kathara connect controller``` in the main terminal
-
-Launch ```python3.9 /pox/pox.py openflow.of_01 -port=6653 component_ARP network_occupation host_discovery link_discovery max_throughput_routing``` in the root@controller
+Launch in the root@controller:
+```
+python3.9 /pox/pox.py openflow.of_01 -port=6653 component_ARP network_occupation host_discovery link_discovery max_throughput_routing
+```
 
 You will obtain: 
 ```
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
-WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
-WARNING:version:You're running Python 3.11.
-WARNING:version:If you run into problems, try using a supported version.
+WARNING:version:Support for Python 3 is experimental.
 INFO:core:POX 0.7.0 (gar) is up.
 INFO:openflow.of_01:[72-7b-f3-68-4e-4c 1] connected
 INFO:openflow.of_01:[06-43-09-87-25-47 2] connected
@@ -81,7 +81,7 @@ switch [4] has 0 bytes and 0 flows
 switch [2] has 0 bytes and 0 flows
 ```
 
-Now, we try the routing algorithm. Go to h1 xterm and launch ```ping 10.0.0.13```. You will obtain:
+Now, we try the routing algorithm. Go to `h1` xterm and launch ```ping 10.0.0.13```. You will obtain:
 ```
 INFO:max_throughput_routing:found path from 10.0.0.11 to 10.0.0.13 -> [(2, 4), (4, 1)]
   ->  link 2_4 has 1 flows
@@ -90,7 +90,7 @@ INFO:max_throughput_routing:found path from 10.0.0.13 to 10.0.0.11 -> [(1, 3), (
   ->  link 1_3 has 1 flows
   ->  link 3_2 has 1 flows
 ```
-The interesting point is that the path for the two flows (h1 to h3 and h3 to h1) are created to overcome the link overlapping, as the max throughput algorithm should do. You can try other ping to see that the behaviour is the same.
+The interesting point is that the path for the two flows (`h1` to `h3` and `h3` to `h1`) are created to overcome the link overlapping, as the max throughput algorithm should do. You can try other ping to see that the behaviour is the same.
 
 There will be another printing (every 30 seconds) with the flow of the different switches. The second one will be as follow:
 ```
@@ -118,7 +118,7 @@ switch [4] has 0 bytes and 0 flows
 switch [2] has 0 bytes and 0 flows
 ```
 
-The ARP handler component is doing the actions explained in the previous lab, but you have to de-comment the "print" in the Component_ARP.py
+The ARP handler component is doing the actions explained in the previous lab, but you have to de-comment the "print" in the Component_ARP.py (if you want to see the messages).
 
 When you close the application, you obtain the disconnection from the switches:
 ```
@@ -129,6 +129,7 @@ INFO:openflow.of_01:[b6-50-bc-90-a9-4d 4] disconnected
 INFO:core:Down.
 ```
 
-Close the root@controller with ```exit```
-
-Close the lab with ```kathara lclean```
+To undeploy the network scenario, open a terminal in the network scenario directory and type:
+```bash
+kathara lclean
+```

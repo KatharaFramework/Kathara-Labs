@@ -18,11 +18,15 @@ found [here](https://noxrepo.github.io/pox-doc/html/#components-in-pox).
 | Name                           | Description                                                                        |
 |--------------------------------|------------------------------------------------------------------------------------|
 | **POX Controller**             | Simple example about the `forwarding.l2_learning` component.                       |
-| **POX Core Object**           | A network example showing how to make basic BGP announcements between two routers. |
-| **POX Events**       | A network introducing to the use of prefix-lists, route-maps, and access-lists.    |
-| **POX Work with Packets**                | Architecture of a stub network.                                                    |
-| **POX Datapaths**         | Configuration of a Stub AS with static routes.                                     |
-| **POX Link Discovery**       | Configuration of a Multi-homed stub network with backup.                           |
-| **POX Host Discovery** | A Multi-homed stub network running RIP.                                            |
-| **POX ARP Handler**            | Configuration of a Multi-homed network with backup and load sharing.               |
-| **POX Routing**            | Configuration of a Multi-homed network with backup and load sharing.               |
+| **POX Core Object**            | Introduction to pox components.                                                    |
+| **POX Events**                 | Introduction to OpenFlow events management.                                        |
+| **POX Work with Packets**      | Introduction to parsing and packets creation.                                      |
+| **POX Datapaths**              | Communication between controller and switch.                                       |
+| **POX Link Discovery**         | Implementation of a pox component that discover the links of the network.          |
+| **POX Host Discovery**         | Implementation of a pox component that discover the links of the network.          |
+| **POX ARP Handler**            | Implementation of a pox component that answers to ARP requests of the hosts.       |
+| **POX Routing**                | Final lab that implements a routing function in the network.                       |
+
+## Thanks to
+
+The scenarios refer to the **Programmable Network** Course of La Sapienza University of Rome, held by Professor **Marco Polverini**.

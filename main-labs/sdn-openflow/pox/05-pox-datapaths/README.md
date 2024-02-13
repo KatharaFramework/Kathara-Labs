@@ -20,11 +20,15 @@ We have created a POX component, called reflector, that:
 
 ### Test the implementation
 
-Launch ```kathara lstart``` in the main terminal, wait until the lab is created
+To run the network scenario, open a terminal in the scenario directory and type:
+```bash
+kathara lstart 
+```
 
-Launch ```kathara connect controller``` in the main terminal
-
-Launch ```python3.9 /pox/pox.py reflector openflow.of_01 -port=6653``` in the root@controller
+Launch in the root@controller:
+```
+python3.9 /pox/pox.py reflector openflow.of_01 -port=6653
+```
 
 You will obtain: 
 ```
@@ -32,22 +36,20 @@ You will obtain:
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
 
 # normal Warning, don't worry
-WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
-WARNING:version:You're running Python 3.11.
-WARNING:version:If you run into problems, try using a supported version.
+WARNING:version:Support for Python 3 is experimental.
 INFO:core:POX 0.7.0 (gar) is up.
 
 # connection of the switch
 INFO:openflow.of_01:[e6-b1-b4-df-ec-42 1] connected
 ```
 
-In h2 xterm, to see that no packet arrives:
+In `h2` terminal, to see that no packet arrives:
 ```
 # launch and leave it on
 tcpdump -i eth0 
 ```
 
-In h1 xterm:
+In `h1` terminal:
 ```
 cd home
 python3 send_receive.py 
@@ -60,11 +62,12 @@ The destination before was: 11:22:33:44:55:66
 Port used: 1
 ```
 
-You can see that the packet is reflected to h1 and h2 does not receive any packets.
-
-Close the root@controller with ```exit```
-
-Close the lab with ```kathara lclean```
+You can see that the packet is reflected to `h1` and `h2` does not receive any packets.
 
 
-Inside the controller there are also A_listener and B_listener component of the the 03-POX_Events lab. Try to launch all of them.
+To undeploy the network scenario, open a terminal in the network scenario directory and type:
+```bash
+kathara lclean
+```
+
+Inside the controller there are also A_listener and B_listener component of the 03-POX-Events lab. Try to launch all of them.

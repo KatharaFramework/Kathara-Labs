@@ -23,18 +23,20 @@ We have created a POX ARP Handler application that:
 
 ### Test the implementation
 
-Launch ```kathara lstart``` in the main terminal, wait until the lab is created
+To run the network scenario, open a terminal in the scenario directory and type:
+```bash
+kathara lstart 
+```
 
-Launch ```kathara connect controller``` in the main terminal
-
-Launch ```python3.9 /pox/pox.py openflow.of_01 -port=6653 component_ARP host_discovery``` in the root@controller
+Launch in the root@controller:
+```
+python3.9 /pox/pox.py openflow.of_01 -port=6653 component_ARP host_discovery
+```
 
 You will obtain: 
 ```
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
-WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
-WARNING:version:You're running Python 3.11.
-WARNING:version:If you run into problems, try using a supported version.
+WARNING:version:Support for Python 3 is experimental.
 INFO:core:POX 0.7.0 (gar) is up.
 INFO:openflow.of_01:[32-b2-97-d3-8b-40 2] connected
 host discovering
@@ -42,13 +44,25 @@ INFO:host_discovery:  ->  host 10.0.0.11 is connected to switch ([1], '32-b2-97-
 INFO:host_discovery:  ->  host 10.0.0.12 is connected to switch ([1], '32-b2-97-d3-8b-40') through switch port 2
 ```
 
-Now, we try some ping to see the response of the ARP handler. Launch the command ```ping 10.0.0.12``` in h1 xterm. You will have a first print that shows the ARP request of h1 and then a print that represents the ARP reply with the MAC of h2:
+Now, we try some ping to see the response of the ARP handler. 
+
+Launch in `h1` terminal the command:
+```
+ping 10.0.0.12
+``` 
+
+You will have a first print that shows the ARP request of `h1` and then a print that represents the ARP reply with the MAC of `h2`:
 ```
 INFO:component_ARP:ARP, Request who-has 10.0.0.12 tell 10.0.0.11
 INFO:component_ARP:ARP, Reply 10.0.0.12 is-at 32:1a:b0:d4:aa:82
 ```
 
-Then, try to ping ```ping 20.0.0.1``` always in h1 xterm. Because it is not a known host, the ARP reply contains a fake MAC:
+Then, try to do a different ping, Launch in `h1` terminal the command:
+```
+ping 20.0.0.1
+```
+
+Because it is not a known host, the ARP reply contains a fake MAC:
 ```
 INFO:component_ARP:ARP, Request who-has 10.0.0.1 tell 10.0.0.11
 INFO:component_ARP:ARP, Reply 10.0.0.1 is-at 11:11:11:11:11:11
@@ -63,6 +77,7 @@ INFO:openflow.of_01:[b6-50-bc-90-a9-4d 4] disconnected
 INFO:core:Down.
 ```
 
-Close the root@controller with ```exit```
-
-Close the lab with ```kathara lclean```
+To undeploy the network scenario, open a terminal in the network scenario directory and type:
+```bash
+kathara lclean
+```

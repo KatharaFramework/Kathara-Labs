@@ -13,13 +13,11 @@ In particular, the scenario shows how to enable the `forwarding.l2_learning` com
 ### Test the implementation
 
 To run the network scenario, open a terminal in the scenario directory and type:
-
 ```bash
 kathara lstart 
 ```
 
 To test the connectivity in the network, open the `h1` terminal and ping `h2`:
-
 ```
 ping 10.0.2.2
 ```
@@ -32,9 +30,7 @@ ovs-ofctl dump-flows s1
 
 This happens since the switch acts as a L2 learning switch by the default, but does not fill the table.
 
-To enable the `forwarding.l2_learning` POX component and see the flow rules in the switch, launching ```kathara connect controller```.
-
-Launch in the root@controller:
+To enable the `forwarding.l2_learning` POX component and see the flow rules in the switch, launch in the root@controller:
 ```
 python3.9 /pox/pox.py forwarding.l2_learning openflow.of_01 -port=6653
 ``` 
@@ -59,7 +55,7 @@ ping 10.0.2.2
 ovs-ofctl dump-flows s1
 ```
 
-You will obtain in s1 something like that:
+You will obtain in `s1` something like that:
 
 ```
  cookie=0x0, duration=28.822s, table=0, n_packets=29, n_bytes=2842, idle_timeout=10, hard_timeout=30, priority=65535,icmp,in_port=eth0,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=00:00:00:00:00:02,nw_src=10.0.1.1,nw_dst=10.0.2.2,nw_tos=0,icmp_type=8,icmp_code=0 actions=output:eth1

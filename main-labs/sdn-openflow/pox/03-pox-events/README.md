@@ -29,11 +29,15 @@ We have created two POX components:
 
 ### Test the implementation
 
-Launch ```kathara lstart``` in the main terminal, wait until the lab is created
+To run the network scenario, open a terminal in the scenario directory and type:
+```bash
+kathara lstart 
+```
 
-Launch ```kathara connect controller``` in the main terminal
-
-Launch ```python3.9 /pox/pox.py A_listener B_listener openflow.of_01 -port=6653``` in the root@controller
+Launch in the root@controller:
+```
+python3.9 /pox/pox.py A_listener B_listener openflow.of_01 -port=6653
+```
 
 You will obtain: 
 ```
@@ -41,19 +45,20 @@ You will obtain:
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
 
 # normal warning, don't worry
-WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
-WARNING:version:You're running Python 3.11.
-WARNING:version:If you run into problems, try using a supported version.
+WARNING:version:Support for Python 3 is experimental.
 INFO:core:POX 0.7.0 (gar) is up.
 ```
 
-Launch ```ping 10.0.2.2``` in the h1 terminal, in the root@controller you will obtain: 
+Launch ```ping 10.0.2.2``` in the `h1` terminal.
+
+In the root@controller you will obtain: 
 ```
 # Result for each ping
 *** From Component_A: packetIn captured!
 *** From Component_B: A has seen an OFP packetIn!
 ```
 
-close the root@controller with ```exit```
-
-close the lab with ```kathara lclean```
+To undeploy the network scenario, open a terminal in the network scenario directory and type:
+```bash
+kathara lclean
+```
