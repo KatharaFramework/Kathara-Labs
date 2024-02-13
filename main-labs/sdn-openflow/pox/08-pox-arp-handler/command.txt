@@ -1,1 +1,0 @@
-python3 /pox/pox.py openflow.of_01 -port=6653 component_ARP host_discovery
