@@ -18,7 +18,7 @@ def parse_icmp (eth_packet):
             icmp_packet = ip_packet.payload
 ```
 
-* by using its find( ) method:
+* by using its `find()` method:
 ```
 def handle_IP_packet (packet):
     ip = packet.find('ipv4')
@@ -41,7 +41,7 @@ To run the network scenario, open a terminal in the scenario directory and type:
 kathara lstart 
 ```
 
-Launch in the root@controller:
+Launch in the `root@controller`:
 ```
 python3.9 /pox/pox.py Packet_check openflow.of_01 -port=6653
 ```
@@ -68,7 +68,7 @@ python3 sendARP.py
 python3 sendIP.py 
 ```
 
-In the root@controller terminal you will see:
+In the `root@controller` terminal you will see:
 ```
 # if you do python3 sendARP.py 
 *** From Component: packet detected NOT IP!
