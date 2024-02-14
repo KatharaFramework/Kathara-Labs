@@ -27,6 +27,5 @@ found [here](https://noxrepo.github.io/pox-doc/html/#components-in-pox).
 | **POX ARP Handler**            | Implementation of a pox component that answers to ARP requests of the hosts.       |
 | **POX Routing**                | Final lab that implements a routing function in the network.                       |
 
-## Thanks to
-
+## Acknowledgements
 The scenarios refer to the **Programmable Network** Course of La Sapienza University of Rome, held by Professor **Marco Polverini**.
