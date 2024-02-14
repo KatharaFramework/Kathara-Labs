@@ -3,7 +3,7 @@
 ## Introduction
 
 You can put your Python code wherever you like, as long as POX can find it.
-One of the top-level directories in POX is called "ext". Indeed, POX automatically adds “ext” folder to the Python
+One of the top-level directories in POX is called `ext`. Indeed, POX automatically adds `ext` folder to the Python
 search path.
 
 The POX core object is a rendezvous between components:
@@ -21,9 +21,9 @@ The following command is used to import the core object: ```from pox.core import
 
 We have created two POX components:
 
-* the component A implements: a string attribute named "hello_message", a method to print the "hello_message" attribute
+* the component A implements: a string attribute named `hello_message`, a method to print the `hello_message` attribute
   on screen, and register itself in the POX Core.
-* the component B implements a method that calls the “print” method of component A at startup.
+* the component B implements a method that calls the `print` method of component A at startup.
 
 ![Network Scenario](../images/image1.png)
 
