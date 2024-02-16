@@ -8,7 +8,7 @@ import networkx as nx
 
 log = core.getLogger()
 
-class Max_throughput_routing:
+class maxThroughputRouting:
 
     def __init__(self):
 
@@ -53,8 +53,8 @@ class Max_throughput_routing:
      
     def routing_flows(self,src_host_ip,dst_host_ip):
 
-        # get graph object with class NetworkGraph
-        graph = core.NetworkGraph.graph
+        # get graph object with class networkGraph
+        graph = core.networkGraph.graph
 
         # get the switch DPID of the src and of the dst, the port on the switch to which the destination host is connected
         sw_src = core.hostDiscovery.hosts[src_host_ip]["switch"]
@@ -117,7 +117,7 @@ class Max_throughput_routing:
                 output_port = core.linkDiscovery.links[link_id].port1
 
                 # increment flow on the edge by 1
-                core.NetworkGraph.add_weight(graph,sw[0],sw[1],1)
+                core.networkGraph.add_weight(graph,sw[0],sw[1],1)
 
                 # take flows of that link to print it
                 flow_weight = graph[sw[0]][sw[1]]["weight"]
@@ -156,12 +156,12 @@ class Max_throughput_routing:
 
             if flow_id in self.dict_flows.keys():
 
-                # get graph object with class NetworkGraph
-                graph = core.NetworkGraph.graph
+                # get graph object with class networkGraph
+                graph = core.networkGraph.graph
 
                 # If the flow is present in the dictionary, it decreases the flow counter for every link used by the flow
                 for link in self.dict_flows[flow_id]:
-                    core.NetworkGraph.remove_weight(graph,link[0],link[1],1)
+                    core.networkGraph.remove_weight(graph,link[0],link[1],1)
 
                 # removes the flow from the dict_flows dictionary
                 self.dict_flows.pop(flow_id)
@@ -197,4 +197,4 @@ class Max_throughput_routing:
 
 
 def launch():
-    core.registerNew(Max_throughput_routing)
+    core.registerNew(maxThroughputRouting)

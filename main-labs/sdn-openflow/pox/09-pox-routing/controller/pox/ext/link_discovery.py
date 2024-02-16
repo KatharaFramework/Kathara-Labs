@@ -107,8 +107,8 @@ class linkDiscovery():
                 print("discovered new link: " + link.name)
                 print(link.__dict__)
 
-                graph = core.NetworkGraph.graph
-                core.NetworkGraph.update_graph(graph,sid1,sid2,link.flow)
+                graph = core.networkGraph.graph
+                core.networkGraph.update_graph(graph,sid1,sid2,link.flow)
 
 
     def sendProbes(self):

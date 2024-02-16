@@ -5,7 +5,7 @@ from pox.core import core
 log = core.getLogger()
 
 
-class NetworkGraph:
+class networkGraph:
 
 
     def __init__(self):
@@ -49,4 +49,4 @@ class NetworkGraph:
 
 
 def launch():
-    core.registerNew(NetworkGraph)
+    core.registerNew(networkGraph)

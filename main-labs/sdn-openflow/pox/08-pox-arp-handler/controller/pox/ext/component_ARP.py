@@ -8,7 +8,7 @@ import ipaddress
 
 log = core.getLogger()
 
-class Component_ARP:
+class componentARP:
     def __init__(self) -> None:
         core.openflow.addListeners(self)
         self.network_mask = "255.255.255.0"
@@ -101,4 +101,4 @@ class Component_ARP:
 
 
 def launch():
-    core.registerNew(Component_ARP)
+    core.registerNew(componentARP)
