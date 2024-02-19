@@ -60,7 +60,6 @@ tcpdump -i eth0
 In `h1` terminal:
 
 ```
-cd home
 python3 send_receive.py 
 ```
 
