@@ -43,7 +43,7 @@ kathara lstart
 
 Launch in the `root@controller`:
 ```
-python3.9 /pox/pox.py Packet_check openflow.of_01 -port=6653
+python3.9 /pox/pox.py PacketCheck openflow.of_01 -port=6653
 ```
 
 You will obtain: 
@@ -61,19 +61,17 @@ INFO:openflow.of_01:[e6-b1-b4-df-ec-42 1] connected
 
 In `h1` terminal:
 ```
-cd home
-
-python3 sendARP.py 
+python3 send_arp.py 
 #or
-python3 sendIP.py 
+python3 send_ip.py 
 ```
 
 In the `root@controller` terminal you will see:
 ```
-# if you do python3 sendARP.py 
+# if you do python3 send_arp.py 
 *** From Component: packet detected NOT IP!
 
-# if you do python3 sendIP.py 
+# if you do python3 send_ip.py 
 *** From Component: IP packet detected!
 ```
 
