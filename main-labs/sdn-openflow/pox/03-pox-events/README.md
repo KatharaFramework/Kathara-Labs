@@ -36,7 +36,7 @@ kathara lstart
 
 Launch in the root@controller:
 ```
-python3.9 /pox/pox.py A_listener B_listener openflow.of_01 -port=6653
+python3.9 /pox/pox.py AListener BListener openflow.of_01 -port=6653
 ```
 
 You will obtain: 
