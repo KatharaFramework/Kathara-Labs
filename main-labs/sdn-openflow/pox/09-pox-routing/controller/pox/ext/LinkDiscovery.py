@@ -1,15 +1,10 @@
 import pox.openflow.libopenflow_01 as of
 from pox.core import core
-from pox.lib.recoco import Timer
 from pox.lib.addresses import EthAddr
-from pox.lib.packet.ethernet import ethernet
 from pox.lib.packet.arp import arp
-from pox.lib.addresses import IPAddr, EthAddr
+from pox.lib.packet.ethernet import ethernet
+from pox.lib.recoco import Timer
 from pox.lib.util import dpidToStr
-from pox.lib.revent.revent import EventMixin
-from pox.lib.revent.revent import Event
-from datetime import datetime
-
 
 log = core.getLogger()
 MIN_SWITCH = 4
@@ -27,8 +22,7 @@ class Link:
         self.flow = 0
 
 
-
-class linkDiscovery():
+class LinkDiscovery:
 
     def __init__(self):
         core.openflow.addListeners(self)
@@ -54,7 +48,6 @@ class linkDiscovery():
         # every 6 seconds sendProbes function is called
         Timer(6, self.sendProbes, recurring=True)
 
-
     def _handle_ConnectionUp(self, event):
         # Event handler method that is called when a new OpenFlow connection is established
 
@@ -74,11 +67,10 @@ class linkDiscovery():
 
         # run the search of the host, I run it from the link discovery to allow order and not crash of my system. I use the following command to never have problem due to connection problem of the switches.
         if self.id >= MIN_SWITCH:
-            core.hostDiscovery.search_host(self.connections_list)
+            core.HostDiscovery.search_host(self.connections_list)
 
         # increment connection ID
         self.id += 1
-
 
     def _handle_PacketIn(self, event):
         # Extracts the Ethernet frame from the event
@@ -99,7 +91,6 @@ class linkDiscovery():
             # Checks if the link between sid1 and sid2 is not already in the links dictionary
 
             if str(sid1) + "_" + str(sid2) not in self.links:
-
                 # creates a new Link object and adds it to the dictionary
                 link = Link(sid1, sid2, dpid1, port1, dpid2, port2)
                 self.links[link.name] = link
@@ -107,9 +98,8 @@ class linkDiscovery():
                 print("discovered new link: " + link.name)
                 print(link.__dict__)
 
-                graph = core.networkGraph.graph
-                core.networkGraph.update_graph(graph,sid1,sid2,link.flow)
-
+                graph = core.NetworkGraph.graph
+                core.NetworkGraph.update_graph(graph, sid1, sid2, link.flow)
 
     def sendProbes(self):
         # iterates over the keys of the switches
@@ -123,7 +113,6 @@ class linkDiscovery():
 
                 # condition excludes the special port used for flooding
                 if port.port_no != 65534:
-
                     # fake source mac address (used in class)
                     mac_src = self.fake_mac
 
@@ -143,7 +132,6 @@ class linkDiscovery():
                     msg.actions.append(of.ofp_action_output(port=port.port_no))
                     core.openflow.sendToDPID(dpid, msg)
 
-
     def install_flow_rule(self, dpid):
         # Creates an OpenFlow flow modification message
         msg = of.ofp_flow_mod()
@@ -162,6 +150,5 @@ class linkDiscovery():
         core.openflow.sendToDPID(dpid, msg)
 
 
-
 def launch():
-    core.registerNew(linkDiscovery)
+    core.registerNew(LinkDiscovery)

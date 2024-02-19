@@ -5,27 +5,34 @@
 This is the last lab and it is the more complex. We advise you to see previous labs (to understand this better).
 
 ## Lab
+
 In the controller, there are the following functionalities:
+
 - a host and network discovery component
 - a component that answers to ARP requests (assume that the gateway is at 10.0.0.1)
 - a component that track the current occupation (in terms of number of flows) of each link
-- a component that compute and install the “max throughput” path. The used algorithm is the Dijkstra's Algorithm: a shortest path search algorithm in a weighted graph, assigning a weight to each edge and finding the shortest path between a starting node and all other nodes.
+- a component that compute and install the “max throughput” path. The used algorithm is the Dijkstra's Algorithm: a
+  shortest path search algorithm in a weighted graph, assigning a weight to each edge and finding the shortest path
+  between a starting node and all other nodes.
 
 ![Network Scenario](../images/image3.png)
 
 ### Test the implementation
 
 To run the network scenario, open a terminal in the scenario directory and type:
+
 ```bash
 kathara lstart 
 ```
 
 Launch in the root@controller:
+
 ```
-python3.9 /pox/pox.py openflow.of_01 -port=6653 component_ARP network_occupation host_discovery link_discovery max_throughput_routing
+python3.9 /pox/pox.py openflow.of_01 -port=6653 ARP NetworkGraph HostDiscovery LinkDiscovery MaxThroughputRouting
 ```
 
-You will obtain: 
+You will obtain:
+
 ```
 POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
 WARNING:version:Support for Python 3 is experimental.
@@ -37,6 +44,7 @@ INFO:openflow.of_01:[02-a1-7d-b5-87-42 3] connected
 ```
 
 Then, there are the discovered hosts:
+
 ```
 host discovering
 INFO:host_discovery:  ->  host 10.0.0.14 is connected to switch ([1], '72-7b-f3-68-4e-4c') through switch port 2
@@ -46,6 +54,7 @@ INFO:host_discovery:  ->  host 10.0.0.12 is connected to switch ([2], '06-43-09-
 ```
 
 Then, there are the discovered links between the switches (as already seen in previous lab):
+
 ```
 discovered new link: 1_4
 {'name': '1_4', 'sid1': 1, 'sid2': 4, 'dpid1': '72-7b-f3-68-4e-4c', 'dpid2': '02-a1-7d-b5-87-42', 'port1': 4, 'port2': 2, 'flow': 0}
@@ -74,6 +83,7 @@ graph updated
 ```
 
 Every 30 seconds, there will be a printing with the flow of the different switches. The first one will be as follow:
+
 ```
 switch [1] has 0 bytes and 0 flows
 switch [3] has 0 bytes and 0 flows
@@ -82,6 +92,7 @@ switch [2] has 0 bytes and 0 flows
 ```
 
 Now, we try the routing algorithm. Go to `h1` xterm and launch ```ping 10.0.0.13```. You will obtain:
+
 ```
 INFO:max_throughput_routing:found path from 10.0.0.11 to 10.0.0.13 -> [(2, 4), (4, 1)]
   ->  link 2_4 has 1 flows
@@ -90,9 +101,14 @@ INFO:max_throughput_routing:found path from 10.0.0.13 to 10.0.0.11 -> [(1, 3), (
   ->  link 1_3 has 1 flows
   ->  link 3_2 has 1 flows
 ```
-The interesting point is that the path for the two flows (`h1` to `h3` and `h3` to `h1`) are created to overcome the link overlapping, as the max throughput algorithm should do. You can try other ping to see that the behaviour is the same.
 
-There will be another printing (every 30 seconds) with the flow of the different switches. The second one will be as follow:
+The interesting point is that the path for the two flows (`h1` to `h3` and `h3` to `h1`) are created to overcome the
+link overlapping, as the max throughput algorithm should do. You can try other ping to see that the behaviour is the
+same.
+
+There will be another printing (every 30 seconds) with the flow of the different switches. The second one will be as
+follow:
+
 ```
 switch [1] has 392 bytes and 2 flows
 switch [2] has 392 bytes and 2 flows
@@ -101,6 +117,7 @@ switch [4] has 196 bytes and 1 flows
 ```
 
 Every 25 seconds, the flow table rules are removed, and the weight in the graph too.
+
 ```
 INFO:max_throughput_routing:  ->  switch ([4], '02-a1-7d-b5-87-42') removed flow from 10.0.0.11 to 10.0.0.13
 INFO:max_throughput_routing:  ->  switch ([3], '5a-84-07-ff-04-4b') removed flow from 10.0.0.13 to 10.0.0.11
@@ -110,7 +127,8 @@ INFO:max_throughput_routing:  ->  switch ([2], '06-43-09-87-25-47') removed flow
 INFO:max_throughput_routing:  ->  switch ([1], '72-7b-f3-68-4e-4c') removed flow from 10.0.0.13 to 10.0.0.11
 ```
 
-There will be another printing with the flow of the different switches. It will be one be as follow:
+There will be another printing with the flow of the different switches. It will be one be as follows:
+
 ```
 switch [1] has 0 bytes and 0 flows
 switch [3] has 0 bytes and 0 flows
@@ -118,9 +136,11 @@ switch [4] has 0 bytes and 0 flows
 switch [2] has 0 bytes and 0 flows
 ```
 
-The ARP handler component is doing the actions explained in the previous lab, but you have to de-comment the "print" in the Component_ARP.py (if you want to see the messages).
+The ARP handler component is doing the actions explained in the previous lab, but you have to de-comment the "print" in
+the Component_ARP.py (if you want to see the messages).
 
 When you close the application, you obtain the disconnection from the switches:
+
 ```
 INFO:openflow.of_01:[9e-8c-f4-ec-9c-4e 1] disconnected
 INFO:openflow.of_01:[d2-37-cc-c7-70-41 2] disconnected
@@ -130,6 +150,7 @@ INFO:core:Down.
 ```
 
 To undeploy the network scenario, open a terminal in the network scenario directory and type:
+
 ```bash
 kathara lclean
 ```
