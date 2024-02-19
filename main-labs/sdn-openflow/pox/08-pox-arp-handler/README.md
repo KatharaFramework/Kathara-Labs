@@ -30,7 +30,7 @@ kathara lstart
 
 Launch in the root@controller:
 ```
-python3.9 /pox/pox.py openflow.of_01 -port=6653 component_ARP host_discovery
+python3.9 /pox/pox.py openflow.of_01 -port=6653 ARP HostDiscovery
 ```
 
 You will obtain: 
