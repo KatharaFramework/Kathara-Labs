@@ -35,7 +35,7 @@ kathara lstart
 
 Launch in the root@controller:
 ```
-python3.9 /pox/pox.py openflow.of_01 -port=6653 host_discovery
+python3.9 /pox/pox.py openflow.of_01 -port=6653 HostDiscovery
 ```
 
 You will obtain: 
