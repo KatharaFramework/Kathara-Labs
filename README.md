@@ -17,6 +17,7 @@ the related explanatory slides.
 * [Data Center Routing](main-labs/data-center-routing)
 * [Labs Integrating Several Technologies](main-labs/labs-integrating-several-technologies)
 * [P4](main-labs/p4) (Thanks to ETH Zurich :smile:)
+* [SDN-Openflow](main-labs/sdn-openflow)
 
 ## Community Labs
 The [community-labs](community-labs) directory contains a collection of network scenarios from the Kathará community.
