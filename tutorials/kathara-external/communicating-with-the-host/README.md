@@ -1,4 +1,4 @@
-# Kathará External - Connecting two network scenarios (Linux Only)
+# Kathará External - Communicating with the host (Linux Only)
 
 This tutorial shows a simple example on how to allow a network scenario to directly communicate with a host interface.
 
