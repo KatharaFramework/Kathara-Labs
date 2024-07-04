@@ -5,8 +5,8 @@ This tutorial shows a simple example on how to allow a network scenario to direc
 The same procedure can be used to connect a network scenario to a VM, a container, or another network scenario running
 on the host executing the emulation.
 
-The tutorial works only on Linux. It works even on WSL, if you install Docker directly from Linux  
-(not using the Docker Desktop installed on the Windows host).
+The tutorial only works on Linux. On WSL, the tutorial works only if you install Docker directly in the Linux
+distribution (Docker Desktop on the Windows host is not supported).
 
 ## Configuration
 
@@ -68,7 +68,7 @@ run the following command:
 sudo kathara lstart 
 ```
 
-On the host, we should have a topology like the following: 
+On the host, we should have a topology like the following:
 
 <img src="virtual-topology.png" width=70% alt="virtual-topology">
 
@@ -76,6 +76,7 @@ On the host, we should have a topology like the following:
 
 To permit the communication we only need to add a route on the host to specify that the prefix `10.0.0.0/24` is
 reachable through the bridge `br0`.
+
 ```bash
 ip route add 10.0.0.0/24 dev br0
 ```

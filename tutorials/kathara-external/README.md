@@ -8,8 +8,9 @@ Kathará network scenario, enabling a variety of use cases (e.g., testing of a r
 
 The following tutorials show simple examples on how to correctly configure Kathará External. 
 
-* [Base Configuration](base-configuration)
+* [Base configuration](base-configuration)
 * [External using VLANs](vlan-configuration)
+* [Communicating with the host](communicating-with-the-host)
 
 ## Documentation
 For more details, please refer to the [man pages](https://www.kathara.org/man-pages/kathara-lab.ext.5.html).
