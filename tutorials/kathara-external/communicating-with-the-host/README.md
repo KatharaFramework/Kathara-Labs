@@ -80,3 +80,7 @@ reachable through the bridge `br0`.
 ```bash
 ip route add 10.0.0.0/24 dev br0
 ```
+
+Supposing that `eth0` on the host has IP `172.30.16.107`, at this point we are able to ping the host from `pc1`: 
+
+![img.png](ping.png)
