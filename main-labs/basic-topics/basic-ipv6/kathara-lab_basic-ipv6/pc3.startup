@@ -1,0 +1,13 @@
+# to eth0 a MAC address is assigned
+# different from the default one
+ip link set dev eth0 address 00:00:00:00:00:03
+
+# the eth0 interface is set down and then up 
+# to force the stateless auto-configuration
+# to rely on the new MAC address
+ip link set dev eth0 down
+ip link set dev eth0 up
+
+# no command is given to configure an IPv6 address 
+# or a default gateway, since they come 
+# from the stateless auto-configuration

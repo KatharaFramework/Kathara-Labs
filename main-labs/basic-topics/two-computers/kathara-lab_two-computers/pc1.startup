@@ -1,0 +1,1 @@
+ip link set dev eth0 address 00:00:00:00:00:01
