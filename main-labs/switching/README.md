@@ -10,4 +10,4 @@ More details on network plugins differences, can be found [here](https://github.
 
 | Name           | Description                   | Slides                                                                                                | Lab                                               |
 |----------------|-------------------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------|
-| **One bridge** | Introduction to L2 switching. | [ppt](one-bridge/0110-kathara-lab_one-bridge.pptx), [pdf](one-bridge/0110-kathara-lab_one-bridge.pdf) | [zip](one-bridge/0110-kathara-lab_one-bridge.zip) |
+| **One bridge** | Introduction to L2 switching. | [ppt](one-bridge/0110-kathara-lab_one-bridge.pptx), [pdf](one-bridge/0110-kathara-lab_one-bridge.pdf) | [zip](one-bridge/kathara-lab_one-bridge.zip) |
