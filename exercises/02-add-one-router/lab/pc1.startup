@@ -1,0 +1,3 @@
+ip address add 100.1.0.2/24 dev eth0
+
+ip route add default via 100.1.0.1 dev eth0

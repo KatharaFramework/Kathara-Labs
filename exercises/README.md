@@ -59,5 +59,3 @@ actual network state against the expected results.
 
 You are ready to dive into Kathará exercise. Each exercise is self-contained and provides all the information to
 complete it and automatically check the results.
-
-
