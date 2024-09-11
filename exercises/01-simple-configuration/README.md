@@ -36,7 +36,7 @@ The network setup consists of the following:
 - `pc1` should be able to ping all of `pc2`'s interfaces successfully.
 - `pc2` should be able to ping all of `pc1`'s interfaces successfully.
 
-## Tips fo Success
+## Tips for Success
 
 - Use the configuration of `pc1` as a reference for setting up `pc2`.
 - It might be helpful to draw out the network topology on paper to visualize the connections and address ranges.
