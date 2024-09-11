@@ -1,6 +1,6 @@
-# Kathará Exercise
+# Kathará Exercises
 
-This repository contains a set of Kathará exercises that can be autocorrected using the `kathara-lab-checker` tool.
+This section contains a set of Kathará exercises that can be autocorrected using the `kathara-lab-checker` tool.
 These exercises are designed to help users become familiar with network emulation, protocol configurations, and
 network troubleshooting using the Kathará network emulation tool.
 
