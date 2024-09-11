@@ -5,9 +5,18 @@ provided for reference!
 
 The task is to add a new device to the network scenario found in the [lab](lab) directory and properly configure the
 network topology, device interfaces, and their IP addresses.
+By the end of the exercise, both devices should be able to `ping` each other on all interfaces.
 
-The scenario already includes one pre-configured device. By the end of the exercise, both devices should be able
-to `ping` each other on all interfaces.
+## Goal
+
+The goal of this exercise is to deepen your understanding of network configuration by adding and setting up a new device
+in a pre-existing Kathará network scenario. You will be responsible for configuring the network topology, interfaces,
+and IP addresses for the new device so that it can seamlessly communicate with the existing device.
+
+By the end of this exercise, both the new and pre-configured devices should be able to successfully `ping` each other on
+all interfaces, demonstrating correct network connectivity and configuration. An example configuration is provided to
+guide you through the process, but the main objective is to independently apply what you've learned to set up a
+functioning network environment.
 
 ## Requirements
 
@@ -27,10 +36,10 @@ The network setup consists of the following:
 - `pc1` should be able to ping all of `pc2`'s interfaces successfully.
 - `pc2` should be able to ping all of `pc1`'s interfaces successfully.
 
-## Tips
+## Tips fo Success
 
 - Use the configuration of `pc1` as a reference for setting up `pc2`.
-- Draw the network topology
+- It might be helpful to draw out the network topology on paper to visualize the connections and address ranges.
 
 ## Verifying Your Work
 
@@ -41,7 +50,7 @@ To check the exercise, use the following command (ensure you activate the virtua
 session, if you used it for the installation):
 
 ```bash
-kathara-lab-checker -c solution/simple_configuration_solution.json --lab lab --no-cache
+kathara-lab-checker -c solution/add_one_router_solution.json --lab lab --no-cache
 ```
 
 If you run the tool before starting the exercise (as recommended), you should see that only 6 out of 17 tests passed.
