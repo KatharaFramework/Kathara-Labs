@@ -5,7 +5,7 @@ provided for reference!
 
 The task is to add a new device to the network scenario found in the [lab](lab) directory and properly configure the
 network topology, device interfaces, and their IP addresses.
-By the end of the exercise, both devices should be able to `ping` each other on all interfaces.
+By the end of the exercise, all devices should be able to `ping` each other on all interfaces.
 
 ## Goal
 
@@ -20,10 +20,15 @@ functioning network environment.
 
 ## Requirements
 
-The network setup consists of the following:
-
+The target is to build a network consisting of the following:
+- Three collision domains (say wires): `A`, `B`, `C` 
 - Two devices: `pc1` and `pc2`.
+- `pc1` is connected on collision domains `A` and `B`.
+- `pc2` is connected on collision domains `B` and `C`.
 - `pc1` and `pc2` are connected through collision domain `B`.
+- `pc1` has two network interfaces:
+    - The first interface is connected to collision domain `A`.
+    - The second interface is connected to `pc2` via collision domain `B`.
 - `pc2` has two network interfaces:
     - The first interface is connected to `pc1` via collision domain `B`.
     - The second interface is connected to collision domain `C`.
@@ -36,6 +41,8 @@ The network setup consists of the following:
 - `pc1` should be able to ping all of `pc2`'s interfaces successfully.
 - `pc2` should be able to ping all of `pc1`'s interfaces successfully.
 
+The network is given only partially and the target of the exercise is to complete it.
+
 ## Tips for Success
 
 - Use the configuration of `pc1` as a reference for setting up `pc2`.
@@ -43,7 +50,9 @@ The network setup consists of the following:
 
 ## Verifying Your Work
 
-To verify your configuration, you can use the `kathara-lab-checker` tool to automatically check the exercise. To install
+To check if you set a correct network, you can use the typical networking troubleshooting tools, e.g., wireshark, ping, traceroute...
+
+When you feel comfortable with your configuration, for the final check you can use the `kathara-lab-checker` tool to automatically correct the exercise. To install
 the tool, follow the instructions provided by the [README](../README.md) of the exercises section.
 
 To check the exercise, use the following command (ensure you activate the virtual environment in every new shell
@@ -53,7 +62,7 @@ session, if you used it for the installation):
 kathara-lab-checker -c solution/add_one_router_solution.json --lab lab --no-cache
 ```
 
-If you run the tool before starting the exercise (as recommended), you should see that only 6 out of 17 tests passed.
+If you run the tool before starting the exercise, you should see that only 6 out of 17 tests passed.
 
 Use the error explanations provided to guide your next steps.
 
