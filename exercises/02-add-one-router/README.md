@@ -19,7 +19,7 @@ elements while ensuring that all hosts can reach each other.
 
 ## Requirements
 
-The network setup consists of the following:
+The target is to build a network consisting of the following:
 
 - Three hosts: `pc1`, `pc2`, `pc3`.
 - Three routers: `r1`, `r2`, `r3`.
@@ -41,13 +41,7 @@ The network setup consists of the following:
 - The routing table of each device contains the prefix directly connected plus a default route pointing to its router.
 - All the hosts should be able to `ping` each other.
 
-## Task Outline
-
-1. Add a new router to the topology in the lab directory and properly configure it.
-2. Add a new host that connects to the new router.
-3. Ensure all IP addresses are correctly assigned based on the topology guidelines.
-4. Update routing tables where necessary to allow for full network communication.
-5. Verify connectivity by making sure that each host can successfully ping any other host in the network.
+The network is given only partially and the target of the exercise is to complete it.
 
 ## Tips for Success
 
@@ -57,8 +51,12 @@ The network setup consists of the following:
 
 ## Verifying Your Work
 
-To verify your configuration, you can use the `kathara-lab-checker` tool to automatically check the exercise. To install
-the tool, follow the instructions provided by the [README](../README.md) of the exercises section.
+To check if you set a correct network, you can use the typical networking troubleshooting tools, e.g., wireshark, ping,
+traceroute...
+
+When you feel comfortable with your configuration, for the final check you can use the `kathara-lab-checker` tool to
+automatically correct the exercise. 
+To install the tool, follow the instructions provided by the [README](../README.md) of the exercises section.
 
 To check the exercise, use the following command (ensure you activate the virtual environment in every new shell
 session, if you used it for the installation):
@@ -66,6 +64,3 @@ session, if you used it for the installation):
 ```bash
 kathara-lab-checker -c solution/add_one_router_solution.json --lab lab --no-cache
 ```
-
-
-

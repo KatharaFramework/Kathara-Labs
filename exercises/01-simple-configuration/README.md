@@ -21,7 +21,8 @@ functioning network environment.
 ## Requirements
 
 The target is to build a network consisting of the following:
-- Three collision domains (say wires): `A`, `B`, `C` 
+
+- Three collision domains (say wires): `A`, `B`, `C`
 - Two devices: `pc1` and `pc2`.
 - `pc1` is connected on collision domains `A` and `B`.
 - `pc2` is connected on collision domains `B` and `C`.
@@ -50,10 +51,12 @@ The network is given only partially and the target of the exercise is to complet
 
 ## Verifying Your Work
 
-To check if you set a correct network, you can use the typical networking troubleshooting tools, e.g., wireshark, ping, traceroute...
+To check if you set a correct network, you can use the typical networking troubleshooting tools, e.g., wireshark, ping,
+traceroute...
 
-When you feel comfortable with your configuration, for the final check you can use the `kathara-lab-checker` tool to automatically correct the exercise. To install
-the tool, follow the instructions provided by the [README](../README.md) of the exercises section.
+When you feel comfortable with your configuration, for the final check you can use the `kathara-lab-checker` tool to
+automatically correct the exercise. 
+To install the tool, follow the instructions provided by the [README](../README.md) of the exercises section.
 
 To check the exercise, use the following command (ensure you activate the virtual environment in every new shell
 session, if you used it for the installation):
@@ -73,6 +76,3 @@ The tool also generates a `.xlsx` report in the lab directory, which consists of
 3. **Failed**: Lists only the failed test results.
 
 Now you're ready to dive into the exercise!
-
-
-
