@@ -5,8 +5,6 @@ the `kathara-lab-checker` tool.
 These exercises are designed to help users become familiar with network emulation, protocol configurations, and
 network troubleshooting using the Kathará network emulation tool.
 
-## Repository Structure
-
 Each folder in this section represents a standalone exercise with its own configuration files, instructions, and
 expected output.
 
