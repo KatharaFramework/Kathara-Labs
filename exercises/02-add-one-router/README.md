@@ -26,11 +26,24 @@ The target is to build a network consisting of the following:
 - `pc1` and `r1` are connected through collision domain `A`.
 - `pc2` and `r2` are connected through collision domain `C`.
 - `pc3` and `r3` are connected through collision domain `D`.
-- `r1` and `r2` are connected through collision domain `B`.
-- `r1` and `r3` are connected through collision domain `E`.
-- `r2` and `r3` are connected through collision domain `F`.
-- The final octet of each router's IP address corresponds to its device number (e.g., `.1` for `r1`).
-- The final octet of each host's IP address corresponds is equal to `2`.
+- `r1` has three interfaces:
+- `eth0` connected on collision domain `A` ;
+- `eth1` connected on collision domain `B` ;
+- `eth2` connected on collision domain `E`.
+- `r2` has three interfaces:
+- `eth0` connected on collision domain `C` ;
+- `eth1` connected on collision domain `B` ;
+- `eth2` connected on collision domain `F`,
+- `r3` has three interfaces:
+- `eth0` connected on collision domain `D` ;
+- `eth1` connected on collision domain `E` ;
+- `eth2` connected on collision domain `F`.
+- The final octet of each router's address on the `/24` networks is equal to `1`.
+- For the `/30` networks, the router with the lower device number has the first address available,
+  the other the second (e.g., considering the network `10.0.0.0/30`, `r1` has address `10.0.0.1` and `r2` has
+  address `10.0.0.2`) .
+- IP address corresponds to its device number .
+- The final octet of each host's IP address is equal to `2`.
 - Devices in collision domain `A` use the address range `100.1.0.0/24`.
 - Devices in collision domain `C` use the address range `100.2.0.0/24`.
 - Devices in collision domain `D` use the address range `100.3.0.0/24`.
@@ -55,7 +68,7 @@ To check if you set a correct network, you can use the typical networking troubl
 traceroute...
 
 When you feel comfortable with your configuration, for the final check you can use the `kathara-lab-checker` tool to
-automatically correct the exercise. 
+automatically correct the exercise.
 To install the tool, follow the instructions provided by the [README](../README.md) of the exercises section.
 
 To check the exercise, use the following command (ensure you activate the virtual environment in every new shell
