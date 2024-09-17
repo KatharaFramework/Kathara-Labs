@@ -35,8 +35,8 @@ The target is to build a network consisting of the following:
 - Devices in collision domain `C` use the address range `100.2.0.0/24`.
 - Devices in collision domain `D` use the address range `100.3.0.0/24`.
 - Devices in collision domain `B` use the address range `10.0.0.0/30`.
-- Devices in collision domain `E` use the address range `10.0.0.4/24`.
-- Devices in collision domain `F` use the address range `10.0.0.8/24`.
+- Devices in collision domain `E` use the address range `10.0.0.4/30`.
+- Devices in collision domain `F` use the address range `10.0.0.8/30`.
 - The routing table of each router only contains the prefixes directly connected plus the other `100.X.0.0/24` prefixes.
 - The routing table of each device contains the prefix directly connected plus a default route pointing to its router.
 - All the hosts should be able to `ping` each other.
@@ -62,5 +62,5 @@ To check the exercise, use the following command (ensure you activate the virtua
 session, if you used it for the installation):
 
 ```bash
-kathara-lab-checker -c solution/add_one_router_solution.json --lab lab --no-cache
+kathara-lab-checker -c solution/add_one_router_solution.json --lab lab --no-cache --skip
 ```

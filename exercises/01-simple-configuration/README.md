@@ -62,17 +62,11 @@ To check the exercise, use the following command (ensure you activate the virtua
 session, if you used it for the installation):
 
 ```bash
-kathara-lab-checker -c solution/add_one_router_solution.json --lab lab --no-cache
+kathara-lab-checker -c solution/simple_configuration_solution.json --lab lab --no-cache --skip
 ```
 
 If you run the tool before starting the exercise, you should see that only 6 out of 17 tests passed.
 
 Use the error explanations provided to guide your next steps.
-
-The tool also generates a `.xlsx` report in the lab directory, which consists of three sheets:
-
-1. **Summary**: Provides an overall summary of the results.
-2. **All**: Displays the results for each test.
-3. **Failed**: Lists only the failed test results.
 
 Now you're ready to dive into the exercise!
