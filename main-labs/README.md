@@ -7,6 +7,7 @@ the related explanation slides.
 
 * [Basic Topics](basic-topics): A set of network scenarios on basic networking topics.
 * [Application Level](application-level): A set of network scenarios on the application level.
+* [Switching](switching): A set of network scenarios on L2 switching.
 * [Intradomain Routing](intradomain-routing): A set of network scenarios on intradomain routing using RIP and OSPF protocols.
 * [Interdomain Routing](interdomain-routing): A set of network scenarios on interdomain routing using BGP.
 * [Data Center Routing](data-center-routing): A set of network scenarios on data center routing.

@@ -1,0 +1,15 @@
+# set a static ip address on eth0
+ip address add 2001:0:0:3::1/64 dev eth0
+
+# set a static ip address on the point-to-point link
+ip address add 2001:0:0:2::2/64 dev eth1
+
+# set the routing table
+# the nexthop is a link-local address
+ip route add 2001:0:0:1::/64 via fe80::200:ff:fe00:b1 dev eth1
+
+# set correct privileges for radvd.conf
+chmod o-rw /etc/radvd.conf
+
+# start the radvd service
+systemctl start radvd

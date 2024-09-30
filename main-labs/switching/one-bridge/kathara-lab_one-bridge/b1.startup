@@ -1,0 +1,33 @@
+# this device is a bridge
+ip link add name mainbridge type bridge 
+
+
+# the following commands create a mapping between
+# machine interfaces and ports of the bridge 
+# the first is attached to port 1, 
+# the second to port 2 ....
+
+# eth0 is mapped to a port of the bridge 
+ip link set dev eth0 master mainbridge
+
+# eth1 is mapped to a port of the bridge 
+ip link set dev eth1 master mainbridge
+
+# eth2 is mapped to a port of the bridge 
+ip link set dev eth2 master mainbridge
+
+# eth3 is mapped to a port of the bridge 
+ip link set dev eth3 master mainbridge
+
+
+# the bridge is set up
+ip link set up dev mainbridge
+
+
+# the number of seconds a MAC address will be kept in 
+# the FDB after a packet has been received from 
+# that address is set different from the default
+brctl setageing mainbridge 600
+
+
+
