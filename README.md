@@ -29,6 +29,12 @@ Pull Request.
 
 Contributions are always welcome! 
 
+## Exercises 
+The [exercises](exercises) directory contains a set of exercises that leverage the 
+[kathara-lab-checker](https://github.com/KatharaFramework/kathara-lab-checker) tool to offer autocorrection for students.
+
+Each exercise includes specific requirements that students need to meet. Using the kathara-lab-checker, 
+students can run tests to ensure that their configuration meets the criteria, receiving feedback if any adjustments are needed.
 
 ## Exam Labs
 The [exam-labs](exam-labs) directory contains the network scenarios used for the practical exams of the course 
