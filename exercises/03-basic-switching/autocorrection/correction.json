@@ -1,0 +1,49 @@
+{
+	"convergence_time": 3,
+	"structure": "autocorrection/structure",
+	"default_image": "kathara/base",
+	"test": {
+		"requiring_startup": [
+			"pc1",
+			"pc2",
+			"s1",
+			"s2"
+		],
+		"ip_mapping": {
+			"pc1": {
+				"0": "100.0.0.1/24"
+			},
+			"pc2": {
+				"0": "100.0.0.2/24"
+			}
+		},
+		"reachability": {
+			"pc1": [
+				"100.0.0.2"
+			],
+			"pc2": [
+				"100.0.0.1"
+			]
+		},
+		"custom_commands": {
+			"pc1": [
+				{
+					"command": "cat /shared/answer1.txt",
+					"output": "2"
+				},
+				{
+					"command": "cat /shared/answer2.txt",
+					"output": "pc1\ns2"
+				},
+				{
+					"command": "cat /shared/answer3.txt",
+					"output": "eth1\neth2"
+				},
+				{
+					"command": "cat /shared/answer4.txt",
+					"regex_match": "((ff|FF):){6}"
+				}
+			]
+		}
+	}
+}

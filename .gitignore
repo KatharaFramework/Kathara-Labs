@@ -3,3 +3,8 @@
 
 # PowerPoint temporary
 ~$*.ppt*
+
+exercises/*/solved_lab
+exercises/kathara-labs-venv
+
+*.xlsx

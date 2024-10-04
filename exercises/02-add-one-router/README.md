@@ -71,9 +71,9 @@ When you feel comfortable with your configuration, for the final check you can u
 automatically correct the exercise.
 To install the tool, follow the instructions provided by the [README](../README.md) of the exercises section.
 
-To check the exercise, use the following command (ensure you activate the virtual environment in every new shell
-session, if you used it for the installation):
+To check the exercise, enter this directory and run the following command (ensure you activate the virtual
+environment in every new shell session, if you used it for the installation):
 
 ```bash
-kathara-lab-checker -c solution/add_one_router_solution.json --lab lab --no-cache --skip
+kathara-lab-checker -c autocorrection/correction.json --lab lab --no-cache --skip-report
 ```
