@@ -1,0 +1,67 @@
+{
+	"convergence_time": 3,
+	"structure": "autocorrection/structure",
+	"default_image": "kathara/base",
+	"test": {
+		"requiring_startup": [
+			"pc1",
+			"pc2",
+			"router1",
+			"router2"
+		],
+		"ip_mapping": {
+			"router2": {
+				"0": "10.0.0.1/30"
+			},
+			"router1": {
+				"0": "200.100.50.1/25",
+				"1": "200.100.50.129/25",
+				"2": "10.0.0.2/30"
+			},
+			"pc1": {
+				"0": "200.100.50.2/25"
+			},
+			"pc2": {
+				"0": "200.100.50.130/25"
+			}
+		},
+		"reachability": {
+			"pc1": [
+				"200.100.50.1",
+				"200.100.50.129",
+				"200.100.50.130",
+				"10.0.0.1"
+			],
+			"pc2": [
+				"200.100.50.1",
+				"200.100.50.2",
+				"200.100.50.129",
+				"10.0.0.1"
+			]
+		},
+		"custom_commands": {
+			"pc1": [
+				{
+					"command": "cat /shared/answer1.txt",
+					"output": "254"
+				},
+				{
+					"command": "cat /shared/answer2.txt",
+					"output": "200.100.50.0 200.100.50.127\n200.100.50.128 200.100.50.255"
+				},
+				{
+					"command": "cat /shared/answer3.txt",
+					"output": "200.100.50.255"
+				},
+				{
+					"command": "cat /shared/answer4.txt",
+					"output": "200.100.50.0 200.100.50.63 62\n200.100.50.64 200.100.50.127 62"
+				},
+				{
+					"command": "cat /shared/answer5.txt",
+					"output": "10.0.0.0\n10.0.0.3"
+				}
+			]
+		}
+	}
+}

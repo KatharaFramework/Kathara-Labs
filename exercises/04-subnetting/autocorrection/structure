@@ -1,0 +1,16 @@
+pc1[0]="A"
+pc1[image]="kathara/base"
+
+pc2[0]="B"
+pc2[image]="kathara/base"
+
+router1[0]="A"
+router1[1]="B"
+router1[2]="C"
+router1[image]="kathara/base"
+
+router2[0]="C"
+router2[1]="D"
+router2[image]="kathara/base"
+
+
