@@ -54,7 +54,7 @@ The network is given only partially and the target of the exercise is to complet
 To check if you set a correct network, you can use the typical networking troubleshooting tools, e.g., wireshark, ping,
 traceroute...
 
-When you feel comfortable with your configuration, for the final check you can use the `kathara-lab-checker` tool to
+When you feel comfortable with your configuration, for the final check you can use the `kathara_lab_checker` tool to
 automatically correct the exercise. 
 To install the tool, follow the instructions provided by the [README](../README.md) of the exercises section.
 
@@ -62,7 +62,7 @@ To check the exercise, use the following command (ensure you activate the virtua
 session, if you used it for the installation):
 
 ```bash
-kathara-lab-checker -c solution/simple_configuration_solution.json --lab lab --no-cache --skip
+kathara_lab_checker -c solution/simple_configuration_solution.json --lab lab --no-cache --skip
 ```
 
 If you run the tool before starting the exercise, you should see that only 6 out of 17 tests passed.
