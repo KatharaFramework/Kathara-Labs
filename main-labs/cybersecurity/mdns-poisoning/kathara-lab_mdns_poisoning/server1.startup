@@ -1,0 +1,18 @@
+apt-get -y update
+apt-get -y install avahi-daemon samba
+
+sed -i 's/.*enable-dbus=.*/enable-dbus=no/' /etc/avahi/avahi-daemon.conf
+sed -i 's/.*allow-interfaces=.*/allow-interfaces=eth0/' /etc/avahi/avahi-daemon.conf
+
+mkdir -p /srv/share
+chmod -R 755 /srv/share
+chown -R nobody:nobody /srv/share
+
+adduser --disabled-password --gecos "" valerio
+(echo iloveyou; echo iloveyou) | smbpasswd -s -a valerio
+
+ip address add 10.13.37.1/24 dev eth0
+
+/usr/sbin/avahi-daemon -D
+/etc/init.d/smbd start
+/etc/init.d/nmbd start
