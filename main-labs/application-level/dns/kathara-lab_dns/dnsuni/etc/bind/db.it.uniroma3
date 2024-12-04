@@ -1,6 +1,6 @@
 $TTL    60000
 @               IN      SOA     dnsuni.uniroma3.it.    root.dnsuni.uniroma3.it. (
-						2006031201 ; serial
+						2024120401 ; serial
 						28 ; refresh
 						14 ; retry
 						3600000 ; expire
