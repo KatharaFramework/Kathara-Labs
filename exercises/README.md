@@ -1,7 +1,7 @@
 # Kathará Exercises
 
 This section contains a set of Kathará exercises whose solution can be automatically checked using
-the `kathara-lab-checker` tool.
+the `kathara_lab_checker` tool.
 These exercises are designed to help users become familiar with network emulation, protocol configurations, and
 network troubleshooting using the Kathará network emulation tool.
 
@@ -21,7 +21,7 @@ Before working on these exercises, you need to have the following installed:
 ### Set up a Virtual Environment (Recommended)
 
 To avoid conflicts with system-wide Python dependencies, it’s recommended to create and use a virtual environment before
-installing the kathara-lab-checker tool.
+installing the kathara_lab_checker tool.
 
 ```bash
 python3 -m venv kathara-labs-venv
@@ -43,15 +43,15 @@ On Windows
 kathara-labs-venv\Scripts\activate
 ```
 
-### Install the kathara-lab-checker Tool
+### Install the kathara_lab_checker Tool
 
-Once the virtual environment is active, install the `kathara-lab-checker` tool from PyPI:
+Once the virtual environment is active, install the `kathara_lab_checker` tool from PyPI:
 
 ```bash
-pip install kathara-lab-checker
+pip install kathara_lab_checker
 ```
 
-The kathara-lab-checker tool will allow you to automatically validate your solutions to the exercises by comparing the
+The kathara_lab_checker tool will allow you to automatically validate your solutions to the exercises by comparing the
 actual network state against the expected results.
 
 ## Getting Started

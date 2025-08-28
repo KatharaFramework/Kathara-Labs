@@ -1,6 +1,6 @@
 $TTL 60000
 @               IN      SOA     dnsstart.startup.net.    root.dnsstart.startup.net. (
-                        2006031201 ; serial
+                        2024120401 ; serial
                         28 ; refresh
                         14400 ; retry
                         3600000 ; expire

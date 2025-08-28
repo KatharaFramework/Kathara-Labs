@@ -1,0 +1,562 @@
+13-Dec-2023 11:23:11.060 general: notice: starting BIND 9.11.5-P4-5.1+deb10u9-Debian (Extended Support Version) <id:998753c>
+13-Dec-2023 11:23:11.082 general: notice: running on Linux x86_64 5.15.133.1-microsoft-standard-WSL2 #1 SMP Thu Oct 5 21:02:42 UTC 2023
+13-Dec-2023 11:23:11.084 general: notice: built with '--build=x86_64-linux-gnu' '--prefix=/usr' '--includedir=/usr/include' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-silent-rules' '--libdir=/usr/lib/x86_64-linux-gnu' '--libexecdir=/usr/lib/x86_64-linux-gnu' '--disable-maintainer-mode' '--disable-dependency-tracking' '--libdir=/usr/lib/x86_64-linux-gnu' '--sysconfdir=/etc/bind' '--with-python=python3' '--localstatedir=/' '--enable-threads' '--enable-largefile' '--with-libtool' '--enable-shared' '--enable-static' '--with-gost=no' '--with-openssl=/usr' '--with-gssapi=/usr' '--disable-isc-spnego' '--with-libidn2' '--with-libjson=/usr' '--with-lmdb=/usr' '--with-gnu-ld' '--with-geoip=/usr' '--with-atf=no' '--enable-ipv6' '--enable-rrl' '--enable-filter-aaaa' '--enable-native-pkcs11' '--with-pkcs11=/usr/lib/softhsm/libsofthsm2.so' '--with-randomdev=/dev/urandom' '--enable-dnstap' 'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2 -fdebug-prefix-map=/tmp/buildd/bind9-9.11.5.P4+dfsg=. -fstack-protector-strong -Wformat -Werror=format-security -fno-strict-aliasing -fno-delete-null-pointer-checks -DNO_VERSION_DATE -DDIG_SIGCHASE' 'LDFLAGS=-Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2'
+13-Dec-2023 11:23:11.088 general: notice: running as: named -f -d 5 -L shared/log.txt
+13-Dec-2023 11:23:11.089 general: notice: compiled by GCC 8.3.0
+13-Dec-2023 11:23:11.090 general: notice: compiled with OpenSSL version: OpenSSL 1.1.1n  15 Mar 2022
+13-Dec-2023 11:23:11.091 general: notice: linked to OpenSSL version: OpenSSL 1.1.1n  15 Mar 2022
+13-Dec-2023 11:23:11.092 general: notice: compiled with libxml2 version: 2.9.4
+13-Dec-2023 11:23:11.093 general: notice: linked to libxml2 version: 20904
+13-Dec-2023 11:23:11.094 general: notice: compiled with libjson-c version: 0.12.1
+13-Dec-2023 11:23:11.095 general: notice: linked to libjson-c version: 0.12.1
+13-Dec-2023 11:23:11.096 general: notice: threads support is enabled
+13-Dec-2023 11:23:11.097 general: notice: ----------------------------------------------------
+13-Dec-2023 11:23:11.098 general: notice: BIND 9 is maintained by Internet Systems Consortium,
+13-Dec-2023 11:23:11.099 general: notice: Inc. (ISC), a non-profit 501(c)(3) public-benefit 
+13-Dec-2023 11:23:11.101 general: notice: corporation.  Support and training for BIND 9 are 
+13-Dec-2023 11:23:11.102 general: notice: available at https://www.isc.org/support
+13-Dec-2023 11:23:11.103 general: notice: ----------------------------------------------------
+13-Dec-2023 11:23:11.104 general: info: found 20 CPUs, using 20 worker threads
+13-Dec-2023 11:23:11.105 general: info: using 19 UDP listeners per interface
+13-Dec-2023 11:23:11.109 general: info: using up to 4096 sockets
+13-Dec-2023 11:23:11.110 database: debug 2: Registering DLZ_dlopen driver
+13-Dec-2023 11:23:11.111 database: debug 2: Registering SDLZ driver 'dlopen'
+13-Dec-2023 11:23:11.112 database: debug 2: Registering DLZ driver 'dlopen'
+13-Dec-2023 11:23:11.118 general: info: loading configuration from '/etc/bind/named.conf'
+13-Dec-2023 11:23:11.120 general: info: reading built-in trust anchors from file '/etc/bind/bind.keys'
+13-Dec-2023 11:23:11.121 general: debug 3: set maximum stack size to 18446744073709551615: success
+13-Dec-2023 11:23:11.122 general: debug 3: set maximum data size to 18446744073709551615: success
+13-Dec-2023 11:23:11.123 general: debug 3: set maximum core size to 18446744073709551615: success
+13-Dec-2023 11:23:11.125 general: debug 3: set maximum open files to 18446744073709551615: success
+13-Dec-2023 11:23:11.126 general: info: initializing GeoIP Country (IPv4) (type 1) DB
+13-Dec-2023 11:23:11.127 general: info: GEO-106FREE 20181108 Build
+13-Dec-2023 11:23:11.128 general: info: initializing GeoIP Country (IPv6) (type 12) DB
+13-Dec-2023 11:23:11.129 general: info: GEO-106FREE 20181108 Build
+13-Dec-2023 11:23:11.131 general: info: GeoIP City (IPv4) (type 2) DB not available
+13-Dec-2023 11:23:11.132 general: info: GeoIP City (IPv4) (type 6) DB not available
+13-Dec-2023 11:23:11.133 general: info: GeoIP City (IPv6) (type 30) DB not available
+13-Dec-2023 11:23:11.134 general: info: GeoIP City (IPv6) (type 31) DB not available
+13-Dec-2023 11:23:11.136 general: info: GeoIP Region (type 3) DB not available
+13-Dec-2023 11:23:11.137 general: info: GeoIP Region (type 7) DB not available
+13-Dec-2023 11:23:11.138 general: info: GeoIP ISP (type 4) DB not available
+13-Dec-2023 11:23:11.139 general: info: GeoIP Org (type 5) DB not available
+13-Dec-2023 11:23:11.141 general: info: GeoIP AS (type 9) DB not available
+13-Dec-2023 11:23:11.142 general: info: GeoIP Domain (type 11) DB not available
+13-Dec-2023 11:23:11.143 general: info: GeoIP NetSpeed (type 10) DB not available
+13-Dec-2023 11:23:11.144 general: info: using default UDP/IPv4 port range: [32768, 60999]
+13-Dec-2023 11:23:11.146 general: info: using default UDP/IPv6 port range: [32768, 60999]
+13-Dec-2023 11:23:11.147 network: info: listening on IPv6 interfaces, port 53
+13-Dec-2023 11:23:11.149 general: debug 3: clientmgr @0x7fd83299d010: create
+13-Dec-2023 11:23:11.205 general: debug 3: clientmgr @0x7fd83299d010: createclients
+13-Dec-2023 11:23:11.206 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.207 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.208 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.209 client: debug 3: client @0x7fd82003b8c0 (no-peer): create
+13-Dec-2023 11:23:11.210 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.211 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.212 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.213 client: debug 3: client @0x7fd8200416a0 (no-peer): create
+13-Dec-2023 11:23:11.214 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.214 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.215 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.216 client: debug 3: client @0x7fd8200a95a0 (no-peer): create
+13-Dec-2023 11:23:11.217 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.218 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.219 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.220 client: debug 3: client @0x7fd8200b7bc0 (no-peer): create
+13-Dec-2023 11:23:11.220 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.221 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.222 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.223 client: debug 3: client @0x7fd8200c61e0 (no-peer): create
+13-Dec-2023 11:23:11.223 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.224 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.225 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.226 client: debug 3: client @0x7fd8200d4800 (no-peer): create
+13-Dec-2023 11:23:11.227 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.227 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.228 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.228 client: debug 3: client @0x7fd8200e2e20 (no-peer): create
+13-Dec-2023 11:23:11.229 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.230 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.231 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.233 client: debug 3: client @0x7fd8200f1440 (no-peer): create
+13-Dec-2023 11:23:11.234 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.236 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.237 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.239 client: debug 3: client @0x7fd8200ffa60 (no-peer): create
+13-Dec-2023 11:23:11.241 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.243 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.246 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.248 client: debug 3: client @0x7fd82010e1f0 (no-peer): create
+13-Dec-2023 11:23:11.250 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.252 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.253 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.255 client: debug 3: client @0x7fd82011c980 (no-peer): create
+13-Dec-2023 11:23:11.257 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.259 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.261 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.263 client: debug 3: client @0x7fd82012b110 (no-peer): create
+13-Dec-2023 11:23:11.264 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.266 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.268 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.269 client: debug 3: client @0x7fd8201398a0 (no-peer): create
+13-Dec-2023 11:23:11.271 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.272 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.274 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.276 client: debug 3: client @0x7fd820148030 (no-peer): create
+13-Dec-2023 11:23:11.277 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.279 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.281 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.282 client: debug 3: client @0x7fd8201567c0 (no-peer): create
+13-Dec-2023 11:23:11.284 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.285 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.287 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.289 client: debug 3: client @0x7fd820164f50 (no-peer): create
+13-Dec-2023 11:23:11.291 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.293 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.294 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.295 client: debug 3: client @0x7fd8201736e0 (no-peer): create
+13-Dec-2023 11:23:11.296 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.296 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.297 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.297 client: debug 3: client @0x7fd820181e70 (no-peer): create
+13-Dec-2023 11:23:11.298 general: debug 3: clientmgr @0x7fd83299d010: get client
+13-Dec-2023 11:23:11.298 general: debug 3: clientmgr @0x7fd83299d010: create new
+13-Dec-2023 11:23:11.299 general: debug 3: clientmgr @0x7fd83299d010: clientmctx
+13-Dec-2023 11:23:11.300 client: debug 3: client @0x7fd820190600 (no-peer): create
+13-Dec-2023 11:23:11.301 network: error: binding TCP socket: address in use
+13-Dec-2023 11:23:11.302 network: info: listening on IPv4 interface lo, 127.0.0.1#53
+13-Dec-2023 11:23:11.302 general: debug 3: clientmgr @0x7fd83299d458: create
+13-Dec-2023 11:23:11.303 general: debug 3: clientmgr @0x7fd83299d458: createclients
+13-Dec-2023 11:23:11.303 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.304 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.305 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.307 client: debug 3: client @0x7fd8201ab4c0 (no-peer): create
+13-Dec-2023 11:23:11.308 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.309 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.310 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.313 client: debug 3: client @0x7fd8201b9ae0 (no-peer): create
+13-Dec-2023 11:23:11.314 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.316 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.317 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.318 client: debug 3: client @0x7fd8201c8100 (no-peer): create
+13-Dec-2023 11:23:11.319 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.319 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.319 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.320 client: debug 3: client @0x7fd8201d6890 (no-peer): create
+13-Dec-2023 11:23:11.321 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.321 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.322 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.322 client: debug 3: client @0x7fd8201e5020 (no-peer): create
+13-Dec-2023 11:23:11.323 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.323 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.324 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.325 client: debug 3: client @0x7fd8201f37b0 (no-peer): create
+13-Dec-2023 11:23:11.325 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.326 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.326 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.327 client: debug 3: client @0x7fd820201f40 (no-peer): create
+13-Dec-2023 11:23:11.327 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.328 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.329 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.329 client: debug 3: client @0x7fd8202106d0 (no-peer): create
+13-Dec-2023 11:23:11.330 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.331 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.331 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.332 client: debug 3: client @0x7fd82021ee60 (no-peer): create
+13-Dec-2023 11:23:11.333 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.333 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.334 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.334 client: debug 3: client @0x7fd82022d5f0 (no-peer): create
+13-Dec-2023 11:23:11.336 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.336 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.337 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.338 client: debug 3: client @0x7fd82023bd80 (no-peer): create
+13-Dec-2023 11:23:11.338 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.339 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.340 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.340 client: debug 3: client @0x7fd82024a510 (no-peer): create
+13-Dec-2023 11:23:11.341 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.342 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.342 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.343 client: debug 3: client @0x7fd820258ca0 (no-peer): create
+13-Dec-2023 11:23:11.344 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.345 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.345 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.346 client: debug 3: client @0x7fd820267430 (no-peer): create
+13-Dec-2023 11:23:11.347 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.347 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.348 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.349 client: debug 3: client @0x7fd820275bc0 (no-peer): create
+13-Dec-2023 11:23:11.350 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.350 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.351 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.352 client: debug 3: client @0x7fd820284350 (no-peer): create
+13-Dec-2023 11:23:11.353 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.353 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.354 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.355 client: debug 3: client @0x7fd820292ae0 (no-peer): create
+13-Dec-2023 11:23:11.355 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.356 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.356 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.357 client: debug 3: client @0x7fd8202a1270 (no-peer): create
+13-Dec-2023 11:23:11.358 general: debug 3: clientmgr @0x7fd83299d458: get client
+13-Dec-2023 11:23:11.358 general: debug 3: clientmgr @0x7fd83299d458: create new
+13-Dec-2023 11:23:11.359 general: debug 3: clientmgr @0x7fd83299d458: clientmctx
+13-Dec-2023 11:23:11.360 client: debug 3: client @0x7fd8202afa00 (no-peer): create
+13-Dec-2023 11:23:11.360 network: error: binding TCP socket: address in use
+13-Dec-2023 11:23:11.362 network: info: listening on IPv4 interface eth0, 192.168.0.11#53
+13-Dec-2023 11:23:11.363 general: debug 3: clientmgr @0x7fd83299d8a0: create
+13-Dec-2023 11:23:11.364 general: debug 3: clientmgr @0x7fd83299d8a0: createclients
+13-Dec-2023 11:23:11.365 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.366 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.367 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.368 client: debug 3: client @0x7fd8202be6e0 (no-peer): create
+13-Dec-2023 11:23:11.368 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.369 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.370 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.370 client: debug 3: client @0x7fd8202cce70 (no-peer): create
+13-Dec-2023 11:23:11.371 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.372 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.372 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.373 client: debug 3: client @0x7fd8202db600 (no-peer): create
+13-Dec-2023 11:23:11.373 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.374 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.374 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.375 client: debug 3: client @0x7fd8202e9d90 (no-peer): create
+13-Dec-2023 11:23:11.376 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.376 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.377 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.377 client: debug 3: client @0x7fd8202f8520 (no-peer): create
+13-Dec-2023 11:23:11.378 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.378 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.379 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.379 client: debug 3: client @0x7fd820306cb0 (no-peer): create
+13-Dec-2023 11:23:11.380 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.380 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.381 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.382 client: debug 3: client @0x7fd820315440 (no-peer): create
+13-Dec-2023 11:23:11.382 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.383 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.383 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.384 client: debug 3: client @0x7fd820323bd0 (no-peer): create
+13-Dec-2023 11:23:11.385 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.385 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.386 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.387 client: debug 3: client @0x7fd820332360 (no-peer): create
+13-Dec-2023 11:23:11.387 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.388 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.388 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.389 client: debug 3: client @0x7fd820340af0 (no-peer): create
+13-Dec-2023 11:23:11.390 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.391 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.391 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.392 client: debug 3: client @0x7fd82034f280 (no-peer): create
+13-Dec-2023 11:23:11.393 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.393 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.394 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.395 client: debug 3: client @0x7fd82035da10 (no-peer): create
+13-Dec-2023 11:23:11.395 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.396 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.397 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.398 client: debug 3: client @0x7fd82036c1a0 (no-peer): create
+13-Dec-2023 11:23:11.398 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.399 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.399 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.400 client: debug 3: client @0x7fd82037a930 (no-peer): create
+13-Dec-2023 11:23:11.401 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.402 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.402 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.403 client: debug 3: client @0x7fd8203890c0 (no-peer): create
+13-Dec-2023 11:23:11.403 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.404 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.404 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.405 client: debug 3: client @0x7fd820397850 (no-peer): create
+13-Dec-2023 11:23:11.406 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.407 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.407 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.408 client: debug 3: client @0x7fd8203a5fe0 (no-peer): create
+13-Dec-2023 11:23:11.408 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.409 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.410 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.410 client: debug 3: client @0x7fd8203b4770 (no-peer): create
+13-Dec-2023 11:23:11.411 general: debug 3: clientmgr @0x7fd83299d8a0: get client
+13-Dec-2023 11:23:11.411 general: debug 3: clientmgr @0x7fd83299d8a0: create new
+13-Dec-2023 11:23:11.412 general: debug 3: clientmgr @0x7fd83299d8a0: clientmctx
+13-Dec-2023 11:23:11.413 client: debug 3: client @0x7fd8203c2f00 (no-peer): create
+13-Dec-2023 11:23:11.413 network: error: binding TCP socket: address in use
+13-Dec-2023 11:23:11.414 general: error: unable to listen on any configured interfaces
+13-Dec-2023 11:23:11.415 general: debug 1: load_configuration: failure
+13-Dec-2023 11:23:11.415 general: critical: loading configuration: failure
+13-Dec-2023 11:23:11.416 general: critical: exiting (due to fatal error)
+13-Dec-2023 11:23:11.416 client: debug 3: client @0x7fd8200416a0 (no-peer): udprecv
+13-Dec-2023 11:23:11.416 client: debug 3: client @0x7fd8200416a0 (no-peer): udprecv
+13-Dec-2023 11:23:11.417 client: debug 3: client @0x7fd8200b7bc0 (no-peer): udprecv
+13-Dec-2023 11:28:30.240 general: notice: starting BIND 9.11.5-P4-5.1+deb10u9-Debian (Extended Support Version) <id:998753c>
+13-Dec-2023 11:28:30.251 general: notice: running on Linux x86_64 5.15.133.1-microsoft-standard-WSL2 #1 SMP Thu Oct 5 21:02:42 UTC 2023
+13-Dec-2023 11:28:30.252 general: notice: built with '--build=x86_64-linux-gnu' '--prefix=/usr' '--includedir=/usr/include' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-silent-rules' '--libdir=/usr/lib/x86_64-linux-gnu' '--libexecdir=/usr/lib/x86_64-linux-gnu' '--disable-maintainer-mode' '--disable-dependency-tracking' '--libdir=/usr/lib/x86_64-linux-gnu' '--sysconfdir=/etc/bind' '--with-python=python3' '--localstatedir=/' '--enable-threads' '--enable-largefile' '--with-libtool' '--enable-shared' '--enable-static' '--with-gost=no' '--with-openssl=/usr' '--with-gssapi=/usr' '--disable-isc-spnego' '--with-libidn2' '--with-libjson=/usr' '--with-lmdb=/usr' '--with-gnu-ld' '--with-geoip=/usr' '--with-atf=no' '--enable-ipv6' '--enable-rrl' '--enable-filter-aaaa' '--enable-native-pkcs11' '--with-pkcs11=/usr/lib/softhsm/libsofthsm2.so' '--with-randomdev=/dev/urandom' '--enable-dnstap' 'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2 -fdebug-prefix-map=/tmp/buildd/bind9-9.11.5.P4+dfsg=. -fstack-protector-strong -Wformat -Werror=format-security -fno-strict-aliasing -fno-delete-null-pointer-checks -DNO_VERSION_DATE -DDIG_SIGCHASE' 'LDFLAGS=-Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2'
+13-Dec-2023 11:28:30.257 general: notice: running as: named -f -L /shared/log.txt
+13-Dec-2023 11:28:30.258 general: notice: compiled by GCC 8.3.0
+13-Dec-2023 11:28:30.259 general: notice: compiled with OpenSSL version: OpenSSL 1.1.1n  15 Mar 2022
+13-Dec-2023 11:28:30.261 general: notice: linked to OpenSSL version: OpenSSL 1.1.1n  15 Mar 2022
+13-Dec-2023 11:28:30.262 general: notice: compiled with libxml2 version: 2.9.4
+13-Dec-2023 11:28:30.263 general: notice: linked to libxml2 version: 20904
+13-Dec-2023 11:28:30.264 general: notice: compiled with libjson-c version: 0.12.1
+13-Dec-2023 11:28:30.265 general: notice: linked to libjson-c version: 0.12.1
+13-Dec-2023 11:28:30.266 general: notice: threads support is enabled
+13-Dec-2023 11:28:30.268 general: notice: ----------------------------------------------------
+13-Dec-2023 11:28:30.269 general: notice: BIND 9 is maintained by Internet Systems Consortium,
+13-Dec-2023 11:28:30.270 general: notice: Inc. (ISC), a non-profit 501(c)(3) public-benefit 
+13-Dec-2023 11:28:30.271 general: notice: corporation.  Support and training for BIND 9 are 
+13-Dec-2023 11:28:30.273 general: notice: available at https://www.isc.org/support
+13-Dec-2023 11:28:30.274 general: notice: ----------------------------------------------------
+13-Dec-2023 11:28:30.275 general: info: found 20 CPUs, using 20 worker threads
+13-Dec-2023 11:28:30.276 general: info: using 19 UDP listeners per interface
+13-Dec-2023 11:28:30.280 general: info: using up to 4096 sockets
+13-Dec-2023 11:28:30.287 general: info: loading configuration from '/etc/bind/named.conf'
+13-Dec-2023 11:28:30.289 general: info: reading built-in trust anchors from file '/etc/bind/bind.keys'
+13-Dec-2023 11:28:30.291 general: info: initializing GeoIP Country (IPv4) (type 1) DB
+13-Dec-2023 11:28:30.292 general: info: GEO-106FREE 20181108 Build
+13-Dec-2023 11:28:30.293 general: info: initializing GeoIP Country (IPv6) (type 12) DB
+13-Dec-2023 11:28:30.295 general: info: GEO-106FREE 20181108 Build
+13-Dec-2023 11:28:30.296 general: info: GeoIP City (IPv4) (type 2) DB not available
+13-Dec-2023 11:28:30.298 general: info: GeoIP City (IPv4) (type 6) DB not available
+13-Dec-2023 11:28:30.300 general: info: GeoIP City (IPv6) (type 30) DB not available
+13-Dec-2023 11:28:30.301 general: info: GeoIP City (IPv6) (type 31) DB not available
+13-Dec-2023 11:28:30.302 general: info: GeoIP Region (type 3) DB not available
+13-Dec-2023 11:28:30.303 general: info: GeoIP Region (type 7) DB not available
+13-Dec-2023 11:28:30.304 general: info: GeoIP ISP (type 4) DB not available
+13-Dec-2023 11:28:30.304 general: info: GeoIP Org (type 5) DB not available
+13-Dec-2023 11:28:30.305 general: info: GeoIP AS (type 9) DB not available
+13-Dec-2023 11:28:30.306 general: info: GeoIP Domain (type 11) DB not available
+13-Dec-2023 11:28:30.307 general: info: GeoIP NetSpeed (type 10) DB not available
+13-Dec-2023 11:28:30.308 general: info: using default UDP/IPv4 port range: [32768, 60999]
+13-Dec-2023 11:28:30.310 general: info: using default UDP/IPv6 port range: [32768, 60999]
+13-Dec-2023 11:28:30.312 network: info: listening on IPv6 interfaces, port 53
+13-Dec-2023 11:28:30.373 network: info: listening on IPv4 interface lo, 127.0.0.1#53
+13-Dec-2023 11:28:30.382 network: info: listening on IPv4 interface eth0, 192.168.0.111#53
+13-Dec-2023 11:28:30.390 general: info: generating session key for dynamic DNS
+13-Dec-2023 11:28:30.391 general: info: sizing zone task pool based on 5 zones
+13-Dec-2023 11:28:30.393 config: info: none:106: 'max-cache-size 90%' - setting to 6980MB (out of 7756MB)
+13-Dec-2023 11:28:30.401 security: info: obtaining root key for view _default from '/etc/bind/bind.keys'
+13-Dec-2023 11:28:30.402 general: info: set up managed keys zone for view _default, file 'managed-keys.bind'
+13-Dec-2023 11:28:30.403 general: info: automatic empty zone: 10.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.404 general: info: automatic empty zone: 16.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.405 general: info: automatic empty zone: 17.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.405 general: info: automatic empty zone: 18.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.406 general: info: automatic empty zone: 19.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.407 general: info: automatic empty zone: 20.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.408 general: info: automatic empty zone: 21.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.410 general: info: automatic empty zone: 22.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.410 general: info: automatic empty zone: 23.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.411 general: info: automatic empty zone: 24.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.412 general: info: automatic empty zone: 25.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.412 general: info: automatic empty zone: 26.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.413 general: info: automatic empty zone: 27.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.414 general: info: automatic empty zone: 28.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.415 general: info: automatic empty zone: 29.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.416 general: info: automatic empty zone: 30.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.417 general: info: automatic empty zone: 31.172.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.418 general: info: automatic empty zone: 168.192.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.418 general: info: automatic empty zone: 64.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.419 general: info: automatic empty zone: 65.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.420 general: info: automatic empty zone: 66.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.421 general: info: automatic empty zone: 67.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.422 general: info: automatic empty zone: 68.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.423 general: info: automatic empty zone: 69.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.424 general: info: automatic empty zone: 70.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.425 general: info: automatic empty zone: 71.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.426 general: info: automatic empty zone: 72.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.427 general: info: automatic empty zone: 73.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.428 general: info: automatic empty zone: 74.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.429 general: info: automatic empty zone: 75.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.429 general: info: automatic empty zone: 76.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.430 general: info: automatic empty zone: 77.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.431 general: info: automatic empty zone: 78.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.432 general: info: automatic empty zone: 79.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.433 general: info: automatic empty zone: 80.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.433 general: info: automatic empty zone: 81.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.434 general: info: automatic empty zone: 82.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.435 general: info: automatic empty zone: 83.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.435 general: info: automatic empty zone: 84.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.436 general: info: automatic empty zone: 85.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.437 general: info: automatic empty zone: 86.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.438 general: info: automatic empty zone: 87.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.438 general: info: automatic empty zone: 88.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.439 general: info: automatic empty zone: 89.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.439 general: info: automatic empty zone: 90.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.440 general: info: automatic empty zone: 91.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.443 general: info: automatic empty zone: 92.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.444 general: info: automatic empty zone: 93.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.445 general: info: automatic empty zone: 94.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.446 general: info: automatic empty zone: 95.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.446 general: info: automatic empty zone: 96.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.447 general: info: automatic empty zone: 97.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.448 general: info: automatic empty zone: 98.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.449 general: info: automatic empty zone: 99.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.450 general: info: automatic empty zone: 100.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.451 general: info: automatic empty zone: 101.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.452 general: info: automatic empty zone: 102.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.453 general: info: automatic empty zone: 103.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.454 general: info: automatic empty zone: 104.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.455 general: info: automatic empty zone: 105.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.456 general: info: automatic empty zone: 106.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.457 general: info: automatic empty zone: 107.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.457 general: info: automatic empty zone: 108.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.458 general: info: automatic empty zone: 109.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.459 general: info: automatic empty zone: 110.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.460 general: info: automatic empty zone: 111.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.461 general: info: automatic empty zone: 112.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.462 general: info: automatic empty zone: 113.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.463 general: info: automatic empty zone: 114.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.463 general: info: automatic empty zone: 115.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.464 general: info: automatic empty zone: 116.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.465 general: info: automatic empty zone: 117.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.466 general: info: automatic empty zone: 118.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.466 general: info: automatic empty zone: 119.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.467 general: info: automatic empty zone: 120.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.468 general: info: automatic empty zone: 121.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.469 general: info: automatic empty zone: 122.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.470 general: info: automatic empty zone: 123.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.471 general: info: automatic empty zone: 124.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.472 general: info: automatic empty zone: 125.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.472 general: info: automatic empty zone: 126.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.473 general: info: automatic empty zone: 127.100.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.474 general: info: automatic empty zone: 254.169.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.475 general: info: automatic empty zone: 2.0.192.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.476 general: info: automatic empty zone: 100.51.198.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.476 general: info: automatic empty zone: 113.0.203.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.477 general: info: automatic empty zone: 255.255.255.255.IN-ADDR.ARPA
+13-Dec-2023 11:28:30.478 general: info: automatic empty zone: 0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA
+13-Dec-2023 11:28:30.479 general: info: automatic empty zone: 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA
+13-Dec-2023 11:28:30.480 general: info: automatic empty zone: D.F.IP6.ARPA
+13-Dec-2023 11:28:30.480 general: info: automatic empty zone: 8.E.F.IP6.ARPA
+13-Dec-2023 11:28:30.481 general: info: automatic empty zone: 9.E.F.IP6.ARPA
+13-Dec-2023 11:28:30.482 general: info: automatic empty zone: A.E.F.IP6.ARPA
+13-Dec-2023 11:28:30.483 general: info: automatic empty zone: B.E.F.IP6.ARPA
+13-Dec-2023 11:28:30.483 general: info: automatic empty zone: 8.B.D.0.1.0.0.2.IP6.ARPA
+13-Dec-2023 11:28:30.484 general: info: automatic empty zone: EMPTY.AS112.ARPA
+13-Dec-2023 11:28:30.485 general: info: automatic empty zone: HOME.ARPA
+13-Dec-2023 11:28:30.486 config: info: none:106: 'max-cache-size 90%' - setting to 6980MB (out of 7756MB)
+13-Dec-2023 11:28:30.493 general: info: configuring command channel from '/etc/bind/rndc.key'
+13-Dec-2023 11:28:30.494 config: error: open: /etc/bind/rndc.key: permission denied
+13-Dec-2023 11:28:30.494 general: notice: couldn't add command channel 127.0.0.1#953: permission denied
+13-Dec-2023 11:28:30.495 general: info: configuring command channel from '/etc/bind/rndc.key'
+13-Dec-2023 11:28:30.496 config: error: open: /etc/bind/rndc.key: permission denied
+13-Dec-2023 11:28:30.497 general: notice: couldn't add command channel ::1#953: permission denied
+13-Dec-2023 11:28:30.505 general: info: managed-keys-zone: loaded serial 0
+13-Dec-2023 11:28:30.511 general: info: zone 0.in-addr.arpa/IN: loaded serial 1
+13-Dec-2023 11:28:30.513 general: info: zone 255.in-addr.arpa/IN: loaded serial 1
+13-Dec-2023 11:28:30.515 general: info: zone 127.in-addr.arpa/IN: loaded serial 1
+13-Dec-2023 11:28:30.517 general: info: zone localhost/IN: loaded serial 2
+13-Dec-2023 11:28:30.519 general: notice: all zones loaded
+13-Dec-2023 11:28:30.519 general: notice: running
+13-Dec-2023 11:28:30.521 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:500:9f::42#53
+13-Dec-2023 11:28:30.522 lame-servers: info: address not available resolving './NS/IN': 2001:500:9f::42#53
+13-Dec-2023 11:28:30.523 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:500:200::b#53
+13-Dec-2023 11:28:30.523 lame-servers: info: address not available resolving './NS/IN': 2001:500:200::b#53
+13-Dec-2023 11:28:30.524 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:500:2f::f#53
+13-Dec-2023 11:28:30.524 lame-servers: info: address not available resolving './NS/IN': 2001:500:2f::f#53
+13-Dec-2023 11:28:30.525 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:dc3::35#53
+13-Dec-2023 11:28:30.526 lame-servers: info: address not available resolving './NS/IN': 2001:dc3::35#53
+13-Dec-2023 11:28:30.527 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:500:12::d0d#53
+13-Dec-2023 11:28:30.527 lame-servers: info: address not available resolving './NS/IN': 2001:500:12::d0d#53
+13-Dec-2023 11:28:30.528 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:500:2::c#53
+13-Dec-2023 11:28:30.529 lame-servers: info: address not available resolving './NS/IN': 2001:500:2::c#53
+13-Dec-2023 11:28:30.530 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:500:a8::e#53
+13-Dec-2023 11:28:30.530 lame-servers: info: address not available resolving './NS/IN': 2001:500:a8::e#53
+13-Dec-2023 11:28:30.531 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:500:2d::d#53
+13-Dec-2023 11:28:30.531 lame-servers: info: address not available resolving './NS/IN': 2001:500:2d::d#53
+13-Dec-2023 11:28:30.532 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:503:ba3e::2:30#53
+13-Dec-2023 11:28:30.533 lame-servers: info: address not available resolving './NS/IN': 2001:503:ba3e::2:30#53
+13-Dec-2023 11:28:30.534 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:500:1::53#53
+13-Dec-2023 11:28:30.534 lame-servers: info: address not available resolving './NS/IN': 2001:500:1::53#53
+13-Dec-2023 11:28:30.535 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:7fe::53#53
+13-Dec-2023 11:28:30.535 lame-servers: info: address not available resolving './NS/IN': 2001:7fe::53#53
+13-Dec-2023 11:28:30.536 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:7fd::1#53
+13-Dec-2023 11:28:30.536 lame-servers: info: address not available resolving './NS/IN': 2001:7fd::1#53
+13-Dec-2023 11:28:30.537 lame-servers: info: address not available resolving './DNSKEY/IN': 2001:503:c27::2:30#53
+13-Dec-2023 11:28:30.537 lame-servers: info: address not available resolving './NS/IN': 2001:503:c27::2:30#53
+13-Dec-2023 11:28:30.538 lame-servers: info: network unreachable resolving './DNSKEY/IN': 199.7.83.42#53
+13-Dec-2023 11:28:30.538 lame-servers: info: network unreachable resolving './NS/IN': 199.7.83.42#53
+13-Dec-2023 11:28:30.539 lame-servers: info: network unreachable resolving './DNSKEY/IN': 199.9.14.201#53
+13-Dec-2023 11:28:30.539 lame-servers: info: network unreachable resolving './NS/IN': 199.9.14.201#53
+13-Dec-2023 11:28:30.539 lame-servers: info: network unreachable resolving './DNSKEY/IN': 192.5.5.241#53
+13-Dec-2023 11:28:30.540 lame-servers: info: network unreachable resolving './NS/IN': 192.5.5.241#53
+13-Dec-2023 11:28:30.540 lame-servers: info: network unreachable resolving './DNSKEY/IN': 202.12.27.33#53
+13-Dec-2023 11:28:30.541 lame-servers: info: network unreachable resolving './NS/IN': 202.12.27.33#53
+13-Dec-2023 11:28:30.542 lame-servers: info: network unreachable resolving './DNSKEY/IN': 192.112.36.4#53
+13-Dec-2023 11:28:30.542 lame-servers: info: network unreachable resolving './NS/IN': 192.112.36.4#53
+13-Dec-2023 11:28:30.543 lame-servers: info: network unreachable resolving './DNSKEY/IN': 192.33.4.12#53
+13-Dec-2023 11:28:30.544 lame-servers: info: network unreachable resolving './NS/IN': 192.33.4.12#53
+13-Dec-2023 11:28:30.544 lame-servers: info: network unreachable resolving './DNSKEY/IN': 192.203.230.10#53
+13-Dec-2023 11:28:30.545 lame-servers: info: network unreachable resolving './NS/IN': 192.203.230.10#53
+13-Dec-2023 11:28:30.545 lame-servers: info: network unreachable resolving './DNSKEY/IN': 199.7.91.13#53
+13-Dec-2023 11:28:30.546 lame-servers: info: network unreachable resolving './NS/IN': 199.7.91.13#53
+13-Dec-2023 11:28:30.547 lame-servers: info: network unreachable resolving './DNSKEY/IN': 198.41.0.4#53
+13-Dec-2023 11:28:30.548 lame-servers: info: network unreachable resolving './NS/IN': 198.41.0.4#53
+13-Dec-2023 11:28:30.548 lame-servers: info: network unreachable resolving './DNSKEY/IN': 198.97.190.53#53
+13-Dec-2023 11:28:30.548 lame-servers: info: network unreachable resolving './NS/IN': 198.97.190.53#53
+13-Dec-2023 11:28:30.549 lame-servers: info: network unreachable resolving './DNSKEY/IN': 192.36.148.17#53
+13-Dec-2023 11:28:30.550 lame-servers: info: network unreachable resolving './NS/IN': 192.36.148.17#53
+13-Dec-2023 11:28:30.552 lame-servers: info: network unreachable resolving './DNSKEY/IN': 193.0.14.129#53
+13-Dec-2023 11:28:30.552 lame-servers: info: network unreachable resolving './NS/IN': 193.0.14.129#53
+13-Dec-2023 11:28:30.552 lame-servers: info: network unreachable resolving './DNSKEY/IN': 192.58.128.30#53
+13-Dec-2023 11:28:30.553 lame-servers: info: network unreachable resolving './NS/IN': 192.58.128.30#53
+13-Dec-2023 11:28:30.554 general: warning: managed-keys-zone: Unable to fetch DNSKEY set '.': failure
+13-Dec-2023 11:28:30.555 resolver: info: resolver priming query complete
+13-Dec-2023 11:29:28.620 general: info: shutting down
+13-Dec-2023 11:29:28.623 network: info: no longer listening on ::#53
+13-Dec-2023 11:29:28.624 network: info: no longer listening on 127.0.0.1#53
+13-Dec-2023 11:29:28.625 network: info: no longer listening on 192.168.0.111#53
+13-Dec-2023 11:29:28.661 general: notice: exiting
+13-Dec-2023 11:33:43.518 general: notice: starting BIND 9.11.5-P4-5.1+deb10u9-Debian (Extended Support Version) <id:998753c>
+13-Dec-2023 11:33:43.527 general: notice: running on Linux x86_64 5.15.133.1-microsoft-standard-WSL2 #1 SMP Thu Oct 5 21:02:42 UTC 2023
+13-Dec-2023 11:33:43.528 general: notice: built with '--build=x86_64-linux-gnu' '--prefix=/usr' '--includedir=/usr/include' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-silent-rules' '--libdir=/usr/lib/x86_64-linux-gnu' '--libexecdir=/usr/lib/x86_64-linux-gnu' '--disable-maintainer-mode' '--disable-dependency-tracking' '--libdir=/usr/lib/x86_64-linux-gnu' '--sysconfdir=/etc/bind' '--with-python=python3' '--localstatedir=/' '--enable-threads' '--enable-largefile' '--with-libtool' '--enable-shared' '--enable-static' '--with-gost=no' '--with-openssl=/usr' '--with-gssapi=/usr' '--disable-isc-spnego' '--with-libidn2' '--with-libjson=/usr' '--with-lmdb=/usr' '--with-gnu-ld' '--with-geoip=/usr' '--with-atf=no' '--enable-ipv6' '--enable-rrl' '--enable-filter-aaaa' '--enable-native-pkcs11' '--with-pkcs11=/usr/lib/softhsm/libsofthsm2.so' '--with-randomdev=/dev/urandom' '--enable-dnstap' 'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2 -fdebug-prefix-map=/tmp/buildd/bind9-9.11.5.P4+dfsg=. -fstack-protector-strong -Wformat -Werror=format-security -fno-strict-aliasing -fno-delete-null-pointer-checks -DNO_VERSION_DATE -DDIG_SIGCHASE' 'LDFLAGS=-Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2'
+13-Dec-2023 11:33:43.531 general: notice: running as: named -f -L /shared/log.txt
+13-Dec-2023 11:33:43.532 general: notice: compiled by GCC 8.3.0
+13-Dec-2023 11:33:43.533 general: notice: compiled with OpenSSL version: OpenSSL 1.1.1n  15 Mar 2022
+13-Dec-2023 11:33:43.534 general: notice: linked to OpenSSL version: OpenSSL 1.1.1n  15 Mar 2022
+13-Dec-2023 11:33:43.535 general: notice: compiled with libxml2 version: 2.9.4
+13-Dec-2023 11:33:43.536 general: notice: linked to libxml2 version: 20904
+13-Dec-2023 11:33:43.537 general: notice: compiled with libjson-c version: 0.12.1
+13-Dec-2023 11:33:43.539 general: notice: linked to libjson-c version: 0.12.1
+13-Dec-2023 11:33:43.540 general: notice: threads support is enabled
+13-Dec-2023 11:33:43.541 general: notice: ----------------------------------------------------
+13-Dec-2023 11:33:43.542 general: notice: BIND 9 is maintained by Internet Systems Consortium,
+13-Dec-2023 11:33:43.543 general: notice: Inc. (ISC), a non-profit 501(c)(3) public-benefit 
+13-Dec-2023 11:33:43.544 general: notice: corporation.  Support and training for BIND 9 are 
+13-Dec-2023 11:33:43.545 general: notice: available at https://www.isc.org/support
+13-Dec-2023 11:33:43.547 general: notice: ----------------------------------------------------
+13-Dec-2023 11:33:43.548 general: info: found 20 CPUs, using 20 worker threads
+13-Dec-2023 11:33:43.550 general: info: using 19 UDP listeners per interface
+13-Dec-2023 11:33:43.553 general: info: using up to 4096 sockets
+13-Dec-2023 11:33:43.560 general: info: loading configuration from '/etc/bind/named.conf'
+13-Dec-2023 11:33:43.561 config: error: /etc/bind/named.conf.options:9: unknown option 'plugin'
+13-Dec-2023 11:33:43.562 general: critical: loading configuration: failure
+13-Dec-2023 11:33:43.563 general: critical: exiting (due to fatal error)
+13-Dec-2023 14:44:06.223 general: notice: starting BIND 9.11.5-P4-5.1+deb10u9-Debian (Extended Support Version) <id:998753c>
+13-Dec-2023 14:44:06.235 general: notice: running on Linux x86_64 5.15.133.1-microsoft-standard-WSL2 #1 SMP Thu Oct 5 21:02:42 UTC 2023
+13-Dec-2023 14:44:06.236 general: notice: built with '--build=x86_64-linux-gnu' '--prefix=/usr' '--includedir=/usr/include' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-silent-rules' '--libdir=/usr/lib/x86_64-linux-gnu' '--libexecdir=/usr/lib/x86_64-linux-gnu' '--disable-maintainer-mode' '--disable-dependency-tracking' '--libdir=/usr/lib/x86_64-linux-gnu' '--sysconfdir=/etc/bind' '--with-python=python3' '--localstatedir=/' '--enable-threads' '--enable-largefile' '--with-libtool' '--enable-shared' '--enable-static' '--with-gost=no' '--with-openssl=/usr' '--with-gssapi=/usr' '--disable-isc-spnego' '--with-libidn2' '--with-libjson=/usr' '--with-lmdb=/usr' '--with-gnu-ld' '--with-geoip=/usr' '--with-atf=no' '--enable-ipv6' '--enable-rrl' '--enable-filter-aaaa' '--enable-native-pkcs11' '--with-pkcs11=/usr/lib/softhsm/libsofthsm2.so' '--with-randomdev=/dev/urandom' '--enable-dnstap' 'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2 -fdebug-prefix-map=/tmp/buildd/bind9-9.11.5.P4+dfsg=. -fstack-protector-strong -Wformat -Werror=format-security -fno-strict-aliasing -fno-delete-null-pointer-checks -DNO_VERSION_DATE -DDIG_SIGCHASE' 'LDFLAGS=-Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2'
+13-Dec-2023 14:44:06.240 general: notice: running as: named -f -L shared/log.txt
+13-Dec-2023 14:44:06.242 general: notice: compiled by GCC 8.3.0
+13-Dec-2023 14:44:06.243 general: notice: compiled with OpenSSL version: OpenSSL 1.1.1n  15 Mar 2022
+13-Dec-2023 14:44:06.245 general: notice: linked to OpenSSL version: OpenSSL 1.1.1n  15 Mar 2022
+13-Dec-2023 14:44:06.246 general: notice: compiled with libxml2 version: 2.9.4
+13-Dec-2023 14:44:06.248 general: notice: linked to libxml2 version: 20904
+13-Dec-2023 14:44:06.249 general: notice: compiled with libjson-c version: 0.12.1
+13-Dec-2023 14:44:06.250 general: notice: linked to libjson-c version: 0.12.1
+13-Dec-2023 14:44:06.252 general: notice: threads support is enabled
+13-Dec-2023 14:44:06.253 general: notice: ----------------------------------------------------
+13-Dec-2023 14:44:06.255 general: notice: BIND 9 is maintained by Internet Systems Consortium,
+13-Dec-2023 14:44:06.256 general: notice: Inc. (ISC), a non-profit 501(c)(3) public-benefit 
+13-Dec-2023 14:44:06.258 general: notice: corporation.  Support and training for BIND 9 are 
+13-Dec-2023 14:44:06.259 general: notice: available at https://www.isc.org/support
+13-Dec-2023 14:44:06.260 general: notice: ----------------------------------------------------
+13-Dec-2023 14:44:06.261 general: info: found 20 CPUs, using 20 worker threads
+13-Dec-2023 14:44:06.262 general: info: using 19 UDP listeners per interface
+13-Dec-2023 14:44:06.264 general: info: using up to 4096 sockets
+13-Dec-2023 14:44:06.268 general: info: loading configuration from '/etc/bind/named.conf'
+13-Dec-2023 14:44:06.269 config: error: /etc/bind/named.conf.options:6: unknown option 'dnsec-lookaside'
+13-Dec-2023 14:44:06.270 general: critical: loading configuration: failure
+13-Dec-2023 14:44:06.271 general: critical: exiting (due to fatal error)

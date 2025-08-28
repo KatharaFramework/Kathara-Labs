@@ -1,6 +1,6 @@
 $TTL   60000
 @               IN      SOA     dnsit.it.    root.dnsit.it. (
-                        2006031201 ; serial
+                        2024120401 ; serial
                         28800 ; refresh
                         14400 ; retry
                         3600000 ; expire

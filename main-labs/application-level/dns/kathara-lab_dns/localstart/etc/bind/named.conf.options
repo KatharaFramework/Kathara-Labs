@@ -1,5 +1,10 @@
 options {
     directory "/var/cache/bind";
     allow-recursion { 192.168.0.0/24; };
+    auto-dnssec off;
     dnssec-validation no;
+	dnssec-enable no;
+    dnssec-lookaside no;
+    filter-aaaa-on-v4 yes;
+    send-cookie no;
 };
