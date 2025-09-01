@@ -1,3 +1,3 @@
 ip address add 20.0.0.2/24 dev eth0
 ip route add default via 20.0.0.1 dev eth0
-systemctl start named
+systemctl start bind9
