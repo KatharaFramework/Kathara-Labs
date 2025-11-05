@@ -2,4 +2,4 @@ ip address add 100.0.0.4/29 dev eth0
 ip route add 40.0.0.0/24 via 100.0.0.1 dev eth0
 ip route add 30.0.0.0/24 via 100.0.0.3 dev eth0
 ip route add 20.0.0.0/24 via 100.0.0.2 dev eth0
-systemctl start named
+systemctl start bind9
