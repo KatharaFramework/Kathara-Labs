@@ -1,0 +1,9 @@
+apt-get -y update
+apt-get -y install avahi-daemon cifs-utils smbclient
+
+sed -i 's/.*enable-dbus=.*/enable-dbus=no/' /etc/avahi/avahi-daemon.conf
+sed -i 's/.*allow-interfaces=.*/allow-interfaces=eth0/' /etc/avahi/avahi-daemon.conf
+
+ip address add 10.13.37.2/24 dev eth0
+/usr/sbin/avahi-daemon -D
+bash /usr/bin/access-share.sh
