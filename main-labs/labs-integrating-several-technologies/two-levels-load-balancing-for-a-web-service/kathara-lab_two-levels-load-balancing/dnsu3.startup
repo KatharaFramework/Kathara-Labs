@@ -1,4 +1,4 @@
 ip address add 45.67.0.16/24 dev eth0
 ip route add default via 45.67.0.17 dev eth0
 
-systemctl start named
+systemctl start bind9
