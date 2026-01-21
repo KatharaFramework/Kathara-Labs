@@ -7,8 +7,9 @@ $TTL    60000
 						0 ; negative cache ttl
 						)
 
-@						IN	NS	dnsuni.uniroma3.it.
-dnsuni.uniroma3.it.		IN	A	192.168.0.11
+@						IN	NS	        dnsuni.uniroma3.it.
+dnsuni.uniroma3.it.		IN	A	        192.168.0.11
 
-pc1.uniroma3.it.		IN	A	192.168.0.111
-localuni.uniroma3.it.	IN	A	192.168.0.110
+pc1.uniroma3.it.		IN	A	        192.168.0.111
+pc1.uniroma3.it.		IN	AAAA	    2001:a::1
+localuni.uniroma3.it.	IN	A	        192.168.0.110

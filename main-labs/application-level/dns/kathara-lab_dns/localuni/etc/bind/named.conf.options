@@ -5,6 +5,5 @@ options {
     dnssec-validation no;
 	dnssec-enable no;
     dnssec-lookaside no;
-    filter-aaaa-on-v4 yes;
     send-cookie no;
 };
