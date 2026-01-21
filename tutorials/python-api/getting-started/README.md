@@ -1,6 +1,6 @@
 # Getting-Started
 
-This tutorial provides the bases for using the Kathará Python API.
+This tutorial provides the basis for using the Kathará Python API.
 
 ## Installation 
 Installing the Kathará Python API is super easy since you can find the latest stable version on [PyPI](https://pypi.org/project/kathara/). 
@@ -12,7 +12,7 @@ python3 -m pip install git+https://github.com/saghul/pyuv@master#egg=pyuv
 
 After installing `pyuv`, install the `kathara` package:
 ```bash
-python3 -m pip install "kathara"
+python3 -m pip install kathara
 ```
 
 ## Getting Started
@@ -62,7 +62,7 @@ This is just an example of what you can do with Kathará Python API.
 
 ## What's next?
 The API also allows you to manage network scenarios and devices filesystem to create more complex scenarios. 
-If you are interested follow the [Managing Filesystem](../managing-filesystem) tutorial. 
+If you are interested, follow the [Managing Filesystem](../managing-filesystem) tutorial. 
 
 ## Documentation 
 You can find a complete overview of the Kathará API at [docs](https://github.com/KatharaFramework/Kathara/wiki/Kathara-API-Docs).  

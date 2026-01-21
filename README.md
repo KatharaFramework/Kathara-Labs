@@ -2,7 +2,14 @@
 This repository contains the official network scenarios of [Kathará](https://github.com/KatharaFramework/Kathara).
 
 ## Tutorials
-The [tutorials](tutorials) directory contains several tutorials about basic and advanced usage of Kathará.
+The [tutorials](tutorials) directory contains several tutorials about basic and advanced usage of Kathará:
+* [Kathará Introduction](tutorials/introduction): Introduction slides of the Kathará tool.
+* [Capture Packets](tutorials/capture-packets): A tutorial explaining how to capture packets using the [Wireshark](https://www.wireshark.org/) GUI in Kathará.
+* [Traffic Control](tutorials/traffic-control): Several tutorials explaining how to use the `tc` tool to control, manipulate and
+shape traffic inside Kathará.
+* [Kathará External](tutorials/kathara-external): Tutorials explaining how to configure Kathará External to attach a Kathará
+device to the host physical interfaces (**Linux only**).  
+* [Python API](tutorials/python-api): Several tutorials about the usage of the Kathará Python APIs. 
 
 ## Main Labs
 The [main-labs](main-labs) directory contains the network scenarios used in the course of "Internet and Data Centers" at

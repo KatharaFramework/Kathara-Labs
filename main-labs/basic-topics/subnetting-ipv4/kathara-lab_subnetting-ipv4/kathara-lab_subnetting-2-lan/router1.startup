@@ -1,0 +1,5 @@
+ip address add X.X.X.X/X dev eth0
+ip address add X.X.X.X/X dev eth1
+ip address add X.X.X.X/X dev eth2
+
+ip route add default via X.X.X.X dev eth2
