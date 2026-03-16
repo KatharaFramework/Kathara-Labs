@@ -16,11 +16,6 @@ pbrd=no
 bfdd=no
 fabricd=no
 
-#
-# If this option is set the /etc/init.d/frr script automatically loads
-# the config via "vtysh -b" when the servers are started.
-# Check /etc/pam.d/frr if you intend to use "vtysh"!
-#
 vtysh_enable=yes
 zebra_options=" -s 90000000 --daemon -A 127.0.0.1"
 bgpd_options="   --daemon -A 127.0.0.1"
