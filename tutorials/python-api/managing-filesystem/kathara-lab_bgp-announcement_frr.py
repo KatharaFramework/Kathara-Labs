@@ -12,7 +12,7 @@ lab = Lab("BGP Announcement")
 
 logger.info("Creating router1...")
 # Create router1 with image "kathara/frr:9"
-router1 = lab.new_machine("router1", **{"image": "kathara/frr:9"})
+router1 = lab.new_machine("router1", image="kathara/frr:9")
 
 # Create and connect router1 interfaces
 lab.connect_machine_to_link(router1.name, "A")
@@ -21,7 +21,7 @@ lab.connect_machine_to_link(router1.name, "B")
 
 logger.info("Creating router2...")
 # Create router2 with image "kathara/frr:9"
-router2 = lab.new_machine("router2", **{"image": "kathara/frr:9"})
+router2 = lab.new_machine("router2", image="kathara/frr:9")
 
 # Create and connect router1 interfaces
 lab.connect_machine_to_link(router2.name, "A")
@@ -30,13 +30,13 @@ lab.connect_machine_to_link(router2.name, "C")
 logger.info("Configuring router1...")
 
 # Configure router1 startup commands
-lab.create_file_from_list(
+lab.create_startup_file_from_list(
+    router1,
     [
         "ip address add 193.10.11.1/24 dev eth0 up",
         "ip address add 195.11.14.1/24 dev eth1",
         "systemctl start frr"
-    ],
-    "router1.startup"
+    ]
 )
 
 # Configuring BGP on router1
@@ -48,13 +48,13 @@ router1.update_file_from_string(content="hostname router1-frr\n", dst_path="/etc
 logger.info("Configuring router2...")
 
 # Configure router2 startup commands
-lab.create_file_from_list(
+lab.create_startup_file_from_list(
+    router2,
     [
         "ip address add 193.10.11.2/24 dev eth0",
         "ip address add 200.1.1.1/24 dev eth1",
         "systemctl start frr"
-    ],
-    "router2.startup"
+    ]
 )
 # Configuring BGP on router2
 router2.create_file_from_path(os.path.join("assets", "router2-frr.conf"), "/etc/frr/frr.conf")
