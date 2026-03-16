@@ -7,7 +7,7 @@
 #
 # When activating a daemon for the first time, a config file, even if it is
 # empty, has to be present *and* be owned by the user and group "frr", else
-# the daemon will not be started by /etc/init.d/frr. The permissions should
+# the daemon will not be started by frr. The permissions should
 # be u=rw,g=r,o=.
 # When using "vtysh" such a config file is also needed. It should be owned by
 # group "frrvty" and set to ug=rw,o= though. Check /etc/pam.d/frr, too.
@@ -33,10 +33,16 @@ fabricd=no
 vrrpd=no
 pathd=no
 
+# ATTENTION:
 #
-# If this option is set the /etc/init.d/frr script automatically loads
+# If this option is set, frr automatically loads
 # the config via "vtysh -b" when the servers are started.
 # Check /etc/pam.d/frr if you intend to use "vtysh"!
+#
+# When using "vtysh" such a config file is also needed. It should be owned by
+# group "frrvty" and set to ug=rw,o= though. Check /etc/pam.d/frr, too.
+#
+# The watchfrr, zebra and staticd daemons are always started.
 #
 vtysh_enable=yes
 zebra_options="  -A 127.0.0.1 -s 90000000"
