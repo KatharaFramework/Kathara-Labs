@@ -51,9 +51,9 @@ two interfaces. Devices are attached on collision domain `A`.
 # Configure router1 startup commands
 lab.create_file_from_list(
     [
-        "/sbin/ifconfig eth0 193.10.11.1 up",
-        "/sbin/ifconfig eth1 195.11.14.1 up",
-        "/etc/init.d/frr start"
+        "ip address add 193.10.11.1/24 dev eth0",
+        "ip address add 195.11.14.1/24 dev eth1",
+        "systemctl start frr"
     ],
     "router1.startup"
 )
@@ -89,9 +89,9 @@ The configuration of `router2` is analogous to the one of `router1`.
 # Configure router2 startup commands
 lab.create_file_from_list(
     [
-        "/sbin/ifconfig eth0 193.10.11.2 up",
-        "/sbin/ifconfig eth1 200.1.1.1 up",
-        "/etc/init.d/frr start"
+        "ip address add 193.10.11.2/24 dev eth0",
+        "ip address add 200.1.1.1/24 dev eth1",
+        "systemctl start frr"
     ],
     "router2.startup"
 )
