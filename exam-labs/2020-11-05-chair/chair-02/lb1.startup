@@ -1,5 +1,5 @@
-ifconfig eth0 10.20.0.22/24 up
-ifconfig eth1 100.100.100.22/24 up
+ip address add 10.20.0.22/24 dev eth0
+ip address add 100.100.100.22/24 dev eth1
 
 route add -net 10.10.0.0/24 gw 10.20.0.11 dev eth0
 

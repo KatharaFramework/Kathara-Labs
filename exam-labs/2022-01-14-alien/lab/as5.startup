@@ -1,4 +1,4 @@
-ifconfig eth0 5.5.2.1/24 up
-ifconfig eth1 3.5.0.2/30 up
-ifconfig eth2 5.5.1.1/24 up
+ip address add 5.5.2.1/24 dev eth0
+ip address add 3.5.0.2/30 dev eth1
+ip address add 5.5.1.1/24 dev eth2
 systemctl start frr

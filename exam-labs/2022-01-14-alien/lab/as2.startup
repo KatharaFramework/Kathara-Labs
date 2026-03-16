@@ -1,2 +1,2 @@
-ifconfig eth0 2.3.0.1/30 up
+ip address add 2.3.0.1/30 dev eth0
 systemctl start frr

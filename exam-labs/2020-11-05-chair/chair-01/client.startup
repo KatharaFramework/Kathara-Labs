@@ -1,2 +1,2 @@
-ifconfig eth0 150.150.150.150/24 up
+ip address add 150.150.150.150/24 dev eth0
 route add default gw 150.150.150.33 dev eth0
