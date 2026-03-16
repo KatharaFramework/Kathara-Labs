@@ -36,7 +36,7 @@ lab.connect_machine_to_link(router1.name, "A")
 lab.connect_machine_to_link(router1.name, "B")
 
 # Create router2 with image "kathara/frr:9"
-router2 = lab.new_machine("router2", **{"image": "kathara/frr"})
+router2 = lab.new_machine("router2", **{"image": "kathara/frr:9"})
 
 # Create and connect router1 interfaces
 lab.connect_machine_to_link(router1.name, "A")
