@@ -5,15 +5,11 @@ This tutorial provides the basis for using the Kathará Python API.
 ## Installation 
 Installing the Kathará Python API is super easy since you can find the latest stable version on [PyPI](https://pypi.org/project/kathara/). 
 
-⚠️ **WARNING:** `pyuv` is a required dependency, but the PyPI package is not updated to the latest version. PEP does not allow to add direct URLs in PyPI published projects, hence, you need to install `pyuv` manually from the GitHub repository:
-```bash
-python3 -m pip install git+https://github.com/saghul/pyuv@master#egg=pyuv
-```
-
-After installing `pyuv`, install the `kathara` package:
+Install the `kathara` package:
 ```bash
 python3 -m pip install kathara
 ```
+A complete guide can be found [here](https://github.com/KatharaFramework/Kathara/wiki/pip).
 
 ## Getting Started
 

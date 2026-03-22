@@ -1,0 +1,6 @@
+ip address add 10.0.13.1/30 dev eth0
+
+ip route add 100.50.25.64/26 via 10.0.13.2 dev eth0
+ip route add 100.50.25.192/26 via 10.0.13.2 dev eth0
+ip route add 100.50.25.0/26 via 10.0.13.2 dev eth0
+ip route add 100.50.25.128/26 via 10.0.13.2 dev eth0

@@ -1,4 +1,4 @@
-ifconfig eth0 12.13.0.13/24 up
-ifconfig eth1 11.13.0.13/24 up
-ifconfig eth2 13.14.0.13/24 up
-/etc/init.d/frr start
+ip address add 12.13.0.13/24 dev eth0
+ip address add 11.13.0.13/24 dev eth1
+ip address add 13.14.0.13/24 dev eth2
+systemctl start frr

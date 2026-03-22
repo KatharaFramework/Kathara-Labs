@@ -1,1 +1,1 @@
-ifconfig eth0 100.100.100.100/24 up
+ip address add 100.100.100.100/24 dev eth0

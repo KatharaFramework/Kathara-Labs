@@ -1,0 +1,7 @@
+ip address add 10.0.13.2/30 dev eth0
+ip address add 100.50.25.76/26 dev eth1
+ip address add 100.50.25.206/26 dev eth2
+ip address add 100.50.25.11/26 dev eth3
+ip address add 100.50.25.145/26 dev eth4
+
+ip route add default via 10.0.13.1 dev eth2

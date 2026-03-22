@@ -8,5 +8,6 @@ $TTL 60000
                         )
 @                          IN      	NS      	dnsstart.startup.net.
 dnsstart.startup.net.      IN      	A       	192.168.0.22
-pc2.startup.net.		   IN		A		192.168.0.222
-localstart.startup.net.	   IN		A		192.168.0.220
+pc2.startup.net.		   IN		A		    192.168.0.222
+pc2.startup.net.		   IN		AAAA		2001:a::2
+localstart.startup.net.	   IN		A		    192.168.0.220

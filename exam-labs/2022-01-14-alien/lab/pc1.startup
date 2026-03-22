@@ -1,2 +1,2 @@
-ifconfig eth0 4.4.1.2/24 up
+ip address add 4.4.1.2/24 dev eth0
 route add default gw 4.4.1.1 dev eth0
