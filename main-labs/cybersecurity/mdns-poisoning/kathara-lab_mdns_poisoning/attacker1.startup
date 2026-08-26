@@ -1,0 +1,9 @@
+apt-get -y update
+apt -y install \
+    python3-pycryptodome \
+    python3-netifaces \
+    python3-six
+
+
+git clone https://github.com/lgandx/Responder /root/responder
+ip address add 10.13.37.3/24 dev eth0
