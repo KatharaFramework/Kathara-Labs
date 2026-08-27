@@ -1,0 +1,6 @@
+ip address add 200.1.0.1/16 dev eth0
+ip address add 200.2.0.2/16 dev eth1
+ip address add 23.0.0.2/30 dev eth2
+ip route add default via 23.0.0.1 dev eth2
+
+systemctl start frr
