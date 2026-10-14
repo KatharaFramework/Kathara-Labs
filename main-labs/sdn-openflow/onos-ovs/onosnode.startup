@@ -1,0 +1,53 @@
+# Assign the control plane IP address
+ip addr add 192.168.1.1/24 dev eth0
+
+# Launch ONOS in a detached screen session with desired apps auto-activated.
+screen -dmS onos bash -c 'export ONOS_APPS="drivers,openflow,gui2,fwd,proxyarp" && /usr/local/bin/start-onos >/var/log/onos.log 2>&1'
+
+# --- Inject a one-shot wait script into .bashrc ---
+# Kathara has a timeout on .startup scripts: if they block too long it
+# pushes them to the background. Instead, we let .startup finish instantly
+# and have .bashrc block the interactive shell that Kathara opens afterwards.
+cat >> /root/.bashrc << 'ONOS_WAIT'
+
+# === ONOS auto-wait (runs once, then removes itself) ===
+if [ -f /tmp/.onos_wait_pending ]; then
+    echo ""
+    echo "============================================"
+    echo " ONOS is starting up — please wait..."
+    echo " (logs: /var/log/onos.log)"
+    echo "============================================"
+    ELAPSED=0
+    while ! curl -sSf --user onos:rocks -o /dev/null http://localhost:8181/onos/v1/applications 2>/dev/null; do
+        sleep 5
+        ELAPSED=$((ELAPSED + 5))
+        echo "  [${ELAPSED}s] Still waiting for ONOS REST API..."
+    done
+    echo "  ONOS REST API is up after ${ELAPSED}s."
+
+    echo ""
+    echo "Activating applications..."
+    # Retry activation until ONOS application manager finishes loading
+    # application descriptors from disk and activates them.
+    for app in org.onosproject.proxyarp org.onosproject.fwd; do
+        while ! curl -sSf --user onos:rocks -X POST \
+            "http://localhost:8181/onos/v1/applications/${app}/active" >/dev/null 2>&1; do
+            sleep 1
+        done
+        echo "  [OK] ${app#org.onosproject.}"
+    done
+
+    echo ""
+    echo "============================================"
+    echo " ONOS is fully configured and READY!"
+    echo "============================================"
+    echo ""
+
+    # Remove the flag so this block never runs again
+    rm -f /tmp/.onos_wait_pending
+fi
+# === End ONOS auto-wait ===
+ONOS_WAIT
+
+# Create the flag file so .bashrc knows to run the wait block
+touch /tmp/.onos_wait_pending
