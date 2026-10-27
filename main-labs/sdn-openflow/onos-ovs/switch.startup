@@ -1,0 +1,17 @@
+# Assign an IP address on the control plane LAN
+ip addr add 192.168.1.2/24 dev eth0
+
+# Start the Open vSwitch service
+/etc/init.d/openvswitch-switch start
+
+# Create a basic OVS bridge and connect it to our ONOS controller
+ovs-vsctl add-br br0
+ovs-vsctl set-controller br0 tcp:192.168.1.1:6653
+
+# Add data plane ports (connected to pc1, pc2, and switch2)
+ovs-vsctl add-port br0 eth1
+ovs-vsctl add-port br0 eth2
+ovs-vsctl add-port br0 eth3
+
+# Force OpenFlow 1.3 and 1.4 compatibility
+ovs-vsctl set bridge br0 protocols=OpenFlow13,OpenFlow14
